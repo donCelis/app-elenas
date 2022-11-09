@@ -7,6 +7,7 @@ export default function UsersList () {
     <View>
       <Text style={styles.title}>User List</Text>
       <FlatList
+        showsVerticalScrollIndicator={false}
         data={users}
         ItemSeparatorComponent={() => <Text />}
         renderItem={({ item: user }) => <UserItem {...user} />}

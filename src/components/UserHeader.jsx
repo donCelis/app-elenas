@@ -8,7 +8,8 @@ export default function UserHeader ({
   lastName,
   email,
   phone,
-  username
+  username,
+  bloodGroup
 }) {
   return (
     <View style={styles.card}>
@@ -19,6 +20,7 @@ export default function UserHeader ({
             uri: image
           }}
         />
+        <StyledText style={styles.blood}>{bloodGroup}</StyledText>
       </View>
       <View style={styles.info}>
         <StyledText fontSize='subheading' fontWeight='bold' color='primary'>
@@ -33,12 +35,24 @@ export default function UserHeader ({
 }
 
 const styles = StyleSheet.create({
+  blood: {
+    position: 'absolute',
+    color: theme.colors.white,
+    fontSize: theme.fontSizes.body,
+    bottom: 5,
+    right: 5,
+    backgroundColor: 'black',
+    padding: 2,
+    borderRadius: 5,
+    overflow: 'hidden'
+  },
   card: {
     flexDirection: 'row',
     alignItems: 'center'
   },
   photo: {
     marginRight: 10,
+    position: 'relative',
     img: {
       width: 100,
       height: 100,
