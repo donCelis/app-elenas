@@ -6,16 +6,28 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "lint": "standard --fix"
   },
   "dependencies": {
-    "expo": "~47.0.3",
-    "expo-status-bar": "~1.4.2",
+    "expo": "47.0.3",
+    "expo-status-bar": "1.4.2",
     "react": "18.1.0",
-    "react-native": "0.70.5"
+    "react-dom": "18.1.0",
+    "react-native": "0.70.5",
+    "react-native-web": "0.18.10",
+    "react-router-native": "6.4.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "7.12.9",
+    "@expo/webpack-config": "0.17.3",
+    "standard": "17.0.0"
   },
-  "private": true
+  "private": true,
+  "eslintConfig": {
+    "extends": [
+      "standard",
+      "standard-jsx"
+    ]
+  }
 }
