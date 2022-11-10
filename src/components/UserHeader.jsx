@@ -35,17 +35,6 @@ export default function UserHeader ({
 }
 
 const styles = StyleSheet.create({
-  blood: {
-    position: 'absolute',
-    color: theme.colors.white,
-    fontSize: theme.fontSizes.body,
-    bottom: 5,
-    right: 5,
-    backgroundColor: 'black',
-    padding: 2,
-    borderRadius: 5,
-    overflow: 'hidden'
-  },
   card: {
     flexDirection: 'row',
     alignItems: 'center'
@@ -59,6 +48,17 @@ const styles = StyleSheet.create({
       borderRadius: 5,
       backgroundColor: theme.colors.textSecondary
     }
+  },
+  blood: {
+    position: 'absolute',
+    color: theme.colors.white,
+    fontSize: theme.fontSizes.body,
+    bottom: 5,
+    right: 5,
+    backgroundColor: 'black',
+    padding: 2,
+    borderRadius: 5,
+    overflow: 'hidden'
   },
   info: {
     marginLeft: 10,

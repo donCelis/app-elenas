@@ -13,7 +13,7 @@ export default function UserItem (user) {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 10,
-    margin: 10
+    padding: 5,
+    marginTop: 10
   }
 })

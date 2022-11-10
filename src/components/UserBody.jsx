@@ -2,23 +2,6 @@ import { StyleSheet, View } from 'react-native'
 import { theme } from '../theme'
 import StyledText from './StyledText'
 
-const styles = StyleSheet.create({
-  title: {
-    textAlign: 'center',
-    marginVertical: 10
-  },
-  'content-box': {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    padding: 10,
-    backgroundColor: theme.colors.gray,
-    borderRadius: 5
-  },
-  space: {
-    paddingBottom: 5
-  }
-})
-
 export default function UserBody ({ age, hair, eyeColor }) {
   return (
     <>
@@ -54,3 +37,20 @@ export default function UserBody ({ age, hair, eyeColor }) {
     </>
   )
 }
+
+const styles = StyleSheet.create({
+  title: {
+    textAlign: 'center',
+    marginVertical: 10
+  },
+  'content-box': {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 10,
+    backgroundColor: theme.colors.gray,
+    borderRadius: 5
+  },
+  space: {
+    paddingBottom: 5
+  }
+})

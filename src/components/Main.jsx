@@ -5,7 +5,7 @@ import UsersList from './UsersList'
 
 export default function Main () {
   return (
-    <View style={styles.general}>
+    <View style={styles.container}>
       <AppBar />
       <Routes>
         <Route path='/' element={<UsersList />} />
@@ -16,7 +16,7 @@ export default function Main () {
 }
 
 const styles = StyleSheet.create({
-  general: {
+  container: {
     flex: 1
   }
 })
