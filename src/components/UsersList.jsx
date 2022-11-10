@@ -23,6 +23,6 @@ const styles = StyleSheet.create({
   title: {
     textAlign: 'center',
     fontSize: 20,
-    paddingVertical: 5
+    paddingVertical: 10
   }
 })

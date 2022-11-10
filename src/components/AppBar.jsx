@@ -1,8 +1,8 @@
 import { StyleSheet, View } from 'react-native'
+import { Link, useLocation } from 'react-router-native'
 import Constants from 'expo-constants'
 import StyledText from './StyledText'
 import { theme } from '../theme'
-import { Link, useLocation } from 'react-router-native'
 
 const AppBarTab = ({ children, to }) => {
   const { pathname } = useLocation()
