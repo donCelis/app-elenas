@@ -4,7 +4,7 @@ import UserItem from './User'
 
 export default function UsersList () {
   return (
-    <View>
+    <View style={styles.container}>
       <Text style={styles.title}>User List</Text>
       <FlatList
         showsVerticalScrollIndicator={false}
@@ -17,6 +17,9 @@ export default function UsersList () {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1
+  },
   title: {
     textAlign: 'center',
     fontSize: 20,

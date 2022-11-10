@@ -1,5 +1,16 @@
-import { View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import StyledText from './StyledText'
+
+const styles = StyleSheet.create({
+  title: {
+    textAlign: 'center',
+    marginVertical: 10
+  },
+  'content-box': {
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  }
+})
 
 export default function VisualPerson ({ age, hair, eyeColor }) {
   return (
@@ -7,11 +18,11 @@ export default function VisualPerson ({ age, hair, eyeColor }) {
       <StyledText
         fontWeight='bold'
         color='primary'
-        style={{ textAlign: 'center', marginVertical: 10 }}
+        style={styles.title}
       >
         Style Person
       </StyledText>
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+      <View style={styles['content-box']}>
         <View>
           <StyledText align='center' fontWeight='bold'>
             Age
