@@ -1,22 +1,23 @@
 import { View, StyleSheet, Button } from 'react-native'
 import { FormProvider, useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
 import { theme } from '../theme'
 
+/* validation */
+import { loginSchema } from '../schemas/login'
 /* components */
 import InputField from '../components/common/InputField'
 
 export default function LogIn () {
   const methods = useForm({
+    resolver: yupResolver(loginSchema),
     defaultValues: {
       username: '',
       password: ''
     }
   })
 
-  const {
-    handleSubmit,
-    reset
-  } = methods
+  const { handleSubmit, reset } = methods
 
   const onSubmit = async (data) => {
     console.log(data)
@@ -27,16 +28,11 @@ export default function LogIn () {
     <FormProvider {...methods}>
       <View style={styles.form}>
         <InputField label='Username' name='username' />
-        <InputField
-          label='Password'
-          name='password'
-          secureTextEntry
-          keyboardType='numeric'
-        />
+        <InputField label='Password' name='password' secureTextEntry />
         <View style={styles.button}>
           <Button
             color={theme.colors.white}
-            title='LogIn'
+            title='Sign in'
             onPress={handleSubmit(onSubmit)}
           />
         </View>
@@ -48,14 +44,13 @@ export default function LogIn () {
 const styles = StyleSheet.create({
   form: {
     flex: 1,
-    padding: 10,
-    paddingVertical: 20,
-    backgroundColor: '#0e101c'
+    padding: 20,
+    backgroundColor: '#2c3e50'
   },
   button: {
     color: 'white',
     backgroundColor: theme.colors.primary,
-    borderRadius: 4,
+    borderRadius: 5,
     marginTop: 20,
     padding: 5
   },

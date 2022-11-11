@@ -4,7 +4,9 @@ import { theme } from '../../theme'
 
 export default function InputField ({ name, ...props }) {
   const { control } = useFormContext()
-  const { label } = props
+  const { label, style } = props
+
+  const InputStyle = [styles.input, style]
 
   return (
     <View>
@@ -15,15 +17,15 @@ export default function InputField ({ name, ...props }) {
           field: { onBlur, onChange, value },
           fieldState: { error }
         }) => (
-          <View>
+          <View style={styles['input-control']}>
             <TextInput
-              style={styles.input}
+              style={[InputStyle, error && styles.inputError]}
               onBlur={onBlur}
               onChangeText={(value) => onChange(value)}
               defaultValue={value}
               {...props}
             />
-            {error && <Text style={styles.error}>This is required.</Text>}
+            {error && <Text style={styles.smsError}>{error.message}</Text>}
           </View>
         )}
         name={name}
@@ -38,17 +40,28 @@ export default function InputField ({ name, ...props }) {
 const styles = StyleSheet.create({
   label: {
     color: 'white',
-    marginLeft: 0
+    marginLeft: 0,
+    fontSize: theme.fontSizes.subheading
+  },
+  'input-control': {
+    position: 'relative'
   },
   input: {
     backgroundColor: 'white',
-    borderColor: 'none',
+    borderWidth: 2,
+    borderColor: 'transparent',
     padding: 10,
     borderRadius: 4,
     marginVertical: 20
   },
-  error: {
+  inputError: {
+    borderColor: theme.colors.wrong
+  },
+  smsError: {
     color: theme.colors.wrong,
-    textAlign: 'right'
+    textAlign: 'right',
+    position: 'absolute',
+    bottom: 0,
+    right: 0
   }
 })
