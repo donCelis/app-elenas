@@ -1,6 +1,6 @@
 import { Image, StyleSheet, View } from 'react-native'
 import { theme } from '../theme'
-import StyledText from './StyledText'
+import StyledText from './common/StyledText'
 
 export default function UserHeader ({
   image,

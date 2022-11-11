@@ -1,17 +1,20 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { SafeAreaView, StyleSheet } from 'react-native'
 import { Route, Routes } from 'react-router-native'
-import AppBar from './AppBar'
-import UsersList from './UsersList'
+
+/* Components */
+import AppBar from './common/AppBar'
+import UsersList from '../Pages/UsersList'
+import LogInPage from '../Pages/LogIn'
 
 export default function Main () {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <AppBar />
       <Routes>
         <Route path='/' element={<UsersList />} />
-        <Route path='/signin' element={<Text>Works</Text>} />
+        <Route path='/signin' element={<LogInPage />} />
       </Routes>
-    </View>
+    </SafeAreaView>
   )
 }
 

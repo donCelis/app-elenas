@@ -1,6 +1,8 @@
 import { FlatList, StyleSheet, View } from 'react-native'
 import users from '../data/users'
-import UserItem from './User'
+
+/* components */
+import UserItem from '../components/User'
 
 export default function UsersList () {
   return (

@@ -15,7 +15,8 @@ export const theme = {
       default: '#f3f3f3'
     }),
     white: '#fafafa',
-    gray: '#f3f3f3'
+    gray: '#f3f3f3',
+    wrong: '#e74c3c'
   },
   fontSizes: {
     body: 14,
