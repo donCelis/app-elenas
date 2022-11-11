@@ -1,4 +1,4 @@
-import { View, StyleSheet, Button } from 'react-native'
+import { View, StyleSheet, Button, Image } from 'react-native'
 import { FormProvider, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { theme } from '../theme'
@@ -26,15 +26,33 @@ export default function LogIn () {
 
   return (
     <FormProvider {...methods}>
-      <View style={styles.form}>
-        <InputField label='Username' name='username' />
-        <InputField label='Password' name='password' secureTextEntry />
-        <View style={styles.button}>
-          <Button
-            color={theme.colors.white}
-            title='Sign in'
-            onPress={handleSubmit(onSubmit)}
+      <View
+        style={{
+          backgroundColor: theme.colors.gray,
+          paddingVertical: 50,
+          borderBottomLeftRadius: 25,
+          borderBottomRightRadius: 25,
+          zIndex: 10
+        }}
+      >
+        <View style={styles.wrapperLogo}>
+          <Image
+            style={styles.logo}
+            source={require('../../assets/elenas.png')}
           />
+        </View>
+      </View>
+      <View style={styles.container}>
+        <View style={styles.form}>
+          <InputField label='Username' name='username' />
+          <InputField label='Password' name='password' secureTextEntry />
+          <View style={styles.button}>
+            <Button
+              color={theme.colors.white}
+              title='Sign in'
+              onPress={handleSubmit(onSubmit)}
+            />
+          </View>
         </View>
       </View>
     </FormProvider>
@@ -42,14 +60,24 @@ export default function LogIn () {
 }
 
 const styles = StyleSheet.create({
-  form: {
+  container: {
     flex: 1,
-    padding: 20,
-    backgroundColor: '#2c3e50'
+    paddingTop: 60,
+    paddingHorizontal: 20,
+    paddingBottom: 20,
+    marginTop: -20,
+    backgroundColor: theme.colors.bg
+    /* justifyContent: 'center' */
+  },
+  wrapperLogo: {
+    padding: 12,
+    alignSelf: 'center',
+    backgroundColor: theme.colors.gray || '#ecf0f1',
+    borderRadius: 5
+    /* marginBottom: 30 */
   },
   button: {
-    color: 'white',
-    backgroundColor: theme.colors.primary,
+    backgroundColor: theme.colors.third,
     borderRadius: 5,
     marginTop: 20,
     padding: 5

@@ -39,7 +39,7 @@ export default function InputField ({ name, ...props }) {
 
 const styles = StyleSheet.create({
   label: {
-    color: 'white',
+    color: theme.colors.white,
     marginLeft: 0,
     fontSize: theme.fontSizes.subheading
   },
@@ -47,15 +47,17 @@ const styles = StyleSheet.create({
     position: 'relative'
   },
   input: {
-    backgroundColor: 'white',
-    borderWidth: 2,
-    borderColor: 'transparent',
-    padding: 10,
-    borderRadius: 4,
-    marginVertical: 20
+    backgroundColor: theme.colors.gray,
+    /* borderWidth: 2, */
+    /* borderColor: 'transparent', */
+    padding: 12,
+    borderRadius: 5,
+    marginVertical: 20,
+    borderBottomWidth: 3,
+    borderBottomColor: theme.colors.third
   },
   inputError: {
-    borderColor: theme.colors.wrong
+    borderBottomColor: theme.colors.wrong
   },
   smsError: {
     color: theme.colors.wrong,

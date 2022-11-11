@@ -4,12 +4,15 @@ import { FlatList, StyleSheet, View } from 'react-native'
 /* components */
 import UserItem from '../components/User'
 import { useEffect, useState } from 'react'
+import AppBar from '../components/common/AppBar'
 
 export default function UsersList () {
   const [users, setUsers] = useState(null)
 
   const fetchData = async () => {
-    const response = await globalThis.fetch('https://dummyjson.com/users?limit=20')
+    const response = await globalThis.fetch(
+      'https://dummyjson.com/users?limit=20'
+    )
     const { users } = await response.json()
     setUsers(users)
   }
@@ -20,6 +23,7 @@ export default function UsersList () {
 
   return (
     <View style={styles.container}>
+      <AppBar />
       <FlatList
         style={styles.space}
         showsVerticalScrollIndicator={false}

@@ -14,9 +14,11 @@ export const theme = {
       android: 'tomato',
       default: '#f3f3f3'
     }),
+    third: '#521ece',
     white: '#fafafa',
     gray: '#f3f3f3',
-    wrong: '#e74c3c'
+    wrong: '#e74c3c',
+    bg: '#2c3e50'
   },
   fontSizes: {
     body: 14,

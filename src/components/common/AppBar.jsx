@@ -7,8 +7,8 @@ import AppBarTab from './AppBarTab'
 export default function AppBar () {
   return (
     <View style={styles.appBar}>
-      <AppBarTab to='/'>Users</AppBarTab>
-      <AppBarTab to='/signin'>Sign In</AppBarTab>
+      <AppBarTab to='/'>Sign In</AppBarTab>
+      <AppBarTab to='/userslist'>Users</AppBarTab>
     </View>
   )
 }
