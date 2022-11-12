@@ -25,7 +25,7 @@ export default function UserHeader ({
         <StyledText style={styles.blood}>{bloodGroup}</StyledText>
       </View>
       <View style={styles.info}>
-        <Link to={`/user/${id}`}>
+        <Link style={{ alignSelf: 'flex-start' }} to={`/user/${id}`}>
           <StyledText fontSize='subheading' fontWeight='bold' color='primary'>
             {firstName} {lastName}
           </StyledText>
