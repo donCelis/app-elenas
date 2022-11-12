@@ -1,19 +1,27 @@
-import { gql } from 'apollo-boost'
+import { gql } from '@apollo/client'
 
-export const LOGIN = gql`
-  mutation Login {
-  login(cellphone: "+573208335263", password: "123456") {
-    ... on AuthInfo {
-      token
-      user {
-        id
-        firstName
-        lastName
-        email
-        cedula
-        cellphone
+export const LOGIN_MUTATION = gql`
+  mutation (
+    $cellphone: String!
+    $password: String!
+    $useExpirationPolicy: Boolean
+  ) {
+    login(
+      cellphone: $cellphone
+      password: $password
+      useExpirationPolicy: $useExpirationPolicy
+    ) {
+      ... on AuthInfo {
+        token
+        user {
+          id
+          firstName
+          lastName
+          email
+          cedula
+          cellphone
+        }
       }
     }
   }
-}
 `

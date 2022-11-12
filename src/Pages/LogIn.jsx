@@ -8,11 +8,19 @@ import { loginSchema } from '../schemas/login'
 /* components */
 import InputField from '../components/common/InputField'
 
+import { useLogin } from '../hooks/useLogin'
+import { useNavigate } from 'react-router-native'
+import authStorage from '../utils/authStorage'
+import { useEffect } from 'react'
+
 export default function LogIn () {
+  const navigate = useNavigate()
+  const { logIn } = useLogin()
+
   const methods = useForm({
     resolver: yupResolver(loginSchema),
     defaultValues: {
-      username: '+573208335263',
+      cellphone: '+573208335263',
       password: '123456'
     }
   })
@@ -20,9 +28,23 @@ export default function LogIn () {
   const { handleSubmit, reset } = methods
 
   const onSubmit = async (data) => {
-    console.log(data)
-    reset()
+    try {
+      const { cellphone, password } = data
+      await logIn({ cellphone, password })
+      reset()
+      navigate('/users')
+    } catch (e) {
+      console.log(e)
+    }
   }
+
+  /* useEffect(() => {
+    const test = async () => {
+      const testToken = await authStorage.getAccessToken()
+      console.log(testToken)
+    }
+    test()
+  }, []) */
 
   return (
     <FormProvider {...methods}>
@@ -43,7 +65,7 @@ export default function LogIn () {
         </View>
       </View>
       <View style={styles.form}>
-        <InputField label='Username' name='username' />
+        <InputField label='Cellphone' name='cellphone' />
         <InputField label='Password' name='password' secureTextEntry />
         <View style={styles.button}>
           <Button

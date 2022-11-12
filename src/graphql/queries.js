@@ -2,21 +2,33 @@ import { gql } from '@apollo/client'
 
 export const GET_USERS = gql`
   query {
-    users {
-      age
-      bloodGroup
-      email
-      eyeColor
-      firstName
-      hair {
-        color
-        type
+    clientsSearch {
+      results {
+        id
+        address
+        addressIndications
+        cedula
+        cellphone
+        city
+        colony
+        credit
+        delegation
+        extraAddress
+        firstName
+        innerNumber
+        isSeller
+        is_range
+        lastName
+        logisticProvider
+        neighborhood
+        outsideNumber
+        registerDate
+        updatedAddress
+        zipCode
+        state {
+          displayName
+        }
       }
-      id
-      image
-      lastName
-      phone
-      username
     }
   }
 `

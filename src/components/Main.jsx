@@ -9,8 +9,8 @@ export default function Main () {
   return (
     <SafeAreaView style={styles.container}>
       <Routes>
-        <Route path='/' element={<UsersList />} />
-        <Route path='/login' element={<LogIn />} />
+        <Route path='/users' element={<UsersList />} />
+        <Route path='/' element={<LogIn />} />
       </Routes>
     </SafeAreaView>
   )
