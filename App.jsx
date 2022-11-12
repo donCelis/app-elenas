@@ -1,16 +1,13 @@
 import { AppRegistry } from 'react-native'
 import { NativeRouter } from 'react-router-native'
 import { StatusBar } from 'expo-status-bar'
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
+import { ApolloProvider } from '@apollo/client'
+import { createApolloClient } from './src/utils/apolloClient'
 
 /* components */
 import Main from './src/components/Main'
 
-/* Creating a new ApolloClient instance. */
-const client = new ApolloClient({
-  uri: 'https://feat-custom-trace-fb-monitoring.dev.elenas.la/gql/',
-  cache: new InMemoryCache()
-})
+const client = createApolloClient()
 
 export default function App () {
   return (
@@ -23,4 +20,4 @@ export default function App () {
   )
 }
 
-AppRegistry.registerComponent('My App', () => App)
+AppRegistry.registerComponent('Elenas App', () => App)

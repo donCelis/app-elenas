@@ -12,8 +12,8 @@ export default function LogIn () {
   const methods = useForm({
     resolver: yupResolver(loginSchema),
     defaultValues: {
-      username: '',
-      password: ''
+      username: '+573208335263',
+      password: '123456'
     }
   })
 
@@ -28,7 +28,7 @@ export default function LogIn () {
     <FormProvider {...methods}>
       <View
         style={{
-          backgroundColor: theme.colors.gray,
+          backgroundColor: 'white',
           paddingVertical: 50,
           borderBottomLeftRadius: 25,
           borderBottomRightRadius: 25,
@@ -42,17 +42,15 @@ export default function LogIn () {
           />
         </View>
       </View>
-      <View style={styles.container}>
-        <View style={styles.form}>
-          <InputField label='Username' name='username' />
-          <InputField label='Password' name='password' secureTextEntry />
-          <View style={styles.button}>
-            <Button
-              color={theme.colors.white}
-              title='Sign in'
-              onPress={handleSubmit(onSubmit)}
-            />
-          </View>
+      <View style={styles.form}>
+        <InputField label='Username' name='username' />
+        <InputField label='Password' name='password' secureTextEntry />
+        <View style={styles.button}>
+          <Button
+            color={theme.colors.white}
+            title='Sign in'
+            onPress={handleSubmit(onSubmit)}
+          />
         </View>
       </View>
     </FormProvider>
@@ -60,7 +58,7 @@ export default function LogIn () {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  form: {
     flex: 1,
     paddingTop: 60,
     paddingHorizontal: 20,
@@ -72,7 +70,8 @@ const styles = StyleSheet.create({
   wrapperLogo: {
     padding: 12,
     alignSelf: 'center',
-    backgroundColor: theme.colors.gray || '#ecf0f1',
+    backgroundColor: 'white',
+    /* backgroundColor: 'white' || '#ecf0f1', */
     borderRadius: 5
     /* marginBottom: 30 */
   },

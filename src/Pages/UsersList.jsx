@@ -1,35 +1,29 @@
-import { FlatList, StyleSheet, View } from 'react-native'
-// import users from '../data/users'
+import { FlatList, StyleSheet, Text, View } from 'react-native'
+import { useQuery } from '@apollo/client'
+
+import { GET_USERS } from '../graphql/queries'
 
 /* components */
 import UserItem from '../components/User'
-import { useEffect, useState } from 'react'
 import AppBar from '../components/common/AppBar'
 
 export default function UsersList () {
-  const [users, setUsers] = useState(null)
-
-  const fetchData = async () => {
-    const response = await globalThis.fetch(
-      'https://dummyjson.com/users?limit=20'
-    )
-    const { users } = await response.json()
-    setUsers(users)
-  }
-
-  useEffect(() => {
-    fetchData()
-  }, [])
+  const { data, loading } = useQuery(GET_USERS)
 
   return (
     <View style={styles.container}>
       <AppBar />
-      <FlatList
-        style={styles.space}
-        showsVerticalScrollIndicator={false}
-        data={users}
-        renderItem={({ item: user }) => <UserItem {...user} />}
-      />
+      {
+        loading
+          ? <Text>Loading</Text>
+          : <FlatList
+              style={styles.space}
+              showsVerticalScrollIndicator={false}
+              data={data?.users}
+              renderItem={({ item: user }) => <UserItem {...user} />}
+            />
+
+      }
     </View>
   )
 }

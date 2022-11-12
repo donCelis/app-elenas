@@ -48,16 +48,14 @@ const styles = StyleSheet.create({
   },
   input: {
     backgroundColor: theme.colors.gray,
-    /* borderWidth: 2, */
-    /* borderColor: 'transparent', */
+    borderWidth: 2,
+    borderColor: theme.colors.third,
     padding: 12,
     borderRadius: 5,
-    marginVertical: 20,
-    borderBottomWidth: 3,
-    borderBottomColor: theme.colors.third
+    marginVertical: 20
   },
   inputError: {
-    borderBottomColor: theme.colors.wrong
+    borderColor: theme.colors.wrong
   },
   smsError: {
     color: theme.colors.wrong,
