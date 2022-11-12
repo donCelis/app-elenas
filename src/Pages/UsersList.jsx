@@ -1,9 +1,10 @@
-import { FlatList, StyleSheet, View } from 'react-native'
+import { FlatList, StyleSheet } from 'react-native'
 import { useQuery } from '@apollo/client'
 
 import { GET_USERS } from '../graphql/queries'
 
 /* components */
+import Container from '../components/common/Container'
 import UserItem from '../components/User'
 import StyledText from '../components/common/StyledText'
 
@@ -13,7 +14,7 @@ export default function UsersList () {
   const users = data?.clientsSearch?.results || []
 
   return (
-    <View style={styles.container}>
+    <Container>
       {error && (
         <StyledText align='center' fontSize='subheading'>
           {String(error)}
@@ -25,14 +26,11 @@ export default function UsersList () {
         data={users}
         renderItem={({ item: user }) => <UserItem {...user} />}
       />
-    </View>
+    </Container>
   )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
   space: {
     paddingHorizontal: 10
   }

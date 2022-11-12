@@ -37,55 +37,51 @@ export default function LogIn () {
   }
 
   return (
-    <FormProvider {...methods}>
-      <View
-        style={{
-          backgroundColor: 'white',
-          paddingVertical: 50,
-          borderBottomLeftRadius: 25,
-          borderBottomRightRadius: 25,
-          zIndex: 10
-        }}
-      >
-        <View style={styles.wrapperLogo}>
-          <Image
-            style={styles.logo}
-            source={require('../../assets/elenas.png')}
-          />
+    <View style={styles.container}>
+      <View style={styles.wrapperLogo}>
+        <View style={styles.logo}>
+          <Image source={require('../../assets/elenas.png')} />
         </View>
       </View>
-      <View style={styles.form}>
-        <InputField label='Cellphone' name='cellphone' />
-        <InputField label='Password' name='password' secureTextEntry />
-        <View style={styles.button}>
-          <Button
-            color={theme.colors.white}
-            title='Sign in'
-            onPress={handleSubmit(onSubmit)}
-          />
+      <FormProvider {...methods}>
+        <View style={styles.form}>
+          <InputField label='Cellphone' name='cellphone' />
+          <InputField label='Password' name='password' secureTextEntry />
+          <View style={styles.button}>
+            <Button
+              color={theme.colors.white}
+              title='Sign in'
+              onPress={handleSubmit(onSubmit)}
+            />
+          </View>
         </View>
-      </View>
-    </FormProvider>
+      </FormProvider>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
-  form: {
+  container: {
     flex: 1,
+    backgroundColor: theme.colors.bg
+  },
+  wrapperLogo: {
+    backgroundColor: theme.colors.white,
+    paddingVertical: 50,
+    borderBottomLeftRadius: 25,
+    borderBottomRightRadius: 25,
+    zIndex: 10
+  },
+  logo: {
+    padding: 12,
+    alignSelf: 'center',
+    borderRadius: 5
+  },
+  form: {
     paddingTop: 60,
     paddingHorizontal: 20,
     paddingBottom: 20,
-    marginTop: -20,
-    backgroundColor: theme.colors.bg
-    /* justifyContent: 'center' */
-  },
-  wrapperLogo: {
-    padding: 12,
-    alignSelf: 'center',
-    backgroundColor: 'white',
-    /* backgroundColor: 'white' || '#ecf0f1', */
-    borderRadius: 5
-    /* marginBottom: 30 */
+    marginTop: -20
   },
   button: {
     backgroundColor: theme.colors.third,
