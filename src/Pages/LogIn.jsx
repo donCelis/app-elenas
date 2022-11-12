@@ -10,8 +10,6 @@ import InputField from '../components/common/InputField'
 
 import { useLogin } from '../hooks/useLogin'
 import { useNavigate } from 'react-router-native'
-import authStorage from '../utils/authStorage'
-import { useEffect } from 'react'
 
 export default function LogIn () {
   const navigate = useNavigate()
@@ -32,19 +30,11 @@ export default function LogIn () {
       const { cellphone, password } = data
       await logIn({ cellphone, password })
       reset()
-      navigate('/users')
+      navigate('/user/list')
     } catch (e) {
       console.log(e)
     }
   }
-
-  /* useEffect(() => {
-    const test = async () => {
-      const testToken = await authStorage.getAccessToken()
-      console.log(testToken)
-    }
-    test()
-  }, []) */
 
   return (
     <FormProvider {...methods}>

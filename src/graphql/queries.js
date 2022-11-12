@@ -1,32 +1,28 @@
 import { gql } from '@apollo/client'
 
 export const GET_USERS = gql`
-  query {
-    clientsSearch {
+  query ($ids: [Int!]){
+    clientsSearch (ids: $ids){
       results {
         id
-        address
-        addressIndications
-        cedula
-        cellphone
-        city
-        colony
-        credit
-        delegation
-        extraAddress
-        firstName
-        innerNumber
-        isSeller
-        is_range
-        lastName
-        logisticProvider
-        neighborhood
-        outsideNumber
         registerDate
-        updatedAddress
-        zipCode
+        firstName
+        lastName
+        cedula
+        address
+        innerNumber
+        outsideNumber
+        addressIndications
+        is_range
+        city
+        cellphone
+        credit
+        isSeller
+        neighborhood
         state {
           displayName
+          id
+          shortCode
         }
       }
     }

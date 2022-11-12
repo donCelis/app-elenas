@@ -2,36 +2,36 @@ import { StyleSheet, View } from 'react-native'
 import { theme } from '../theme'
 import StyledText from './common/StyledText'
 
-export default function UserBody ({ age, hair, eyeColor }) {
+export default function UserBody ({ city, state, isSeller }) {
   return (
     <>
       <StyledText fontWeight='bold' color='primary' style={styles.title}>
-        Style Person
+        Detail Person
       </StyledText>
       <View style={styles['content-box']}>
         <View>
           <StyledText style={styles.space} align='center' fontWeight='bold'>
-            Age
+            City
           </StyledText>
-          <StyledText align='center'>{age}</StyledText>
+          <StyledText align='center'>{city}</StyledText>
         </View>
         <View>
           <StyledText style={styles.space} align='center' fontWeight='bold'>
-            Hair Color
+            State
           </StyledText>
-          <StyledText align='center'>{hair.color}</StyledText>
+          <StyledText align='center'>{state?.displayName}</StyledText>
         </View>
         <View>
           <StyledText style={styles.space} align='center' fontWeight='bold'>
-            Hair Type
+            ShortCode
           </StyledText>
-          <StyledText align='center'>{hair.type}</StyledText>
+          <StyledText align='center'>{state?.shortCode}</StyledText>
         </View>
         <View>
           <StyledText style={styles.space} align='center' fontWeight='bold'>
-            Eye Color
+            Seller
           </StyledText>
-          <StyledText align='center'>{eyeColor}</StyledText>
+          <StyledText align='center'>{isSeller ? '🟢' : '🔴'}</StyledText>
         </View>
       </View>
     </>

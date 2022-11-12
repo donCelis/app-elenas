@@ -1,4 +1,5 @@
 import { StyleSheet, View } from 'react-native'
+import { Outlet } from 'react-router-native'
 import { theme } from '../../theme'
 
 /* components */
@@ -6,10 +7,13 @@ import AppBarTab from './AppBarTab'
 
 export default function AppBar () {
   return (
-    <View style={styles.appBar}>
-      <AppBarTab to='/'>Sign In</AppBarTab>
-      <AppBarTab to='/userslist'>Users</AppBarTab>
-    </View>
+    <>
+      <View style={styles.appBar}>
+        <AppBarTab to='/'>Sign In</AppBarTab>
+        <AppBarTab to='/user/list'>Users</AppBarTab>
+      </View>
+      <Outlet />
+    </>
   )
 }
 
