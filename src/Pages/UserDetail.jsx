@@ -2,7 +2,7 @@ import { StyleSheet, View } from 'react-native'
 import { useQuery } from '@apollo/client'
 import { useRoute } from '@react-navigation/native'
 
-import { GET_USERS } from '../graphql/queries'
+import { GET_PROFILE } from '../graphql/queries'
 import { theme } from '../theme'
 
 /* Components */
@@ -13,7 +13,7 @@ export default function UserDetail () {
   const { params: { screen } } = useRoute()
   const converNumberId = Number(screen)
 
-  const { data = {} } = useQuery(GET_USERS, {
+  const { data = {} } = useQuery(GET_PROFILE, {
     variables: {
       ids: converNumberId
     }

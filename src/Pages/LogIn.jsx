@@ -1,5 +1,5 @@
 import { View, StyleSheet, Image } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation, StackActions } from '@react-navigation/native'
 import { FormProvider, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { theme } from '../theme'
@@ -15,7 +15,8 @@ import { PATH_PAGE } from '../paths'
 import Container from '../components/common/Container'
 
 export default function LogIn () {
-  const { navigate } = useNavigation()
+  const { dispatch } = useNavigation()
+  const { replace } = StackActions
   const { logIn } = useLogin()
 
   const methods = useForm({
@@ -28,7 +29,7 @@ export default function LogIn () {
 
   const {
     handleSubmit,
-    reset,
+    reset: resetForm,
     formState: { isSubmitting }
   } = methods
 
@@ -36,8 +37,9 @@ export default function LogIn () {
     try {
       const { cellphone, password } = data
       await logIn({ cellphone, password })
-      navigate(PATH_PAGE.home)
-      reset()
+      /* disable navigation to login */
+      dispatch(replace(PATH_PAGE.home))
+      resetForm()
     } catch (e) {
       console.log(e)
     }
