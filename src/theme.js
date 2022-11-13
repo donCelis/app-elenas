@@ -16,6 +16,7 @@ export const theme = {
     }),
     third: '#521ece',
     white: '#fafafa',
+    whitePure: 'white',
     gray: '#f3f3f3',
     wrong: '#e74c3c',
     bg: '#2c3e50'

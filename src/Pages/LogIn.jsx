@@ -1,18 +1,18 @@
 import { View, StyleSheet, Button, Image } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 import { FormProvider, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { theme } from '../theme'
 
 /* validation */
-import { loginSchema } from '../schemas/login'
+import { loginSchema } from '../schemas'
 /* components */
 import InputField from '../components/common/InputField'
-
+/* hooks */
 import { useLogin } from '../hooks/useLogin'
-import { useNavigate } from 'react-router-native'
 
 export default function LogIn () {
-  const navigate = useNavigate()
+  const { navigate } = useNavigation()
   const { logIn } = useLogin()
 
   const methods = useForm({
@@ -23,14 +23,18 @@ export default function LogIn () {
     }
   })
 
-  const { handleSubmit, reset } = methods
+  const {
+    handleSubmit,
+    reset,
+    formState: { isSubmitting }
+  } = methods
 
   const onSubmit = async (data) => {
     try {
       const { cellphone, password } = data
       await logIn({ cellphone, password })
+      navigate('main')
       reset()
-      navigate('/user/list')
     } catch (e) {
       console.log(e)
     }
@@ -49,8 +53,9 @@ export default function LogIn () {
           <InputField label='Password' name='password' secureTextEntry />
           <View style={styles.button}>
             <Button
+              disabled={isSubmitting}
               color={theme.colors.white}
-              title='Sign in'
+              title={isSubmitting ? 'loading' : 'Sign in'}
               onPress={handleSubmit(onSubmit)}
             />
           </View>
@@ -62,26 +67,22 @@ export default function LogIn () {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: theme.colors.bg
+    backgroundColor: theme.colors.bg,
+    flex: 1
   },
   wrapperLogo: {
     backgroundColor: theme.colors.white,
     paddingVertical: 50,
-    borderBottomLeftRadius: 25,
-    borderBottomRightRadius: 25,
+    borderBottomLeftRadius: 50,
+    borderBottomRightRadius: 50,
     zIndex: 10
   },
   logo: {
     padding: 12,
-    alignSelf: 'center',
-    borderRadius: 5
+    alignSelf: 'center'
   },
   form: {
-    paddingTop: 60,
-    paddingHorizontal: 20,
-    paddingBottom: 20,
-    marginTop: -20
+    padding: 20
   },
   button: {
     backgroundColor: theme.colors.third,

@@ -1,11 +1,18 @@
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet } from 'react-native'
+import { StatusBar } from 'expo-status-bar'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
-export default function Container ({ children }) {
-  return <View style={styles.container}>{children}</View>
+export default function Container ({ children, theme, style = {}, active = false }) {
+  return (
+    <SafeAreaView style={[styles.inner, style]}>
+      {active && <StatusBar style={theme} backgroundColor='red' />}
+      {children}
+    </SafeAreaView>
+  )
 }
 
 const styles = StyleSheet.create({
-  container: {
+  inner: {
     flex: 1
   }
 })

@@ -1,31 +1,44 @@
-import { SafeAreaView, StyleSheet } from 'react-native'
-import { Route, Routes } from 'react-router-native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 /* Components */
-import AppBar from './common/AppBar'
+import Container from './common/Container'
 import LogIn from '../pages/LogIn'
 import UsersList from '../pages/UsersList'
 import UserDetail from '../pages/UserDetail'
 import UserCreate from '../pages/UserCreate'
+import TabsNavigator from './TabsNavigator'
+
+const Stack = createNativeStackNavigator()
 
 export default function Main () {
   return (
-    <SafeAreaView style={styles.container}>
-      <Routes>
-        <Route path='/' element={<LogIn />} />
-        <Route path='/user' element={<AppBar />}>
-          <Route path='list' element={<UsersList />} />
-          <Route path=':userId' element={<UserDetail />} />
-          <Route path='new' element={<UserCreate />} />
-          <Route path=':userId/edit' element={<UserCreate />} />
-        </Route>
-      </Routes>
-    </SafeAreaView>
+    <Container active>
+      <Stack.Navigator initialRouteName='signin'>
+        <Stack.Screen
+          name='signin'
+          component={LogIn}
+          options={{
+            title: 'Sign In',
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name='main'
+          component={TabsNavigator}
+          options={{ title: 'Users List' }}
+        />
+        {/* <Stack.Screen
+          name='newuser'
+          component={UserCreate}
+          options={{ title: 'New User' }}
+        /> */}
+        <Stack.Screen
+          name='detail'
+          component={UserDetail}
+          /* options={{ title: 'Detail' }} */
+          options={({ route }) => ({ title: route.params.screen })}
+        />
+      </Stack.Navigator>
+    </Container>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  }
-})

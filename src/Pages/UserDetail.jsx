@@ -1,6 +1,6 @@
-import { useQuery } from '@apollo/client'
 import { StyleSheet, View } from 'react-native'
-import { Link, useParams } from 'react-router-native'
+import { useQuery } from '@apollo/client'
+import { useRoute } from '@react-navigation/native'
 
 import { GET_USERS } from '../graphql/queries'
 import { theme } from '../theme'
@@ -10,8 +10,8 @@ import StyledText from '../components/common/StyledText'
 import UserItem from '../components/User'
 
 export default function UserDetail () {
-  const { userId } = useParams()
-  const converNumberId = Number(userId)
+  const { params: { screen } } = useRoute()
+  const converNumberId = Number(screen)
 
   const { data = {} } = useQuery(GET_USERS, {
     variables: {
@@ -23,11 +23,13 @@ export default function UserDetail () {
 
   return (
     <View style={styles.container}>
-      <StyledText align='center' fontSize='subheading'>User Detail</StyledText>
+      <StyledText align='center' fontSize='subheading'>
+        User Detail
+      </StyledText>
       <UserItem {...user} />
-      <Link style={styles.button} to='edit'>
+      {/* <Link style={styles.button} to='edit'>
         <StyledText style={styles.text} align='center'>Edit</StyledText>
-      </Link>
+      </Link> */}
     </View>
   )
 }
@@ -35,7 +37,9 @@ export default function UserDetail () {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
-    paddingTop: 20
+    paddingTop: 20,
+    backgroundColor: theme.colors.whitePure,
+    flex: 1
   },
   button: {
     backgroundColor: theme.colors.third,
