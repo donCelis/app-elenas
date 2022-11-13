@@ -7,7 +7,7 @@ import { theme } from '../theme'
 
 /* Components */
 import StyledText from '../components/common/StyledText'
-import UserItem from '../components/User'
+import Profile from '../components/Profile'
 
 export default function UserDetail () {
   const { params: { screen } } = useRoute()
@@ -26,7 +26,7 @@ export default function UserDetail () {
       <StyledText align='center' fontSize='subheading'>
         User Detail
       </StyledText>
-      <UserItem {...user} />
+      <Profile {...user} />
       {/* <Link style={styles.button} to='edit'>
         <StyledText style={styles.text} align='center'>Edit</StyledText>
       </Link> */}
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     flex: 1
   },
   button: {
-    backgroundColor: theme.colors.third,
+    backgroundColor: theme.colors.primary,
     borderRadius: 5,
     marginTop: 20,
     paddingVertical: 12

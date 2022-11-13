@@ -6,9 +6,8 @@ import { useQuery } from '@apollo/client'
 import { GET_USERS } from '../graphql/queries'
 
 /* components */
-import UserItem from '../components/User'
 import StyledText from '../components/common/StyledText'
-import { theme } from '../theme'
+import UserCard from '../components/common/UserCard'
 
 export default function UsersList () {
   const refList = useRef()
@@ -30,7 +29,7 @@ export default function UsersList () {
         style={styles.space}
         showsVerticalScrollIndicator={false}
         data={users}
-        renderItem={({ item: user }) => <UserItem {...user} />}
+        renderItem={({ item: user }) => <UserCard {...user} />}
       />
     </View>
   )
@@ -38,10 +37,9 @@ export default function UsersList () {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: theme.colors.whitePure,
     flex: 1
   },
   space: {
-    paddingHorizontal: 10
+    paddingHorizontal: 15
   }
 })

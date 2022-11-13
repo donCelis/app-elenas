@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     fontSize: theme.fontSizes.body,
     bottom: 5,
     right: 5,
-    backgroundColor: 'black',
+    backgroundColor: theme.colors.bg,
     padding: 2,
     borderRadius: 5,
     overflow: 'hidden'

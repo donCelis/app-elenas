@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   input: {
     backgroundColor: theme.colors.gray,
     borderWidth: 2,
-    borderColor: theme.colors.third,
+    borderColor: theme.colors.primary,
     padding: 12,
     borderRadius: 5,
     marginVertical: 20

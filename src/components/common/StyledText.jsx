@@ -14,6 +14,7 @@ export default function StyledText ({
     styles.text,
     color === 'primary' && styles.colorPrimary,
     color === 'secondary' && styles.colorSecondary,
+    color === 'white' && styles.colorText,
     fontSize === 'subheading' && styles.subheading,
     fontWeight === 'bold' && styles.bold,
     align === 'center' && styles.align
@@ -43,6 +44,9 @@ const styles = StyleSheet.create({
   },
   colorSecondary: {
     color: theme.colors.textSecondary
+  },
+  colorText: {
+    color: theme.colors.whitePure
   },
   align: {
     textAlign: 'center'

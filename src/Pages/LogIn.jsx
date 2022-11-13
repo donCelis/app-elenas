@@ -1,4 +1,4 @@
-import { View, StyleSheet, Button, Image } from 'react-native'
+import { View, StyleSheet, Image } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { FormProvider, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -8,8 +8,11 @@ import { theme } from '../theme'
 import { loginSchema } from '../schemas'
 /* components */
 import InputField from '../components/common/InputField'
+import Button from '../components/common/Button'
 /* hooks */
 import { useLogin } from '../hooks/useLogin'
+import { PATH_PAGE } from '../paths'
+import Container from '../components/common/Container'
 
 export default function LogIn () {
   const { navigate } = useNavigation()
@@ -33,7 +36,7 @@ export default function LogIn () {
     try {
       const { cellphone, password } = data
       await logIn({ cellphone, password })
-      navigate('main')
+      navigate(PATH_PAGE.home)
       reset()
     } catch (e) {
       console.log(e)
@@ -41,32 +44,31 @@ export default function LogIn () {
   }
 
   return (
-    <View style={styles.container}>
-      <View style={styles.wrapperLogo}>
-        <View style={styles.logo}>
-          <Image source={require('../../assets/elenas.png')} />
-        </View>
-      </View>
-      <FormProvider {...methods}>
-        <View style={styles.form}>
-          <InputField label='Cellphone' name='cellphone' />
-          <InputField label='Password' name='password' secureTextEntry />
-          <View style={styles.button}>
-            <Button
-              disabled={isSubmitting}
-              color={theme.colors.white}
-              title={isSubmitting ? 'loading' : 'Sign in'}
-              onPress={handleSubmit(onSubmit)}
-            />
+    <Container activeBar theme='dark'>
+      <View style={styles.login}>
+        <View style={styles.wrapperLogo}>
+          <View style={styles.logo}>
+            <Image source={require('../../assets/elenas.png')} />
           </View>
         </View>
-      </FormProvider>
-    </View>
+        <FormProvider {...methods}>
+          <View style={styles.form}>
+            <InputField label='Cellphone' name='cellphone' />
+            <InputField label='Password' name='password' secureTextEntry />
+            <Button
+              disabled={isSubmitting}
+              onPress={handleSubmit(onSubmit)}
+              title={isSubmitting ? 'loading' : 'Sign in'}
+            />
+          </View>
+        </FormProvider>
+      </View>
+    </Container>
   )
 }
 
 const styles = StyleSheet.create({
-  container: {
+  login: {
     backgroundColor: theme.colors.bg,
     flex: 1
   },
@@ -85,10 +87,10 @@ const styles = StyleSheet.create({
     padding: 20
   },
   button: {
-    backgroundColor: theme.colors.third,
+    backgroundColor: theme.colors.primary,
     borderRadius: 5,
     marginTop: 20,
-    padding: 5
+    paddingVertical: 15
   },
   error: {
     color: theme.colors.wrong,
