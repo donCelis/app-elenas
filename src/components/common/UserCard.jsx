@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colors.whitePure,
     borderRadius: 5,
     padding: 15,
-    marginBottom: 20
+    marginVertical: 10
   },
   info: {
     marginLeft: 15
