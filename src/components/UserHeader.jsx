@@ -1,6 +1,6 @@
 import { Image, StyleSheet, View } from 'react-native'
 import { theme } from '../theme'
-import StyledText from './common/StyledText'
+import TextMd from './common/TextMd'
 
 export default function UserHeader ({
   image = 'https://robohash.org/aliquamcumqueiure.png',
@@ -21,15 +21,15 @@ export default function UserHeader ({
             uri: image
           }}
         />
-        <StyledText style={styles.blood}>{bloodGroup}</StyledText>
+        <TextMd style={styles.blood}>{bloodGroup}</TextMd>
       </View>
       <View style={styles.info}>
-        <StyledText fontSize='subheading' fontWeight='bold' color='primary'>
+        <TextMd fontSize='subheading' fontWeight='bold' color='primary'>
           {firstName} {lastName}
-        </StyledText>
-        <StyledText style={styles.info.nick}>{cedula || 'Empty'}</StyledText>
-        <StyledText>Email: {email || 'Empty'}</StyledText>
-        <StyledText>Phone: {cellphone}</StyledText>
+        </TextMd>
+        <TextMd style={styles.info.nick}>{cedula || 'Empty'}</TextMd>
+        <TextMd>Email: {email || 'Empty'}</TextMd>
+        <TextMd>Phone: {cellphone}</TextMd>
       </View>
     </View>
   )

@@ -1,37 +1,37 @@
 import { StyleSheet, View } from 'react-native'
 import { theme } from '../theme'
-import StyledText from './common/StyledText'
+import TextMd from './common/TextMd'
 
 export default function UserBody ({ city, state, isSeller }) {
   return (
     <>
-      <StyledText fontWeight='bold' color='primary' style={styles.title}>
+      <TextMd fontWeight='bold' color='primary' style={styles.title}>
         Detail Person
-      </StyledText>
+      </TextMd>
       <View style={styles['content-box']}>
         <View>
-          <StyledText style={styles.space} align='center' fontWeight='bold'>
+          <TextMd style={styles.space} align='center' fontWeight='bold'>
             City
-          </StyledText>
-          <StyledText align='center'>{city}</StyledText>
+          </TextMd>
+          <TextMd align='center'>{city}</TextMd>
         </View>
         <View>
-          <StyledText style={styles.space} align='center' fontWeight='bold'>
+          <TextMd style={styles.space} align='center' fontWeight='bold'>
             State
-          </StyledText>
-          <StyledText align='center'>{state?.displayName}</StyledText>
+          </TextMd>
+          <TextMd align='center'>{state?.displayName}</TextMd>
         </View>
         <View>
-          <StyledText style={styles.space} align='center' fontWeight='bold'>
+          <TextMd style={styles.space} align='center' fontWeight='bold'>
             ShortCode
-          </StyledText>
-          <StyledText align='center'>{state?.shortCode}</StyledText>
+          </TextMd>
+          <TextMd align='center'>{state?.shortCode}</TextMd>
         </View>
         <View>
-          <StyledText style={styles.space} align='center' fontWeight='bold'>
+          <TextMd style={styles.space} align='center' fontWeight='bold'>
             Seller
-          </StyledText>
-          <StyledText align='center'>{isSeller ? '🟢' : '🔴'}</StyledText>
+          </TextMd>
+          <TextMd align='center'>{isSeller ? '🟢' : '🔴'}</TextMd>
         </View>
       </View>
     </>

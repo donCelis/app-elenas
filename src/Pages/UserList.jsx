@@ -1,18 +1,13 @@
-import { useRef } from 'react'
 import { FlatList, StyleSheet, View } from 'react-native'
-import { useScrollToTop } from '@react-navigation/native'
 import { useQuery } from '@apollo/client'
 
 import { GET_USERS } from '../graphql/queries'
 
 /* components */
-import StyledText from '../components/common/StyledText'
+import TextMd from '../components/common/TextMd'
 import UserCard from '../components/common/UserCard'
 
-export default function UsersList () {
-  const refList = useRef()
-  useScrollToTop(refList)
-
+export default function UserList () {
   const { data, error } = useQuery(GET_USERS)
 
   const users = data?.clientsSearch?.results || []
@@ -20,12 +15,11 @@ export default function UsersList () {
   return (
     <View style={styles.container}>
       {error && (
-        <StyledText align='center' fontSize='subheading'>
+        <TextMd align='center' fontSize='subheading'>
           {String(error)}
-        </StyledText>
+        </TextMd>
       )}
       <FlatList
-        ref={refList}
         style={styles.space}
         showsVerticalScrollIndicator={false}
         data={users}

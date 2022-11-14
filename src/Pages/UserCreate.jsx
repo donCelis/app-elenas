@@ -1,5 +1,5 @@
 import { View } from 'react-native'
-import StyledText from '../components/common/StyledText'
+import TextMd from '../components/common/TextMd'
 
 export default function UserCreate () {
   // const { userId = '' } = useParams()
@@ -10,7 +10,7 @@ export default function UserCreate () {
 
   return (
     <View>
-      {/* <StyledText>{isEdit ? 'Edit' : 'Create'}</StyledText> */}
+      {/* <TextMd>{isEdit ? 'Edit' : 'Create'}</TextMd> */}
     </View>
   )
 }

@@ -14,6 +14,7 @@ export const theme = {
       android: '#0366d6',
       default: '#f3f3f3'
     }),
+    secondary: '#999',
     third: '#0366d6',
     white: '#fafafa',
     whitePure: 'white',
@@ -40,12 +41,9 @@ export const theme = {
 
 export const screenOptions = {
   tabBarActiveTintColor: theme?.colors.primary,
-  tabBarInactiveTintColor: theme?.appBar.secondaryText,
+  tabBarInactiveTintColor: theme?.colors.secondaryText,
   headerStyle: {
     backgroundColor: theme?.colors.primary
   },
-  headerTintColor: theme?.colors.white,
-  headerTitleStyle: {
-    fontWeight: 'bold'
-  }
+  headerTintColor: theme?.colors.white
 }

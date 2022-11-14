@@ -1,7 +1,7 @@
 import { StyleSheet, Text } from 'react-native'
 import { theme } from '../../theme'
 
-export default function StyledText ({
+export default function TextMd ({
   children,
   color,
   fontSize,

@@ -1,10 +1,12 @@
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { StatusBar } from 'expo-status-bar'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+
 import { screenOptions } from '../theme'
 
 /* Components */
 import UserCreate from './UserCreate'
-import UsersList from './UsersList'
+import UserList from './UserList'
+import TabBarIcon from '../components/common/TabBarIcon'
 
 const Tab = createBottomTabNavigator()
 
@@ -12,19 +14,22 @@ export default function Home () {
   return (
     <>
       <StatusBar style='light' />
-      <Tab.Navigator
-        initialRouteName='userslist'
-        screenOptions={screenOptions}
-      >
+      <Tab.Navigator initialRouteName='userlist' screenOptions={screenOptions}>
         <Tab.Screen
-          name='userslist'
-          options={{ title: 'Users List' }}
-          component={UsersList}
+          name='userlist'
+          options={{
+            title: 'User List',
+            tabBarIcon: (props) => <TabBarIcon icon='list' {...props} />
+          }}
+          component={UserList}
         />
         <Tab.Screen
           name='newuser'
           component={UserCreate}
-          options={{ title: 'New User' }}
+          options={{
+            title: 'New User',
+            tabBarIcon: (props) => <TabBarIcon icon='person-add' {...props} />
+          }}
         />
       </Tab.Navigator>
     </>

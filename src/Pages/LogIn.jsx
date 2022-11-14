@@ -60,7 +60,7 @@ export default function LogIn () {
             <Button
               disabled={isSubmitting}
               onPress={handleSubmit(onSubmit)}
-              title={isSubmitting ? 'loading' : 'Sign in'}
+              title={isSubmitting ? 'Loading' : 'Sign in'}
             />
           </View>
         </FormProvider>
