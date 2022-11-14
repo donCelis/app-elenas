@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { StatusBar } from 'expo-status-bar'
-import { theme } from '../theme'
+import { screenOptions } from '../theme'
 
 /* Components */
 import UserCreate from './UserCreate'
@@ -11,11 +11,10 @@ const Tab = createBottomTabNavigator()
 export default function Home () {
   return (
     <>
+      <StatusBar style='light' />
       <Tab.Navigator
-        initialRouteName='userslist' screenOptions={{
-          tabBarActiveTintColor: theme?.colors?.primary,
-          tabBarInactiveTintColor: theme?.appBar?.secondaryText
-        }}
+        initialRouteName='userslist'
+        screenOptions={screenOptions}
       >
         <Tab.Screen
           name='userslist'

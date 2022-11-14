@@ -6,7 +6,6 @@ import { GET_PROFILE } from '../graphql/queries'
 import { theme } from '../theme'
 
 /* Components */
-import StyledText from '../components/common/StyledText'
 import Profile from '../components/Profile'
 
 export default function UserDetail () {
@@ -23,9 +22,6 @@ export default function UserDetail () {
 
   return (
     <View style={styles.container}>
-      <StyledText align='center' fontSize='subheading'>
-        User Detail
-      </StyledText>
       <Profile {...user} />
       {/* <Link style={styles.button} to='edit'>
         <StyledText style={styles.text} align='center'>Edit</StyledText>

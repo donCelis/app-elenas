@@ -5,6 +5,7 @@ import { PATH_PAGE } from '../paths'
 import LogIn from '../pages/LogIn'
 import Home from '../pages/Home'
 import UserDetail from '../pages/UserDetail'
+import { screenOptions } from '../theme'
 
 const Stack = createNativeStackNavigator()
 
@@ -29,7 +30,8 @@ export default function Main () {
         component={UserDetail}
         options={({ route }) => ({
           title: route.params.screen,
-          headerShown: true
+          headerShown: true,
+          ...screenOptions
         })}
       />
     </Stack.Navigator>

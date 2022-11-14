@@ -2,6 +2,7 @@ import { AppRegistry } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { ApolloProvider } from '@apollo/client'
+import { StatusBar } from 'expo-status-bar'
 
 import { createApolloClient } from './src/utils/apolloClient'
 /* components */
@@ -14,6 +15,7 @@ export default function App () {
     <ApolloProvider client={client}>
       <SafeAreaProvider>
         <NavigationContainer>
+          <StatusBar style='dark' />
           <Main />
         </NavigationContainer>
       </SafeAreaProvider>

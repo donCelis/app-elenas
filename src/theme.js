@@ -37,3 +37,15 @@ export const theme = {
     bold: '700'
   }
 }
+
+export const screenOptions = {
+  tabBarActiveTintColor: theme?.colors.primary,
+  tabBarInactiveTintColor: theme?.appBar.secondaryText,
+  headerStyle: {
+    backgroundColor: theme?.colors.primary
+  },
+  headerTintColor: theme?.colors.white,
+  headerTitleStyle: {
+    fontWeight: 'bold'
+  }
+}

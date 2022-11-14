@@ -7,12 +7,12 @@ import { theme } from '../theme'
 /* validation */
 import { loginSchema } from '../schemas'
 /* components */
+import Container from '../components/common/Container'
 import InputField from '../components/common/InputField'
 import Button from '../components/common/Button'
 /* hooks */
 import { useLogin } from '../hooks/useLogin'
 import { PATH_PAGE } from '../paths'
-import Container from '../components/common/Container'
 
 export default function LogIn () {
   const { dispatch } = useNavigation()
@@ -46,7 +46,7 @@ export default function LogIn () {
   }
 
   return (
-    <Container activeBar theme='dark'>
+    <Container>
       <View style={styles.login}>
         <View style={styles.wrapperLogo}>
           <View style={styles.logo}>

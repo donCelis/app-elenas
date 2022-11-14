@@ -8,7 +8,6 @@ import { GET_USERS } from '../graphql/queries'
 /* components */
 import StyledText from '../components/common/StyledText'
 import UserCard from '../components/common/UserCard'
-import Container from '../components/common/Container'
 
 export default function UsersList () {
   const refList = useRef()
@@ -19,29 +18,26 @@ export default function UsersList () {
   const users = data?.clientsSearch?.results || []
 
   return (
-    <Container activeBar>
-      <View style={styles.container}>
-        {error && (
-          <StyledText align='center' fontSize='subheading'>
-            {String(error)}
-          </StyledText>
-        )}
-        <FlatList
-          ref={refList}
-          style={styles.space}
-          showsVerticalScrollIndicator={false}
-          data={users}
-          renderItem={({ item: user }) => <UserCard {...user} />}
-        />
-      </View>
-    </Container>
+    <View style={styles.container}>
+      {error && (
+        <StyledText align='center' fontSize='subheading'>
+          {String(error)}
+        </StyledText>
+      )}
+      <FlatList
+        ref={refList}
+        style={styles.space}
+        showsVerticalScrollIndicator={false}
+        data={users}
+        renderItem={({ item: user }) => <UserCard {...user} />}
+      />
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: 'red'
+    flex: 1
   },
   space: {
     paddingHorizontal: 15
