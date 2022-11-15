@@ -15,16 +15,18 @@ export default function Profile (user) {
   const handleEdit = () => {
     linkTo(`/${PATH_PAGE.update}/${user?.id}`)
   }
+  console.log(user.firstName)
 
   return (
     <View style={styles.container}>
       <View
         style={styles.avatar}
       >
-        <Avatar str={user.firstName} size={120} />
+        <Avatar str={user?.firstName} size={120} />
         <TextMd
           style={{
-            marginVertical: 20
+            marginVertical: 20,
+            textTransform: 'capitalize'
           }}
           fontWeight='bold'
           align='center'
@@ -75,9 +77,9 @@ export default function Profile (user) {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  /* container: {
     flex: 1
-  },
+  }, */
   avatar: {
     alignItems: 'center'
   },

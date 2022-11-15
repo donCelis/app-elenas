@@ -6,27 +6,26 @@ export const useAddUser = () => {
   const apolloClient = useApolloClient()
 
   const addUser = async ({
-    updateClientId,
     firstName,
     lastName,
-    cellphone,
     cedula,
-    streetAddress
+    streetAddress,
+    cellphone,
+    cityId,
+    stateId
   }) => {
     const { data } = await addUserMutation({
       variables: {
         createClientInput: {
-          firstName: 'Jefe',
-          lastName: 'Maestro',
-          cedula: '117',
+          firstName,
+          lastName,
+          cedula,
           address: {
-            streetAddress: 'cll 123',
-            city: 'Medellín',
-            cityId: 3,
-            stateId: 1
+            streetAddress,
+            cityId,
+            stateId
           },
-          cellphone: '+573001122334',
-          email: 'jefemaestro@correo.com'
+          cellphone
         }
       }
     })

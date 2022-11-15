@@ -14,10 +14,7 @@ import { useAddUser } from '../hooks/useAddUser'
 import InputField from './common/InputField'
 import Button from './common/Button'
 
-export default function AddEditForm ({
-  currentUser,
-  isEdit = false
-}) {
+export default function AddEditForm ({ currentUser, isEdit = false }) {
   const { goBack } = useNavigation()
   const { updateUser } = useUpdate()
   const { addUser } = useAddUser()
@@ -55,11 +52,12 @@ export default function AddEditForm ({
   const onSubmit = async ({
     firstName,
     lastName,
-    cellphone,
     cedula,
-    address
+    address,
+    cellphone
   }) => {
     try {
+      /* method update user */
       isEdit &&
         (await updateUser({
           updateClientId: currentUser?.id,
@@ -69,10 +67,17 @@ export default function AddEditForm ({
           cedula,
           streetAddress: address
         }))
-
-      !isEdit && (
-        await addUser({})
-      )
+      /* method add user */
+      !isEdit &&
+        (await addUser({
+          firstName,
+          lastName,
+          cedula,
+          cellphone,
+          cityId: 2,
+          stateId: 1,
+          streetAddress: address
+        }))
       goBack()
     } catch (e) {
       console.log(e)
@@ -88,7 +93,8 @@ export default function AddEditForm ({
           contentContainerStyle={{
             paddingVertical: 10,
             paddingHorizontal: 15
-          }} showsVerticalScrollIndicator={false}
+          }}
+          showsVerticalScrollIndicator={false}
         >
           <View style={styles.inner}>
             <InputField topError label='First Name' name='firstName' />

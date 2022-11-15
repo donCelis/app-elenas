@@ -4,6 +4,7 @@ import { createAvatar } from '../../utils/createAvatar'
 
 export default function Avatar ({ str, size }) {
   const { name } = createAvatar(str)
+
   const stylesAvatar = [
     styles.circle,
     size && {
@@ -30,6 +31,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     color: theme.colors.whitePure,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    textTransform: 'uppercase'
   }
 })

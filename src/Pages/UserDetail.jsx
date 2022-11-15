@@ -33,6 +33,7 @@ export default function UserDetail () {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 15
+    padding: 15,
+    flex: 1
   }
 })

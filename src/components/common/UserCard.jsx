@@ -42,7 +42,8 @@ const styles = StyleSheet.create({
   },
   title: {
     fontWeight: 'bold',
-    fontSize: theme.fontSizes.subheading
+    fontSize: theme.fontSizes.subheading,
+    textTransform: 'capitalize'
   },
   small: {
     color: theme.colors.textSecondary,
