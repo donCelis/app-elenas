@@ -27,8 +27,9 @@ export default function UserHeader ({
         <TextMd fontSize='subheading' fontWeight='bold' color='primary'>
           {firstName} {lastName}
         </TextMd>
-        <TextMd style={styles.info.nick}>{cedula || 'Empty'}</TextMd>
-        <TextMd>Email: {email || 'Empty'}</TextMd>
+        {/* <TextMd style={styles.info.nick}>{cedula || 'Empty'}</TextMd> */}
+        <TextMd style={styles.info.nick}>{id || 'Empty'}</TextMd>
+        <TextMd>Email: {email || 'Not Email'}</TextMd>
         <TextMd>Phone: {cellphone}</TextMd>
       </View>
     </View>

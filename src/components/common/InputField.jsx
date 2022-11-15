@@ -3,11 +3,15 @@ import { Controller, useFormContext } from 'react-hook-form'
 import { StyleSheet, Text, TextInput, View } from 'react-native'
 import { theme } from '../../theme'
 
-export default function InputField ({ name, ...props }) {
+export default function InputField ({
+  name,
+  topError = false,
+  bottonError = false,
+  ...props
+}) {
   const [isFocus, setIsFocus] = useState(false)
   const { control } = useFormContext()
-  const { label, style } = props
-  const InputStyle = [styles.input, style]
+  const { label, mod } = props
 
   const handleFocus = () => {
     setIsFocus(true)
@@ -17,19 +21,18 @@ export default function InputField ({ name, ...props }) {
   }
 
   return (
-    <View>
+    <View style={mod}>
       <Text style={styles.label}>{label}</Text>
       <Controller
         control={control}
         render={({
           field: { onBlur, onChange, value },
-          fieldState: { error },
-          formState: { isValid }
+          fieldState: { error }
         }) => (
-          <View style={styles['input-control']}>
+          <View style={[styles['input-control']]}>
             <TextInput
               style={[
-                InputStyle,
+                styles.input,
                 error && styles.inputError,
                 isFocus && !error && styles.inputFocus,
                 value !== '' && styles.inputFocus
@@ -41,10 +44,14 @@ export default function InputField ({ name, ...props }) {
               onChangeText={(value) => onChange(value)}
               defaultValue={value}
               onFocus={handleFocus}
-              placeholder={name}
               {...props}
             />
-            {error && <Text style={styles.smsError}>{error.message}</Text>}
+            {topError && error && (
+              <Text style={styles.smsErrorTop}>{error.message}</Text>
+            )}
+            {bottonError && error && (
+              <Text style={styles.smsErrorBotton}>{error.message}</Text>
+            )}
           </View>
         )}
         name={name}
@@ -59,7 +66,6 @@ export default function InputField ({ name, ...props }) {
 const styles = StyleSheet.create({
   label: {
     color: theme.colors.primary,
-    marginLeft: 0,
     fontSize: theme.fontSizes.subheading
   },
   'input-control': {
@@ -71,7 +77,7 @@ const styles = StyleSheet.create({
     borderColor: theme.colors.secondary,
     padding: 12,
     borderRadius: 5,
-    marginVertical: 20
+    marginTop: 15
   },
   inputError: {
     borderColor: theme.colors.wrong
@@ -79,14 +85,18 @@ const styles = StyleSheet.create({
   inputFocus: {
     borderColor: theme.colors.primary
   },
-  inputTest: {
-    borderColor: theme.colors.primarys || 'green'
-  },
-  smsError: {
+  smsErrorBotton: {
     color: theme.colors.wrong,
     textAlign: 'right',
     position: 'absolute',
-    bottom: 0,
+    bottom: -20,
+    right: 0
+  },
+  smsErrorTop: {
+    color: theme.colors.wrong,
+    textAlign: 'right',
+    position: 'absolute',
+    top: -20,
     right: 0
   }
 })

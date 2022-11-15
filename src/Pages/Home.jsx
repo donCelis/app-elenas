@@ -27,7 +27,7 @@ export default function Home () {
           name='newuser'
           component={UserCreate}
           options={{
-            title: 'New User',
+            title: 'Add User',
             tabBarIcon: (props) => <TabBarIcon icon='person-add' {...props} />
           }}
         />

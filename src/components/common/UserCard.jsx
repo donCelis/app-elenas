@@ -17,7 +17,7 @@ export default function UserCard ({ id, firstName, lastName, city }) {
           <Text style={styles.title}>
             {firstName} {lastName}
           </Text>
-          <Text style={styles.small}>Meta</Text>
+          <Text style={styles.small}>{city}</Text>
         </View>
       </View>
     </Pressable>

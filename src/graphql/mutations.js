@@ -25,3 +25,31 @@ export const LOGIN_MUTATION = gql`
     }
   }
 `
+export const UPDATE_CLIENT = gql`
+  mutation ($input: ClientInput!, $updateClientId: Int!) {
+    updateClient(input: $input, id: $updateClientId) {
+      ... on Client {
+        id
+        registerDate
+        firstName
+        lastName
+        cedula
+        address
+        innerNumber
+        outsideNumber
+        addressIndications
+        is_range
+        city
+        cellphone
+        credit
+        isSeller
+        neighborhood
+        state {
+          displayName
+          id
+          shortCode
+        }
+      }
+    }
+  }
+`

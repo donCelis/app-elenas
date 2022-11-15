@@ -56,10 +56,13 @@ export default function LogIn () {
             <InputField
               placeholder='12345678'
               label='Cellphone' name='cellphone'
+              bottonError
             />
             <InputField
+              mod={styles.space}
               placeholder='hola mundo!'
               label='Password' name='password' secureTextEntry
+              bottonError
             />
             <Button
               disabled={isSubmitting}
@@ -86,11 +89,9 @@ const styles = StyleSheet.create({
   form: {
     padding: 20
   },
-  button: {
-    backgroundColor: theme.colors.primary,
-    borderRadius: 5,
-    marginTop: 20,
-    paddingVertical: 15
+  space: {
+    marginTop: 15,
+    marginBottom: 35
   },
   error: {
     color: theme.colors.wrong,
