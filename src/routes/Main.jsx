@@ -4,8 +4,8 @@ import { screenOptions } from '../theme'
 
 /* Components */
 import LogIn from '../pages/LogIn'
-import Home from '../pages/Home'
 import UserDetail from '../pages/UserDetail'
+import Home from './Home'
 
 const Stack = createNativeStackNavigator()
 

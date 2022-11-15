@@ -5,8 +5,8 @@ import { ApolloProvider } from '@apollo/client'
 import { StatusBar } from 'expo-status-bar'
 
 import { createApolloClient } from './src/utils/apolloClient'
+import Main from './src/routes/Main'
 /* components */
-import Main from './src/components/Main'
 
 const client = createApolloClient()
 
