@@ -48,15 +48,19 @@ export default function LogIn () {
   return (
     <Container>
       <View style={styles.login}>
-        <View style={styles.wrapperLogo}>
-          <View style={styles.logo}>
-            <Image source={require('../../assets/elenas.png')} />
-          </View>
+        <View style={styles.logo}>
+          <Image source={require('../../assets/elenas.png')} />
         </View>
         <FormProvider {...methods}>
           <View style={styles.form}>
-            <InputField label='Cellphone' name='cellphone' />
-            <InputField label='Password' name='password' secureTextEntry />
+            <InputField
+              placeholder='12345678'
+              label='Cellphone' name='cellphone'
+            />
+            <InputField
+              placeholder='hola mundo!'
+              label='Password' name='password' secureTextEntry
+            />
             <Button
               disabled={isSubmitting}
               onPress={handleSubmit(onSubmit)}
@@ -71,19 +75,13 @@ export default function LogIn () {
 
 const styles = StyleSheet.create({
   login: {
-    backgroundColor: theme.colors.bg,
-    flex: 1
-  },
-  wrapperLogo: {
-    backgroundColor: theme.colors.white,
-    paddingVertical: 50,
-    borderBottomLeftRadius: 50,
-    borderBottomRightRadius: 50,
-    zIndex: 10
+    flex: 1,
+    justifyContent: 'center'
   },
   logo: {
     padding: 12,
-    alignSelf: 'center'
+    alignSelf: 'center',
+    marginBottom: 10
   },
   form: {
     padding: 20
