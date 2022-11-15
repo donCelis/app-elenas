@@ -4,7 +4,7 @@ import TextMd from './common/TextMd'
 
 export default function UserBody ({ city, state, isSeller }) {
   return (
-    <>
+    <View style={styles.container}>
       <TextMd fontWeight='bold' color='primary' style={styles.title}>
         Detail Person
       </TextMd>
@@ -34,11 +34,14 @@ export default function UserBody ({ city, state, isSeller }) {
           <TextMd align='center'>{isSeller ? '🟢' : '🔴'}</TextMd>
         </View>
       </View>
-    </>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
+  container: {
+    marginBottom: 20
+  },
   title: {
     textAlign: 'center',
     marginVertical: 10

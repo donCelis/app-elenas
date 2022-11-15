@@ -1,22 +1,23 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { PATH_PAGE } from '../paths'
 import { screenOptions } from '../theme'
 
+import { PATH_AUTH, PATH_PAGE } from './paths'
 /* Components */
 import LogIn from '../pages/LogIn'
-import UserDetail from '../pages/UserDetail'
 import Home from './Home'
+import UserDetail from '../pages/UserDetail'
+import UpdateUser from '../pages/UpdateUser'
 
 const Stack = createNativeStackNavigator()
 
 export default function Main () {
   return (
     <Stack.Navigator
-      initialRouteName='signin'
+      initialRouteName={PATH_AUTH.signin}
       screenOptions={{ headerShown: false, ...screenOptions }}
     >
       <Stack.Screen
-        name='signin'
+        name={PATH_AUTH.signin}
         component={LogIn}
         options={{ title: 'Sign In' }}
       />
@@ -25,14 +26,21 @@ export default function Main () {
         component={Home}
         options={{ title: 'Home' }}
       />
-      <Stack.Screen
-        name='detail'
-        component={UserDetail}
-        options={({ route }) => ({
+      <Stack.Group
+        screenOptions={({ route }) => ({
           title: route.params.screen,
           headerShown: true
         })}
-      />
+      >
+        <Stack.Screen name={PATH_PAGE.detail} component={UserDetail} />
+        <Stack.Screen
+          name={PATH_PAGE.update}
+          component={UpdateUser}
+          options={{
+            presentation: 'modal'
+          }}
+        />
+      </Stack.Group>
     </Stack.Navigator>
   )
 }

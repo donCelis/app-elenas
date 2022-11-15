@@ -2,10 +2,11 @@ import { StatusBar } from 'expo-status-bar'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import { screenOptions } from '../theme'
+import { PATH_PAGE } from './paths'
 
 /* Components */
-import UserCreate from './UserCreate'
-import UserList from './UserList'
+import AddEditForm from '../components/AddEditForm'
+import UserList from '../pages/UserList'
 import TabBarIcon from '../components/common/TabBarIcon'
 
 const Tab = createBottomTabNavigator()
@@ -16,7 +17,7 @@ export default function Home () {
       <StatusBar style='light' />
       <Tab.Navigator initialRouteName='userlist' screenOptions={screenOptions}>
         <Tab.Screen
-          name='userlist'
+          name={PATH_PAGE.userlist}
           options={{
             title: 'User List',
             tabBarIcon: (props) => <TabBarIcon icon='list' {...props} />
@@ -24,8 +25,8 @@ export default function Home () {
           component={UserList}
         />
         <Tab.Screen
-          name='newuser'
-          component={UserCreate}
+          name={PATH_PAGE.adduser}
+          component={AddEditForm}
           options={{
             title: 'Add User',
             tabBarIcon: (props) => <TabBarIcon icon='person-add' {...props} />

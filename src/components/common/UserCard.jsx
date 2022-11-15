@@ -1,13 +1,17 @@
 import { useLinkTo } from '@react-navigation/native'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
+
+import { PATH_PAGE } from '../../routes/paths'
 import { theme } from '../../theme'
+
+/* components */
 import Avatar from './Avatar'
 
 export default function UserCard ({ id, firstName, lastName, city }) {
   const linkTo = useLinkTo()
 
   const handleRouting = () => {
-    linkTo(`/detail/${id}`)
+    linkTo(`/${PATH_PAGE.detail}/${id}`)
   }
   return (
     <Pressable onPress={handleRouting}>

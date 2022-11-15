@@ -26,8 +26,8 @@ export const LOGIN_MUTATION = gql`
   }
 `
 export const UPDATE_CLIENT = gql`
-  mutation ($input: ClientInput!, $updateClientId: Int!) {
-    updateClient(input: $input, id: $updateClientId) {
+  mutation ($updateClientId: Int!, $updateClientInput: ClientInput!) {
+    updateClient(id: $updateClientId, input: $updateClientInput) {
       ... on Client {
         id
         registerDate

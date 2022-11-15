@@ -12,7 +12,7 @@ import InputField from '../components/common/InputField'
 import Button from '../components/common/Button'
 /* hooks */
 import { useLogin } from '../hooks/useLogin'
-import { PATH_PAGE } from '../paths'
+import { PATH_PAGE } from '../routes/paths'
 
 export default function LogIn () {
   const { dispatch } = useNavigation()
