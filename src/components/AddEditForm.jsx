@@ -12,7 +12,10 @@ import InputField from './common/InputField'
 import Button from './common/Button'
 import { useNavigation } from '@react-navigation/native'
 
-export default function AddEditForm ({ currentUser, isEdit = false, navigation }) {
+export default function AddEditForm ({
+  currentUser,
+  isEdit = false
+}) {
   const { goBack } = useNavigation()
   const { updateUser } = useUpdate()
   const defaultValues = useMemo(
@@ -46,9 +49,14 @@ export default function AddEditForm ({ currentUser, isEdit = false, navigation }
     }
   }, [isEdit, currentUser])
 
-  const onSubmit = async (data) => {
+  const onSubmit = async ({
+    firstName,
+    lastName,
+    cellphone,
+    cedula,
+    address
+  }) => {
     try {
-      const { firstName, lastName, cellphone, cedula, address } = data
       isEdit &&
         (await updateUser({
           updateClientId: currentUser?.id,
