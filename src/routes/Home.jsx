@@ -5,9 +5,9 @@ import { screenOptions } from '../theme'
 import { PATH_PAGE } from './paths'
 
 /* Components */
-import AddEditForm from '../components/AddEditForm'
-import UserList from '../pages/UserList'
 import TabBarIcon from '../components/common/TabBarIcon'
+import UserList from '../pages/UserList'
+import CreateUser from '../pages/CreateUser'
 
 const Tab = createBottomTabNavigator()
 
@@ -26,7 +26,7 @@ export default function Home () {
         />
         <Tab.Screen
           name={PATH_PAGE.adduser}
-          component={AddEditForm}
+          component={CreateUser}
           options={{
             title: 'Add User',
             tabBarIcon: (props) => <TabBarIcon icon='person-add' {...props} />

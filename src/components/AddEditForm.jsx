@@ -1,16 +1,18 @@
 import { useEffect, useMemo } from 'react'
 import { StyleSheet, View, ScrollView } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 import { FormProvider, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 
 import { addUserSchema } from '../schemas'
 import { theme } from '../theme'
+/* hooks */
 import { useUpdate } from '../hooks/useUpdate'
+import { useAddUser } from '../hooks/useAddUser'
 
 /* components */
 import InputField from './common/InputField'
 import Button from './common/Button'
-import { useNavigation } from '@react-navigation/native'
 
 export default function AddEditForm ({
   currentUser,
@@ -18,6 +20,7 @@ export default function AddEditForm ({
 }) {
   const { goBack } = useNavigation()
   const { updateUser } = useUpdate()
+  const { addUser } = useAddUser()
   const defaultValues = useMemo(
     () => ({
       id: currentUser?.id || 0,
@@ -66,6 +69,10 @@ export default function AddEditForm ({
           cedula,
           streetAddress: address
         }))
+
+      !isEdit && (
+        await addUser({})
+      )
       goBack()
     } catch (e) {
       console.log(e)
@@ -77,7 +84,12 @@ export default function AddEditForm ({
   return (
     <View style={styles.container}>
       <FormProvider {...methods}>
-        <ScrollView showsVerticalScrollIndicator={false}>
+        <ScrollView
+          contentContainerStyle={{
+            paddingVertical: 10,
+            paddingHorizontal: 15
+          }} showsVerticalScrollIndicator={false}
+        >
           <View style={styles.inner}>
             <InputField topError label='First Name' name='firstName' />
           </View>
@@ -93,21 +105,19 @@ export default function AddEditForm ({
           <View style={[styles.inner, styles.space]}>
             <InputField topError label='Cellphone' name='cellphone' />
           </View>
+          <Button
+            disabled={isSubmitting}
+            onPress={handleSubmit(onSubmit)}
+            title={isSubmitting ? 'Loading' : titleBtn}
+          />
         </ScrollView>
-        <Button
-          disabled={isSubmitting}
-          onPress={handleSubmit(onSubmit)}
-          title={isSubmitting ? 'Loading' : titleBtn}
-        />
       </FormProvider>
     </View>
   )
 }
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    paddingHorizontal: 10,
-    paddingBottom: 10
+    flex: 1
   },
   inner: {
     backgroundColor: theme.colors.whitePure,

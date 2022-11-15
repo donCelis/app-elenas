@@ -53,3 +53,38 @@ export const UPDATE_CLIENT = gql`
     }
   }
 `
+export const ADD_USER = gql`
+  mutation ($createClientInput: ClientInput!) {
+    createClient(input: $createClientInput) {
+      ... on Client {
+        id
+        registerDate
+        firstName
+        lastName
+        cedula
+        address
+        innerNumber
+        outsideNumber
+        addressIndications
+        is_range
+        city
+        cellphone
+        credit
+        isSeller
+        neighborhood
+        state {
+          displayName
+          id
+          shortCode
+        }
+      }
+      ... on ValidationErrors {
+        message
+        errors {
+          message
+          field
+        }
+      }
+    }
+  }
+`

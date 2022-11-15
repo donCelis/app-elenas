@@ -1,8 +1,8 @@
 import 'dotenv/config'
 
 export default {
-  name: 'react-native-app-elenas',
-  slug: 'react-native-app',
+  name: 'app-elenas',
+  slug: 'app-elenas',
   version: '1.0.0',
   orientation: 'portrait',
   icon: './assets/icon.png',

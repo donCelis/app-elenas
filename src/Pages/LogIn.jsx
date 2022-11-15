@@ -1,8 +1,13 @@
-import { View, StyleSheet, Image } from 'react-native'
+import {
+  View,
+  StyleSheet,
+  Image
+} from 'react-native'
 import { useNavigation, StackActions } from '@react-navigation/native'
 import { FormProvider, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { theme } from '../theme'
+
+import { PATH_PAGE } from '../routes/paths'
 
 /* validation */
 import { loginSchema } from '../schemas'
@@ -10,9 +15,9 @@ import { loginSchema } from '../schemas'
 import Container from '../components/common/Container'
 import InputField from '../components/common/InputField'
 import Button from '../components/common/Button'
+import TextMd from '../components/common/TextMd'
 /* hooks */
 import { useLogin } from '../hooks/useLogin'
-import { PATH_PAGE } from '../routes/paths'
 
 export default function LogIn () {
   const { dispatch } = useNavigation()
@@ -45,6 +50,8 @@ export default function LogIn () {
     }
   }
 
+  const currentYear = new Date().getFullYear()
+
   return (
     <Container>
       <View style={styles.login}>
@@ -55,13 +62,16 @@ export default function LogIn () {
           <View style={styles.form}>
             <InputField
               placeholder='12345678'
-              label='Cellphone' name='cellphone'
+              label='Cellphone'
+              name='cellphone'
               bottonError
             />
             <InputField
               mod={styles.space}
               placeholder='hola mundo!'
-              label='Password' name='password' secureTextEntry
+              label='Password'
+              name='password'
+              secureTextEntry
               bottonError
             />
             <Button
@@ -71,6 +81,9 @@ export default function LogIn () {
             />
           </View>
         </FormProvider>
+        <TextMd align='center' color='secondary'>
+          {currentYear}
+        </TextMd>
       </View>
     </Container>
   )
@@ -92,9 +105,5 @@ const styles = StyleSheet.create({
   space: {
     marginTop: 15,
     marginBottom: 35
-  },
-  error: {
-    color: theme.colors.wrong,
-    textAlign: 'right'
   }
 })

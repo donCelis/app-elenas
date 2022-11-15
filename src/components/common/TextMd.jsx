@@ -16,6 +16,7 @@ export default function TextMd ({
     color === 'secondary' && styles.colorSecondary,
     color === 'white' && styles.colorText,
     fontSize === 'subheading' && styles.subheading,
+    fontSize === 'title' && styles.title,
     fontWeight === 'bold' && styles.bold,
     align === 'center' && styles.align
   ]
@@ -38,6 +39,9 @@ const styles = StyleSheet.create({
   },
   subheading: {
     fontSize: theme.fontSizes.subheading
+  },
+  title: {
+    fontSize: theme.fontSizes.title
   },
   colorPrimary: {
     color: theme.colors.primary

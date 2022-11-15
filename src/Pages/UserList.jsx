@@ -8,6 +8,7 @@ import TextMd from '../components/common/TextMd'
 import UserCard from '../components/common/UserCard'
 
 export default function UserList () {
+  /* id de usuario creado 11708842 */
   const { data, error } = useQuery(GET_USERS)
 
   const users = data?.clientsSearch?.results || []
@@ -20,10 +21,10 @@ export default function UserList () {
         </TextMd>
       )}
       <FlatList
-        style={styles.space}
         showsVerticalScrollIndicator={false}
         data={users}
         renderItem={({ item: user }) => <UserCard {...user} />}
+        contentContainerStyle={styles.flatlist}
       />
     </View>
   )
@@ -33,7 +34,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  space: {
+  flatlist: {
+    paddingVertical: 10,
     paddingHorizontal: 15
   }
 })
