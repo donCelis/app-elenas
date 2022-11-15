@@ -10,8 +10,10 @@ import { useUpdate } from '../hooks/useUpdate'
 /* components */
 import InputField from './common/InputField'
 import Button from './common/Button'
+import { useNavigation } from '@react-navigation/native'
 
-export default function AddEditForm ({ currentUser, isEdit = false }) {
+export default function AddEditForm ({ currentUser, isEdit = false, navigation }) {
+  const { goBack } = useNavigation()
   const { updateUser } = useUpdate()
   const defaultValues = useMemo(
     () => ({
@@ -45,7 +47,6 @@ export default function AddEditForm ({ currentUser, isEdit = false }) {
   }, [isEdit, currentUser])
 
   const onSubmit = async (data) => {
-    console.log(data)
     try {
       const { firstName, lastName, cellphone, cedula, address } = data
       isEdit &&
@@ -57,6 +58,7 @@ export default function AddEditForm ({ currentUser, isEdit = false }) {
           cedula,
           streetAddress: address
         }))
+      goBack()
     } catch (e) {
       console.log(e)
     }
