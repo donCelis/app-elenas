@@ -8,21 +8,17 @@ export default function ProfilePage () {
   const { data = {} } = useQuery(GET_PROFILE, { })
 
   const user = data?.profile || {}
+  console.log(user)
 
   return (
-    <SafeAreaView>
-      <ScrollView
-        contentContainerStyle={styles.container}
-        showsVerticalScrollIndicator={false}
-      >
-        {/* <Profile {...user} /> */}
-      </ScrollView>
+    <SafeAreaView style={styles.container}>
+      {/* <Profile {...user} /> */}
     </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-    padding: 15
+    flex: 1
   }
 })

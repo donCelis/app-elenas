@@ -42,7 +42,10 @@ export default function Profile ({
           {firstName} {lastName}
         </TextMd>
       </View>
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView
+        contentContainerStyle={styles.scroll}
+        showsVerticalScrollIndicator={false}
+      >
         <View style={styles.innerCard}>
           <TextMd fontWeight='bold'>Id</TextMd>
           <TextMd>{id}</TextMd>
@@ -53,7 +56,7 @@ export default function Profile ({
         </View>
         <View style={styles.innerCard}>
           <TextMd fontWeight='bold'>City</TextMd>
-          <TextMd>{city}</TextMd>
+          <TextMd>{city || ''}</TextMd>
         </View>
         <View style={styles.innerCard}>
           <TextMd fontWeight='bold'>State</TextMd>
@@ -79,9 +82,7 @@ export default function Profile ({
           <TextMd fontWeight='bold'>Credit</TextMd>
           <TextMd>{credit}</TextMd>
         </View>
-        <View style={styles.space}>
-          <Button title='Edit' onPress={handleEdit} />
-        </View>
+        <Button title='Edit' onPress={handleEdit} />
       </ScrollView>
     </View>
   )
@@ -89,15 +90,17 @@ export default function Profile ({
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1
+  },
+  scroll: {
     padding: 15
   },
   avatar: {
-    alignItems: 'center'
+    alignItems: 'center',
+    paddingVertical: 20
   },
   username: {
-    marginTop: 20,
-    marginBottom: 10,
+    marginTop: 10,
     textTransform: 'capitalize'
   },
   innerCard: {
@@ -106,9 +109,6 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colors.whitePure,
     padding: 15,
     justifyContent: 'space-between',
-    marginVertical: 10
-  },
-  space: {
-    marginTop: 15
+    marginBottom: 20
   }
 })
