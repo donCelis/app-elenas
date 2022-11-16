@@ -1,4 +1,4 @@
-import { SafeAreaView, ScrollView, StyleSheet } from 'react-native'
+import { SafeAreaView, StyleSheet } from 'react-native'
 import { useQuery } from '@apollo/client'
 import { GET_PROFILE } from '../graphql/queries'
 
@@ -8,11 +8,10 @@ export default function ProfilePage () {
   const { data = {} } = useQuery(GET_PROFILE, { })
 
   const user = data?.profile || {}
-  console.log(user)
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* <Profile {...user} /> */}
+      <Profile {...user} />
     </SafeAreaView>
   )
 }

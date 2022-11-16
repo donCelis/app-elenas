@@ -21,7 +21,7 @@ export default function UserDetail () {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Profile {...user} />
+      <Profile isEdit {...user} />
     </SafeAreaView>
   )
 }

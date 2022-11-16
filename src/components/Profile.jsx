@@ -15,12 +15,15 @@ export default function Profile ({
   firstName = '',
   lastName = '',
   cellphone = '',
-  city = '',
-  state = '',
   registerDate,
-  isSeller = '',
   address = '',
-  credit = ''
+  isSeller = '',
+  credit = '',
+  state = '',
+  city = '',
+  isEdit = false,
+  email = 'Empty',
+  cedula = 0
 }) {
   const linkTo = useLinkTo()
   const handleEdit = () => {
@@ -54,35 +57,49 @@ export default function Profile ({
           <TextMd fontWeight='bold'>Phone</TextMd>
           <TextMd>{cellphone}</TextMd>
         </View>
-        <View style={styles.innerCard}>
-          <TextMd fontWeight='bold'>City</TextMd>
-          <TextMd>{city || ''}</TextMd>
-        </View>
-        <View style={styles.innerCard}>
-          <TextMd fontWeight='bold'>State</TextMd>
-          <TextMd>{state?.displayName}</TextMd>
-        </View>
-        <View style={styles.innerCard}>
-          <TextMd fontWeight='bold'>Short Code</TextMd>
-          <TextMd>{state?.shortCode}</TextMd>
-        </View>
+        {
+          !isEdit && (
+            <View style={styles.innerCard}>
+              <TextMd fontWeight='bold'>Cedula</TextMd>
+              <TextMd>{cedula}</TextMd>
+            </View>
+          )
+        }
         <View style={styles.innerCard}>
           <TextMd fontWeight='bold'>Created</TextMd>
           <TextMd>{formatRegisterDate}</TextMd>
         </View>
         <View style={styles.innerCard}>
-          <TextMd fontWeight='bold'>Is Seller</TextMd>
-          <TextMd>{isSeller ? '🟢' : '🔴'}</TextMd>
+          <TextMd fontWeight='bold'>Email</TextMd>
+          <TextMd>{email}</TextMd>
         </View>
         <View style={styles.innerCard}>
-          <TextMd fontWeight='bold'>Address</TextMd>
-          <TextMd>{address}</TextMd>
+          <TextMd fontWeight='bold'>City</TextMd>
+          <TextMd>{address?.city || city}</TextMd>
         </View>
-        <View style={styles.innerCard}>
-          <TextMd fontWeight='bold'>Credit</TextMd>
-          <TextMd>{credit}</TextMd>
-        </View>
-        <Button title='Edit' onPress={handleEdit} />
+        {
+          isEdit && (
+            <>
+              <View style={styles.innerCard}>
+                <TextMd fontWeight='bold'>State</TextMd>
+                <TextMd>{state?.displayName}</TextMd>
+              </View>
+              <View style={styles.innerCard}>
+                <TextMd fontWeight='bold'>Short Code</TextMd>
+                <TextMd>{state?.shortCode}</TextMd>
+              </View>
+              <View style={styles.innerCard}>
+                <TextMd fontWeight='bold'>Is Seller</TextMd>
+                <TextMd>{isSeller ? '🟢' : '🔴'}</TextMd>
+              </View>
+              <View style={styles.innerCard}>
+                <TextMd fontWeight='bold'>Credit</TextMd>
+                <TextMd>{credit}</TextMd>
+              </View>
+              <Button title='Edit' onPress={handleEdit} />
+            </>
+          )
+        }
       </ScrollView>
     </View>
   )
