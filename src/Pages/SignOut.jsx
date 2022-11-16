@@ -12,9 +12,9 @@ export default function SignOut () {
 
   /* fake signOut */
   async function signOut () {
-    dispatch(replace(PATH_AUTH.signin))
     await authStorage.removeAccessToken()
     await apolloClient.resetStore()
+    dispatch(replace(PATH_AUTH.signin))
   }
 
   return (
