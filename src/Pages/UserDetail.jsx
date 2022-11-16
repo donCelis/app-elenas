@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet } from 'react-native'
+import { ScrollView, StyleSheet, SafeAreaView } from 'react-native'
 import { useQuery } from '@apollo/client'
 import { useRoute } from '@react-navigation/native'
 
@@ -22,18 +22,19 @@ export default function UserDetail () {
   const user = data?.clientsSearch?.results[0] || {}
 
   return (
-    <ScrollView
-      contentContainerStyle={styles.container}
-      showsVerticalScrollIndicator={false}
-    >
-      <Profile {...user} />
-    </ScrollView>
+    <SafeAreaView>
+      <ScrollView
+        contentContainerStyle={styles.container}
+        showsVerticalScrollIndicator={false}
+      >
+        <Profile {...user} />
+      </ScrollView>
+    </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-    padding: 15,
-    flex: 1
+    padding: 15
   }
 })

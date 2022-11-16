@@ -1,7 +1,10 @@
 import { useQuery } from '@apollo/client'
 import { useRoute } from '@react-navigation/native'
-import AddEditForm from '../components/AddEditForm'
 import { GET_PROFILE } from '../graphql/queries'
+
+/* components */
+import KeyboardShift from '../components/KeyboardShift'
+import AddEditForm from '../components/AddEditForm'
 
 export default function UpdateUser () {
   const {
@@ -18,6 +21,8 @@ export default function UpdateUser () {
   const currentUser = data?.clientsSearch?.results[0] || {}
 
   return (
-    <AddEditForm isEdit currentUser={currentUser} />
+    <KeyboardShift>
+      <AddEditForm isEdit currentUser={currentUser} />
+    </KeyboardShift>
   )
 }

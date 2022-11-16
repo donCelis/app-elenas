@@ -13,6 +13,7 @@ import { PATH_PAGE } from '../routes/paths'
 import { loginSchema } from '../schemas'
 /* components */
 import Container from '../components/common/Container'
+import KeyboardShift from '../components/KeyboardShift'
 import InputField from '../components/common/InputField'
 import Button from '../components/common/Button'
 import TextMd from '../components/common/TextMd'
@@ -54,37 +55,39 @@ export default function LogIn () {
 
   return (
     <Container>
-      <View style={styles.login}>
-        <View style={styles.logo}>
-          <Image source={require('../../assets/elenas.png')} />
-        </View>
-        <FormProvider {...methods}>
-          <View style={styles.form}>
-            <InputField
-              placeholder='12345678'
-              label='Cellphone'
-              name='cellphone'
-              bottonError
-            />
-            <InputField
-              mod={styles.space}
-              placeholder='hola mundo!'
-              label='Password'
-              name='password'
-              secureTextEntry
-              bottonError
-            />
-            <Button
-              disabled={isSubmitting}
-              onPress={handleSubmit(onSubmit)}
-              title={isSubmitting ? 'Loading' : 'Sign in'}
-            />
+      <KeyboardShift>
+        <View style={styles.login}>
+          <View style={styles.logo}>
+            <Image source={require('../../assets/elenas.png')} />
           </View>
-        </FormProvider>
-        <TextMd align='center' color='secondary'>
-          {currentYear}
-        </TextMd>
-      </View>
+          <FormProvider {...methods}>
+            <View style={styles.form}>
+              <InputField
+                placeholder='12345678'
+                label='Cellphone'
+                name='cellphone'
+                bottonError
+              />
+              <InputField
+                mod={styles.space}
+                placeholder='hola mundo!'
+                label='Password'
+                name='password'
+                secureTextEntry
+                bottonError
+              />
+              <Button
+                disabled={isSubmitting}
+                onPress={handleSubmit(onSubmit)}
+                title={isSubmitting ? 'Loading' : 'Sign in'}
+              />
+            </View>
+          </FormProvider>
+          <TextMd align='center' color='secondary'>
+            {currentYear}
+          </TextMd>
+        </View>
+      </KeyboardShift>
     </Container>
   )
 }

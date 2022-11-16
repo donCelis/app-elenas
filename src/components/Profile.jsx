@@ -10,19 +10,27 @@ import Button from '../components/common/Button'
 import Avatar from '../components/common/Avatar'
 import TextMd from './common/TextMd'
 
-export default function Profile (user) {
+export default function Profile ({
+  id,
+  firstName,
+  lastName,
+  cellphone,
+  city,
+  state,
+  registerDate,
+  isSeller,
+  address,
+  credit
+}) {
   const linkTo = useLinkTo()
   const handleEdit = () => {
-    linkTo(`/${PATH_PAGE.update}/${user?.id}`)
+    linkTo(`/${PATH_PAGE.update}/${id}`)
   }
-  console.log(user.firstName)
 
   return (
     <View style={styles.container}>
-      <View
-        style={styles.avatar}
-      >
-        <Avatar str={user?.firstName} size={120} />
+      <View style={styles.avatar}>
+        <Avatar str={firstName} size={120} />
         <TextMd
           style={{
             marginVertical: 20,
@@ -32,54 +40,56 @@ export default function Profile (user) {
           align='center'
           fontSize='title'
         >
-          {user.firstName} {user.lastName}
+          {firstName} {lastName}
         </TextMd>
       </View>
       <View style={styles.innerCard}>
         <TextMd fontWeight='bold'>Id</TextMd>
-        <TextMd>{user.id}</TextMd>
+        <TextMd>{id}</TextMd>
       </View>
       <View style={styles.innerCard}>
         <TextMd fontWeight='bold'>Phone</TextMd>
-        <TextMd>{user.cellphone}</TextMd>
+        <TextMd>{cellphone}</TextMd>
       </View>
       <View style={styles.innerCard}>
         <TextMd fontWeight='bold'>City</TextMd>
-        <TextMd>{user.city}</TextMd>
+        <TextMd>{city}</TextMd>
       </View>
       <View style={styles.innerCard}>
         <TextMd fontWeight='bold'>State</TextMd>
-        <TextMd>{user.state?.displayName}</TextMd>
+        <TextMd>{state?.displayName}</TextMd>
       </View>
       <View style={styles.innerCard}>
         <TextMd fontWeight='bold'>Short Code</TextMd>
-        <TextMd>{user.state?.shortCode}</TextMd>
+        <TextMd>{state?.shortCode}</TextMd>
       </View>
       <View style={styles.innerCard}>
         <TextMd fontWeight='bold'>Created</TextMd>
-        <TextMd>{converDate(user?.registerDate)}</TextMd>
+        <TextMd>{converDate(registerDate)}</TextMd>
       </View>
       <View style={styles.innerCard}>
         <TextMd fontWeight='bold'>Is Seller</TextMd>
-        <TextMd>{user.isSeller ? '🟢' : '🔴'}</TextMd>
+        <TextMd>{isSeller ? '🟢' : '🔴'}</TextMd>
       </View>
       <View style={styles.innerCard}>
         <TextMd fontWeight='bold'>Address</TextMd>
-        <TextMd>{user.address}</TextMd>
+        <TextMd>{address}</TextMd>
       </View>
       <View style={styles.innerCard}>
         <TextMd fontWeight='bold'>Credit</TextMd>
-        <TextMd>{user.credit}</TextMd>
+        <TextMd>{credit}</TextMd>
       </View>
-      <Button title='Edit' onPress={handleEdit} />
+      <View style={styles.space}>
+        <Button title='Edit' onPress={handleEdit} />
+      </View>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-  /* container: {
+  container: {
     flex: 1
-  }, */
+  },
   avatar: {
     alignItems: 'center'
   },
@@ -89,7 +99,9 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colors.whitePure,
     padding: 15,
     justifyContent: 'space-between',
-    marginVertical: 10,
-    flex: 1
+    marginVertical: 10
+  },
+  space: {
+    marginTop: 15
   }
 })
