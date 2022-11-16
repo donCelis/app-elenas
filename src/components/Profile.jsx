@@ -9,6 +9,7 @@ import { converDate } from '../utils/convertDate'
 import Button from '../components/common/Button'
 import Avatar from '../components/common/Avatar'
 import TextMd from './common/TextMd'
+import SignOut from '../pages/SignOut'
 
 export default function Profile ({
   id = 0,
@@ -77,6 +78,11 @@ export default function Profile ({
           <TextMd fontWeight='bold'>City</TextMd>
           <TextMd>{address?.city || city}</TextMd>
         </View>
+        {
+          !isEdit && (
+            <SignOut />
+          )
+        }
         {
           isEdit && (
             <>
