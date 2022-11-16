@@ -9,11 +9,7 @@ export const theme = {
   colors: {
     textPrimary: '#24292e',
     textSecondary: '#586069',
-    primary: Platform.select({
-      ios: '#521ece',
-      android: '#0366d6',
-      default: '#f3f3f3'
-    }),
+    primary: '#521ece',
     secondary: '#999',
     third: '#0366d6',
     white: '#fafafa',

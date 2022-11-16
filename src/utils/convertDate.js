@@ -1,4 +1,6 @@
-export const converDate = (entry = new Date()) => {
+import { format } from 'date-fns'
+
+export const converDate = (entry = null) => {
   const date = new Date(entry)
-  return new Intl.DateTimeFormat('en-GB').format(date)
+  return format(date, 'dd/MM/yyyy')
 }

@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   circle: {
     width: 50,
     height: 50,
-    borderRadius: '100%',
+    borderRadius: 200,
     justifyContent: 'center',
     backgroundColor: theme.colors.primary
   },

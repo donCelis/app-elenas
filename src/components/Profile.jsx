@@ -27,6 +27,8 @@ export default function Profile ({
     linkTo(`/${PATH_PAGE.update}/${id}`)
   }
 
+  const formatRegisterDate = converDate(registerDate)
+
   return (
     <View style={styles.container}>
       <View style={styles.avatar}>
@@ -65,7 +67,7 @@ export default function Profile ({
       </View>
       <View style={styles.innerCard}>
         <TextMd fontWeight='bold'>Created</TextMd>
-        <TextMd>{converDate(registerDate)}</TextMd>
+        <TextMd>{formatRegisterDate}</TextMd>
       </View>
       <View style={styles.innerCard}>
         <TextMd fontWeight='bold'>Is Seller</TextMd>
