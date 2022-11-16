@@ -1,14 +1,14 @@
 
 export const PATH_AUTH = {
   signin: 'signin',
-  signOut: 'signOut'
+  signOut: 'signout'
 }
 
 export const PATH_PAGE = {
   home: 'home',
   detail: 'detail',
   update: 'update',
-  userlist: 'userlist',
-  adduser: 'adduser',
+  userList: 'userlist',
+  addUser: 'adduser',
   profile: 'profile'
 }
