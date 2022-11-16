@@ -16,11 +16,11 @@ export default function Main () {
     <>
       <StatusBar style='dark' />
       <Stack.Navigator
-        initialRouteName={PATH_AUTH.signin}
+        initialRouteName={PATH_AUTH.signIn}
         screenOptions={{ headerShown: false, ...screenOptions }}
       >
         <Stack.Screen
-          name={PATH_AUTH.signin}
+          name={PATH_AUTH.signIn}
           component={LogIn}
           options={{ title: 'Sign In' }}
         />

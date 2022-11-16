@@ -18,7 +18,7 @@ export default function Home () {
       <StatusBar style='light' />
       <Tab.Navigator initialRouteName='userlist' screenOptions={screenOptions}>
         <Tab.Screen
-          name={PATH_PAGE.userlist}
+          name={PATH_PAGE.userList}
           options={{
             title: 'User List',
             tabBarIcon: (props) => <TabBarIcon icon='list' {...props} />
@@ -26,7 +26,7 @@ export default function Home () {
           component={UserList}
         />
         <Tab.Screen
-          name={PATH_PAGE.adduser}
+          name={PATH_PAGE.addUser}
           component={CreateUser}
           options={{
             title: 'Add User',

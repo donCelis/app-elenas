@@ -14,7 +14,7 @@ export default function SignOut () {
   async function signOut () {
     await authStorage.removeAccessToken()
     await apolloClient.resetStore()
-    dispatch(replace(PATH_AUTH.signin))
+    dispatch(replace(PATH_AUTH.signIn))
   }
 
   return (
