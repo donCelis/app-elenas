@@ -1,11 +1,13 @@
+import { useState } from 'react'
 import { View, Modal, StyleSheet, Text, ActivityIndicator } from 'react-native'
 
 export default function LoadingModal ({ modalVisible, task = '', title }) {
+  const [isVisible, setIsVisible] = useState(modalVisible)
   return (
     <Modal
       animationType='fade'
       transparent
-      visible={modalVisible}
+      visible={() => !isVisible || setIsVisible(!isVisible)}
       statusBarTranslucent
     >
 
@@ -26,7 +28,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#0008'
+    backgroundColor: 'red'
 
   },
   modalView: {

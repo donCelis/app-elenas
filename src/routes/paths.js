@@ -9,5 +9,6 @@ export const PATH_PAGE = {
   detail: 'detail',
   update: 'update',
   userlist: 'userlist',
-  adduser: 'adduser'
+  adduser: 'adduser',
+  profile: 'profile'
 }

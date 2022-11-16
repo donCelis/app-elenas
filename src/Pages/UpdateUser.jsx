@@ -1,6 +1,6 @@
 import { useQuery } from '@apollo/client'
 import { useRoute } from '@react-navigation/native'
-import { GET_PROFILE } from '../graphql/queries'
+import { GET_SINGLE_USER } from '../graphql/queries'
 
 /* components */
 import KeyboardShift from '../components/KeyboardShift'
@@ -12,7 +12,7 @@ export default function UpdateUser () {
   } = useRoute()
   const NumberId = Number(screen)
 
-  const { data = {} } = useQuery(GET_PROFILE, {
+  const { data = {} } = useQuery(GET_SINGLE_USER, {
     variables: {
       ids: NumberId
     }

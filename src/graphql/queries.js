@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client'
 
-export const GET_PROFILE = gql`
+export const GET_SINGLE_USER = gql`
   query ($ids: [Int!]) {
     clientsSearch(ids: $ids) {
       results {
@@ -36,6 +36,22 @@ export const GET_USERS = gql`
         id
         firstName
         lastName
+        city
+      }
+    }
+  }
+`
+export const GET_PROFILE = gql`
+  query {
+    profile {
+      firstName
+      lastName
+      id
+      cellphone
+      email
+      cedula
+      registerDate
+      address {
         city
       }
     }

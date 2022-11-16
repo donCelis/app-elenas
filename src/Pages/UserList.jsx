@@ -8,7 +8,6 @@ import TextMd from '../components/common/TextMd'
 import UserCard from '../components/common/UserCard'
 
 export default function UserList () {
-  /* id de usuario creado 11708842 */
   const { data, error } = useQuery(GET_USERS)
 
   const users = data?.clientsSearch?.results || []
