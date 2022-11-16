@@ -1,8 +1,4 @@
-import {
-  View,
-  StyleSheet,
-  Image
-} from 'react-native'
+import { View, StyleSheet, Image } from 'react-native'
 import { useNavigation, StackActions } from '@react-navigation/native'
 import { FormProvider, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -58,19 +54,23 @@ export default function LogIn () {
       <KeyboardShift>
         <View style={styles.login}>
           <View style={styles.logo}>
-            <Image source={require('../../assets/elenas.png')} />
+            <Image
+              style={{ width: 220 }}
+              resizeMode='contain'
+              source={require('../../assets/elenas.png')}
+            />
           </View>
           <FormProvider {...methods}>
             <View style={styles.form}>
               <InputField
-                placeholder='12345678'
+                placeholder='+57'
                 label='Cellphone'
                 name='cellphone'
                 bottonError
               />
               <InputField
                 mod={styles.space}
-                placeholder='hola mundo!'
+                placeholder=':)'
                 label='Password'
                 name='password'
                 secureTextEntry
@@ -99,8 +99,7 @@ const styles = StyleSheet.create({
   },
   logo: {
     padding: 12,
-    alignSelf: 'center',
-    marginBottom: 10
+    alignSelf: 'center'
   },
   form: {
     padding: 20
