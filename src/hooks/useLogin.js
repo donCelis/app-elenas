@@ -1,6 +1,6 @@
 import { useMutation, useApolloClient } from '@apollo/client'
 import { LOGIN_MUTATION } from '../graphql/mutations.js'
-import authStorage from '../utils/authStorage.js'
+import { setAccessToken } from '../utils/authStorage.js'
 
 export const useLogin = () => {
   const [loginMutation] = useMutation(LOGIN_MUTATION)
@@ -15,7 +15,7 @@ export const useLogin = () => {
       }
     })
 
-    await authStorage.setAccessToken(data.login.token)
+    await setAccessToken(data.login.token)
     await apolloClient.resetStore()
   }
 

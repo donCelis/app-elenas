@@ -1,6 +1,6 @@
 import { Platform } from 'react-native'
 
-export const theme = {
+const theme = {
   appBar: {
     primary: '#24292e',
     primaryText: '#fff',
@@ -36,7 +36,7 @@ export const theme = {
   }
 }
 
-export const screenOptions = {
+const screenOptions = {
   tabBarActiveTintColor: theme?.colors.primary,
   tabBarInactiveTintColor: theme?.colors.secondaryText,
   headerStyle: {
@@ -44,3 +44,5 @@ export const screenOptions = {
   },
   headerTintColor: theme?.colors.white
 }
+
+export { theme, screenOptions }
