@@ -1,6 +1,7 @@
 
 export const PATH_AUTH = {
-  signin: 'signin'
+  signin: 'signin',
+  signOut: 'signOut'
 }
 
 export const PATH_PAGE = {

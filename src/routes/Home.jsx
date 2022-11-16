@@ -2,12 +2,13 @@ import { StatusBar } from 'expo-status-bar'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import { screenOptions } from '../theme'
-import { PATH_PAGE } from './paths'
+import { PATH_AUTH, PATH_PAGE } from './paths'
 
 /* Components */
 import TabBarIcon from '../components/common/TabBarIcon'
 import UserList from '../pages/UserList'
 import CreateUser from '../pages/CreateUser'
+import SignOut from '../pages/SignOut'
 
 const Tab = createBottomTabNavigator()
 
@@ -30,6 +31,14 @@ export default function Home () {
           options={{
             title: 'Add User',
             tabBarIcon: (props) => <TabBarIcon icon='person-add' {...props} />
+          }}
+        />
+        <Tab.Screen
+          name={PATH_AUTH.signOut}
+          component={SignOut}
+          options={{
+            title: 'Sign Out',
+            tabBarIcon: (props) => <TabBarIcon icon='exit-outline' {...props} />
           }}
         />
       </Tab.Navigator>
