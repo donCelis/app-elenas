@@ -1,13 +1,11 @@
-import { useState } from 'react'
 import { View, Modal, StyleSheet, Text, ActivityIndicator } from 'react-native'
 
 export default function LoadingModal ({ modalVisible, task = '', title }) {
-  const [isVisible, setIsVisible] = useState(modalVisible)
   return (
     <Modal
       animationType='fade'
       transparent
-      visible={() => !isVisible || setIsVisible(!isVisible)}
+      visible={modalVisible}
       statusBarTranslucent
     >
 

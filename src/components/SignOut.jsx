@@ -12,12 +12,11 @@ export default function SignOut () {
 
   const signOut = async () => {
     try {
-      await removeAccessToken()
       await apolloClient.resetStore()
-    } catch (error) {
-      console.trace(error)
-    } finally {
+      await removeAccessToken()
       dispatch(replace(PATH_AUTH.signIn))
+    } catch (error) {
+      console.log('Este error', error)
     }
   }
 

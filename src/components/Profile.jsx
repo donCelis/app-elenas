@@ -1,15 +1,11 @@
 import { ScrollView, StyleSheet, View } from 'react-native'
-import { useLinkTo } from '@react-navigation/native'
 
-import { PATH_PAGE } from '../routes/paths'
 import { theme } from '../theme'
 import { converDate } from '../utils/convertDate'
 
 /* components */
-import Button from '../components/common/Button'
 import Avatar from '../components/common/Avatar'
 import TextMd from './common/TextMd'
-import SignOut from '../pages/SignOut'
 
 export default function Profile ({
   id = 0,
@@ -24,13 +20,9 @@ export default function Profile ({
   city = '',
   isEdit = false,
   email = 'Empty',
-  cedula = 0
+  cedula = 0,
+  children
 }) {
-  const linkTo = useLinkTo()
-  const handleEdit = () => {
-    linkTo(`/${PATH_PAGE.update}/${id}`)
-  }
-
   const formatRegisterDate = converDate(registerDate)
 
   return (
@@ -60,10 +52,16 @@ export default function Profile ({
         </View>
         {
           !isEdit && (
-            <View style={styles.innerCard}>
-              <TextMd fontWeight='bold'>Cedula</TextMd>
-              <TextMd>{cedula}</TextMd>
-            </View>
+            <>
+              <View style={styles.innerCard}>
+                <TextMd fontWeight='bold'>Cedula</TextMd>
+                <TextMd>{cedula}</TextMd>
+              </View>
+              <View style={styles.innerCard}>
+                <TextMd fontWeight='bold'>Email</TextMd>
+                <TextMd>{email}</TextMd>
+              </View>
+            </>
           )
         }
         <View style={styles.innerCard}>
@@ -71,18 +69,9 @@ export default function Profile ({
           <TextMd>{formatRegisterDate}</TextMd>
         </View>
         <View style={styles.innerCard}>
-          <TextMd fontWeight='bold'>Email</TextMd>
-          <TextMd>{email}</TextMd>
-        </View>
-        <View style={styles.innerCard}>
           <TextMd fontWeight='bold'>City</TextMd>
           <TextMd>{address?.city || city}</TextMd>
         </View>
-        {
-          !isEdit && (
-            <SignOut />
-          )
-        }
         {
           isEdit && (
             <>
@@ -102,10 +91,10 @@ export default function Profile ({
                 <TextMd fontWeight='bold'>Credit</TextMd>
                 <TextMd>{credit}</TextMd>
               </View>
-              <Button title='Edit' onPress={handleEdit} />
             </>
           )
         }
+        {children}
       </ScrollView>
     </View>
   )

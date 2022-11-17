@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/client'
 import { GET_PROFILE } from '../graphql/queries'
 
 import Profile from '../components/Profile'
+import SignOut from '../components/SignOut'
 
 export default function ProfilePage () {
   const { data = {} } = useQuery(GET_PROFILE, { })
@@ -11,7 +12,9 @@ export default function ProfilePage () {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Profile {...user} />
+      <Profile {...user}>
+        <SignOut />
+      </Profile>
     </SafeAreaView>
   )
 }

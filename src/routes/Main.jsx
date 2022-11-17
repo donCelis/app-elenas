@@ -8,6 +8,7 @@ import Home from './Home'
 import UserDetail from '../pages/UserDetail'
 import UpdateUser from '../pages/UpdateUser'
 import { StatusBar } from 'expo-status-bar'
+import InitialScreen from '../components/InitialScreen'
 
 const Stack = createNativeStackNavigator()
 
@@ -16,9 +17,13 @@ export default function Main () {
     <>
       <StatusBar style='dark' />
       <Stack.Navigator
-        initialRouteName={PATH_AUTH.signIn}
+        initialRouteName='screen'
         screenOptions={{ headerShown: false, ...screenOptions }}
       >
+        <Stack.Screen
+          name='screen'
+          component={InitialScreen}
+        />
         <Stack.Screen
           name={PATH_AUTH.signIn}
           component={LogIn}

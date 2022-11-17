@@ -16,7 +16,7 @@ export default function Home () {
   return (
     <>
       <StatusBar style='light' />
-      <Tab.Navigator initialRouteName='userlist' screenOptions={screenOptions}>
+      <Tab.Navigator initialRouteName={PATH_PAGE.userList} screenOptions={screenOptions}>
         <Tab.Screen
           name={PATH_PAGE.userList}
           options={{
