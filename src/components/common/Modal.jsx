@@ -1,23 +1,18 @@
-import { View, Modal, StyleSheet, Text, ActivityIndicator } from 'react-native'
+import { View, StyleSheet, Text, ActivityIndicator } from 'react-native'
+import { theme } from '../../theme'
 
-export default function LoadingModal ({ modalVisible, task = '', title }) {
+export default function LoadingModal ({ task = '', title }) {
   return (
-    <Modal
-      animationType='fade'
-      transparent
-      visible={modalVisible}
-      statusBarTranslucent
-    >
-
+    <>
       <View style={styles.centeredView}>
         <View style={styles.modalView}>
-          <ActivityIndicator size='large' color='red' />
+          <ActivityIndicator size='large' color={theme.colors.primary} />
           {task
             ? <Text style={styles.modalText}>{task}</Text>
             : <Text style={styles.modalText}>Loading.. {title}</Text>}
         </View>
       </View>
-    </Modal>
+    </>
   )
 }
 
@@ -25,8 +20,7 @@ const styles = StyleSheet.create({
   centeredView: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'red'
+    alignItems: 'center'
 
   },
   modalView: {

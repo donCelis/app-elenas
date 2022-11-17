@@ -1,4 +1,4 @@
-import { ActivityIndicator, FlatList, StyleSheet, View } from 'react-native'
+import { FlatList, StyleSheet, View } from 'react-native'
 import { useQuery } from '@apollo/client'
 
 import { GET_USERS } from '../graphql/queries'
@@ -6,7 +6,7 @@ import { GET_USERS } from '../graphql/queries'
 /* components */
 import TextMd from '../components/common/TextMd'
 import UserCard from '../components/common/UserCard'
-import { theme } from '../theme'
+import LoadingModal from '../components/common/Modal'
 
 export default function UserList () {
   const { data, error, loading } = useQuery(GET_USERS)
@@ -15,7 +15,7 @@ export default function UserList () {
 
   return (
     <View style={styles.container}>
-      {loading && <ActivityIndicator size='large' color={theme.colors.primary} />}
+      {loading && <LoadingModal />}
       {!loading && (
         <FlatList
           showsVerticalScrollIndicator={false}

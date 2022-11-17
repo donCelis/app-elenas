@@ -8,12 +8,13 @@ import { GET_SINGLE_USER } from '../graphql/queries'
 import Profile from '../components/Profile'
 import { PATH_PAGE } from '../routes/paths'
 import Button from '../components/common/Button'
+import LoadingModal from '../components/common/Modal'
 
 export default function UserDetail () {
   const { params: { screen } } = useRoute()
   const NumberId = Number(screen)
 
-  const { data = {} } = useQuery(GET_SINGLE_USER, {
+  const { data = {}, loading } = useQuery(GET_SINGLE_USER, {
     variables: {
       ids: NumberId
     }
@@ -28,9 +29,12 @@ export default function UserDetail () {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Profile isEdit {...user}>
-        <Button title='Edit' onPress={handleEdit} />
-      </Profile>
+      {loading && <LoadingModal />}
+      {!loading && (
+        <Profile isEdit {...user}>
+          <Button title='Edit' onPress={handleEdit} />
+        </Profile>
+      )}
     </SafeAreaView>
   )
 }

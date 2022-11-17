@@ -17,7 +17,7 @@ export default function Main () {
     <>
       <StatusBar style='dark' />
       <Stack.Navigator
-        initialRouteName='screen'
+        initialRouteName={PATH_AUTH.signIn}
         screenOptions={{ headerShown: false, ...screenOptions }}
       >
         <Stack.Screen
