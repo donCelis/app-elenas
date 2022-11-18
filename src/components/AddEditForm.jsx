@@ -41,12 +41,7 @@ export default function AddEditForm ({ currentUser, isEdit = false }) {
   } = methods
 
   useEffect(() => {
-    if (isEdit && currentUser) {
-      resetForm(defaultValues)
-    }
-    if (!isEdit) {
-      resetForm(defaultValues)
-    }
+    if (isEdit && currentUser) resetForm(defaultValues)
   }, [isEdit, currentUser])
 
   const onSubmit = async ({
@@ -68,16 +63,18 @@ export default function AddEditForm ({ currentUser, isEdit = false }) {
           streetAddress: address
         }))
       /* method add user */
-      !isEdit &&
-        (await addUser({
+      if (!isEdit) {
+        await addUser({
           firstName,
           lastName,
           cedula,
-          cellphone,
+          cellphone: `+57${cellphone}`,
           cityId: 2,
           stateId: 1,
           streetAddress: address
-        }))
+        })
+        resetForm()
+      }
       goBack()
     } catch (e) {
       console.log(e)
