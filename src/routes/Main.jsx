@@ -1,3 +1,4 @@
+import { StatusBar } from 'expo-status-bar'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { screenOptions } from '../theme'
 
@@ -7,7 +8,6 @@ import LogIn from '../pages/LogIn'
 import Home from './Home'
 import UserDetail from '../pages/UserDetail'
 import UpdateUser from '../pages/UpdateUser'
-import { StatusBar } from 'expo-status-bar'
 import InitialScreen from '../components/InitialScreen'
 
 const Stack = createNativeStackNavigator()

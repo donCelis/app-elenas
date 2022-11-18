@@ -1,3 +1,4 @@
+import { StatusBar } from 'expo-status-bar'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import { screenOptions } from '../theme'
@@ -8,7 +9,6 @@ import TabBarIcon from '../components/common/TabBarIcon'
 import UserList from '../pages/UserList'
 import CreateUser from '../pages/CreateUser'
 import ProfilePage from '../pages/ProfilePage'
-import { StatusBar } from 'expo-status-bar'
 
 const Tab = createBottomTabNavigator()
 
