@@ -1,5 +1,4 @@
 import { View, StyleSheet, Image } from 'react-native'
-import { useNavigation, StackActions } from '@react-navigation/native'
 import { FormProvider, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 
@@ -16,9 +15,7 @@ import TextMd from '../components/common/TextMd'
 /* hooks */
 import { useLogin } from '../hooks/useLogin'
 
-export default function LogIn () {
-  const { dispatch } = useNavigation()
-  const { replace } = StackActions
+export default function LogIn ({ navigation: { replace } }) {
   const { logIn } = useLogin()
 
   const methods = useForm({
@@ -40,7 +37,7 @@ export default function LogIn () {
       const { cellphone, password } = data
       await logIn({ cellphone, password })
       /* disable navigation to login */
-      dispatch(replace(PATH_PAGE.home))
+      replace(PATH_PAGE.home)
       resetForm()
     } catch (e) {
       console.log(e)

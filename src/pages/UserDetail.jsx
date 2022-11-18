@@ -1,5 +1,4 @@
 import { StyleSheet, SafeAreaView } from 'react-native'
-import { useLinkTo, useRoute } from '@react-navigation/native'
 import { useQuery } from '@apollo/client'
 
 import { GET_SINGLE_USER } from '../graphql/queries'
@@ -10,9 +9,8 @@ import { PATH_PAGE } from '../routes/paths'
 import Button from '../components/common/Button'
 import LoadingModal from '../components/common/Modal'
 
-export default function UserDetail () {
-  const { params: { screen } } = useRoute()
-  const NumberId = Number(screen)
+export default function UserDetail ({ route, navigation: { navigate } }) {
+  const NumberId = Number(route?.params.screen)
 
   const { data = {}, loading } = useQuery(GET_SINGLE_USER, {
     variables: {
@@ -22,9 +20,8 @@ export default function UserDetail () {
 
   const user = data?.clientsSearch?.results[0] || {}
 
-  const linkTo = useLinkTo()
   const handleEdit = () => {
-    linkTo(`/${PATH_PAGE.update}/${user.id}`)
+    navigate(PATH_PAGE.update, { ...user })
   }
 
   return (

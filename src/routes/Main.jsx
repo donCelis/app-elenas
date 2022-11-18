@@ -20,10 +20,7 @@ export default function Main () {
         initialRouteName={PATH_AUTH.signIn}
         screenOptions={{ headerShown: false, ...screenOptions }}
       >
-        <Stack.Screen
-          name='screen'
-          component={InitialScreen}
-        />
+        <Stack.Screen name='screen' component={InitialScreen} />
         <Stack.Screen
           name={PATH_AUTH.signIn}
           component={LogIn}
@@ -34,18 +31,18 @@ export default function Main () {
           component={Home}
           options={{ title: 'Home' }}
         />
-        <Stack.Group
-          screenOptions={({ route }) => ({
-            title: route.params.screen,
-            headerShown: true
-          })}
-        >
-          <Stack.Screen name={PATH_PAGE.detail} component={UserDetail} />
+        <Stack.Group screenOptions={{ headerShown: true }}>
+          <Stack.Screen
+            options={{ title: 'Detail' }}
+            name={PATH_PAGE.detail}
+            component={UserDetail}
+          />
           <Stack.Screen
             name={PATH_PAGE.update}
             component={UpdateUser}
             options={{
-              presentation: 'modal'
+              presentation: 'modal',
+              title: 'Edit'
             }}
           />
         </Stack.Group>
