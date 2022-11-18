@@ -6,18 +6,14 @@ import { yupResolver } from '@hookform/resolvers/yup'
 
 import { addUserSchema } from '../schemas'
 import { theme } from '../theme'
-/* hooks */
-import { useUpdate } from '../hooks/useUpdate'
-import { useAddUser } from '../hooks/useAddUser'
 
 /* components */
 import InputField from './common/InputField'
 import Button from './common/Button'
 
-export default function AddEditForm ({ currentUser, isEdit = false }) {
+export default function AddEditForm ({ currentUser, isEdit = false, callBack = async () => {} }) {
   const { goBack } = useNavigation()
-  const { updateUser } = useUpdate()
-  const { addUser } = useAddUser()
+
   const defaultValues = useMemo(
     () => ({
       id: currentUser?.id || 0,
@@ -44,40 +40,13 @@ export default function AddEditForm ({ currentUser, isEdit = false }) {
     if (isEdit && currentUser) resetForm(defaultValues)
   }, [isEdit, currentUser])
 
-  const onSubmit = async ({
-    firstName,
-    lastName,
-    cedula,
-    address,
-    cellphone
-  }) => {
+  const onSubmit = async (data) => {
     try {
-      /* method update user */
-      isEdit &&
-        (await updateUser({
-          updateClientId: currentUser?.id,
-          firstName,
-          lastName,
-          cellphone,
-          cedula,
-          streetAddress: address
-        }))
-      /* method add user */
-      if (!isEdit) {
-        await addUser({
-          firstName,
-          lastName,
-          cedula,
-          cellphone: `+57${cellphone}`,
-          cityId: 2,
-          stateId: 1,
-          streetAddress: address
-        })
-        resetForm()
-      }
+      await callBack(data)
+      if (!isEdit) resetForm()
       goBack()
-    } catch (e) {
-      console.log(e)
+    } catch (error) {
+      console.log(error)
     }
   }
 
