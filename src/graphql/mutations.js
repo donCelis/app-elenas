@@ -13,13 +13,11 @@ export const LOGIN_MUTATION = gql`
     ) {
       ... on AuthInfo {
         token
-        user {
-          id
-          firstName
-          lastName
-          email
-          cedula
-          cellphone
+      }
+      ... on ValidationErrors {
+        errors {
+          message
+          field
         }
       }
     }
@@ -30,25 +28,6 @@ export const UPDATE_CLIENT = gql`
     updateClient(id: $updateClientId, input: $updateClientInput) {
       ... on Client {
         id
-        registerDate
-        firstName
-        lastName
-        cedula
-        address
-        innerNumber
-        outsideNumber
-        addressIndications
-        is_range
-        city
-        cellphone
-        credit
-        isSeller
-        neighborhood
-        state {
-          displayName
-          id
-          shortCode
-        }
       }
     }
   }
@@ -58,28 +37,8 @@ export const ADD_USER = gql`
     createClient(input: $createClientInput) {
       ... on Client {
         id
-        registerDate
-        firstName
-        lastName
-        cedula
-        address
-        innerNumber
-        outsideNumber
-        addressIndications
-        is_range
-        city
-        cellphone
-        credit
-        isSeller
-        neighborhood
-        state {
-          displayName
-          id
-          shortCode
-        }
       }
       ... on ValidationErrors {
-        message
         errors {
           message
           field

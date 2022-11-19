@@ -1,5 +1,5 @@
 import { useEffect, useMemo } from 'react'
-import { StyleSheet, View, ScrollView } from 'react-native'
+import { StyleSheet, View, ScrollView, Alert } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { FormProvider, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -11,7 +11,11 @@ import { theme } from '../theme'
 import InputField from './common/InputField'
 import Button from './common/Button'
 
-export default function AddEditForm ({ currentUser, isEdit = false, callBack = async () => {} }) {
+export default function AddEditForm ({
+  currentUser,
+  isEdit = false,
+  callBack = async () => {}
+}) {
   const { goBack } = useNavigation()
 
   const defaultValues = useMemo(
@@ -41,12 +45,12 @@ export default function AddEditForm ({ currentUser, isEdit = false, callBack = a
   }, [isEdit, currentUser])
 
   const onSubmit = async (data) => {
-    try {
-      await callBack(data)
+    const response = await callBack(data)
+    if (response) {
+      Alert.alert(response[0].message)
+    } else {
       if (!isEdit) resetForm()
       goBack()
-    } catch (error) {
-      console.log(error)
     }
   }
 
@@ -75,7 +79,13 @@ export default function AddEditForm ({ currentUser, isEdit = false, callBack = a
             <InputField topError label='Address' name='address' />
           </View>
           <View style={[styles.inner, styles.space]}>
-            <InputField topError label='Cellphone' name='cellphone' />
+            <InputField
+              editable={!isEdit}
+              notEdit={isEdit}
+              topError
+              label='Cellphone'
+              name='cellphone'
+            />
           </View>
           <Button
             disabled={isSubmitting}

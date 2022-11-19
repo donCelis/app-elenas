@@ -9,13 +9,10 @@ export default function UpdateUser ({ route }) {
   const { updateUser } = useUpdate()
 
   const handleUpdateUser = async (data) => {
-    const { firstName, lastName, cedula, cellphone, address } = data
+    const { address } = data
     await updateUser({
+      ...data,
       updateClientId: currentUser?.id,
-      firstName,
-      lastName,
-      cellphone,
-      cedula,
       streetAddress: address
     })
   }

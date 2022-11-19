@@ -1,4 +1,4 @@
-import { View, StyleSheet, Image } from 'react-native'
+import { View, StyleSheet, Image, Alert } from 'react-native'
 import { FormProvider, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 
@@ -33,14 +33,13 @@ export default function LogIn ({ navigation: { replace } }) {
   } = methods
 
   const onSubmit = async (data) => {
-    try {
-      const { cellphone, password } = data
-      await logIn({ cellphone, password })
+    const response = await logIn({ ...data })
+    if (response) {
+      Alert.alert(response[0].message)
+    } else {
       /* disable navigation to login */
       replace(PATH_PAGE.home)
       resetForm()
-    } catch (e) {
-      console.log(e)
     }
   }
 

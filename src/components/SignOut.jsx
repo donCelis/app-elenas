@@ -16,7 +16,7 @@ export default function SignOut () {
       await removeAccessToken()
       dispatch(replace(PATH_AUTH.signIn))
     } catch (error) {
-      console.log('Este error', error)
+      console.log(error)
     }
   }
 

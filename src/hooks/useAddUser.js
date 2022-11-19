@@ -14,7 +14,7 @@ export const useAddUser = () => {
     cityId,
     stateId
   }) => {
-    const { data } = await addUserMutation({
+    const { data: { createClient } } = await addUserMutation({
       variables: {
         createClientInput: {
           firstName,
@@ -30,9 +30,11 @@ export const useAddUser = () => {
       }
     })
 
-    console.log(data)
-
-    await apolloClient.resetStore()
+    if (createClient?.errors) {
+      return createClient?.errors
+    } else {
+      await apolloClient.resetStore()
+    }
   }
 
   return {

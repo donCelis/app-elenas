@@ -6,17 +6,20 @@ export const useLogin = () => {
   const [loginMutation] = useMutation(LOGIN_MUTATION)
   const apolloClient = useApolloClient()
 
-  const logIn = async ({ cellphone, password }) => {
-    const { data } = await loginMutation({
+  const logIn = async (data) => {
+    const { data: { login } } = await loginMutation({
       variables: {
-        cellphone,
-        password,
+        ...data,
         exuseExpirationPolicy: true
       }
     })
 
-    await setAccessToken(data.login.token)
-    await apolloClient.resetStore()
+    if (login?.errors) {
+      return login?.errors
+    } else {
+      await setAccessToken(login.token)
+      await apolloClient.resetStore()
+    }
   }
 
   return {

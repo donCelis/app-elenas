@@ -1,12 +1,14 @@
 import { useState } from 'react'
-import { Controller, useFormContext } from 'react-hook-form'
 import { StyleSheet, Text, TextInput, View } from 'react-native'
+import { Controller, useFormContext } from 'react-hook-form'
 import { theme } from '../../theme'
+import Sms from './Sms'
 
 export default function InputField ({
   name,
   topError = false,
   bottonError = false,
+  notEdit = false,
   ...props
 }) {
   const [isFocus, setIsFocus] = useState(false)
@@ -46,12 +48,9 @@ export default function InputField ({
               onFocus={handleFocus}
               {...props}
             />
-            {topError && error && (
-              <Text style={styles.smsErrorTop}>{error.message}</Text>
-            )}
-            {bottonError && error && (
-              <Text style={styles.smsErrorBotton}>{error.message}</Text>
-            )}
+            {(topError && error) && <Sms topError text={error.message} />}
+            {(bottonError && error) && <Sms bottonError text={error.message} />}
+            {notEdit && <Sms notEdit text='Not Editable' />}
           </View>
         )}
         name={name}
@@ -84,19 +83,5 @@ const styles = StyleSheet.create({
   },
   inputFocus: {
     borderColor: theme.colors.primary
-  },
-  smsErrorBotton: {
-    color: theme.colors.wrong,
-    textAlign: 'right',
-    position: 'absolute',
-    bottom: -20,
-    right: 0
-  },
-  smsErrorTop: {
-    color: theme.colors.wrong,
-    textAlign: 'right',
-    position: 'absolute',
-    top: -20,
-    right: 0
   }
 })

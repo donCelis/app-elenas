@@ -13,7 +13,7 @@ export const useUpdate = () => {
     cedula,
     streetAddress
   }) => {
-    const { data } = await updateMutation({
+    await updateMutation({
       variables: {
         updateClientId,
         updateClientInput: {
@@ -27,8 +27,6 @@ export const useUpdate = () => {
         }
       }
     })
-
-    console.log(data)
 
     await apolloClient.resetStore()
   }
