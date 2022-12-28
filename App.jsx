@@ -1,23 +1,21 @@
 import { AppRegistry } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
-import { ApolloProvider } from '@apollo/client'
+import { Provider as OvermindProvider } from 'overmind-react'
+import { overmind } from './src/overmind'
 
-import { createApolloClient } from './src/utils/apolloClient'
-import Main from './src/routes/Main'
 /* components */
-
-const client = createApolloClient()
+import Main from './src/routes/Main'
 
 export default function App () {
   return (
-    <ApolloProvider client={client}>
+    <OvermindProvider value={overmind}>
       <SafeAreaProvider>
         <NavigationContainer>
           <Main />
         </NavigationContainer>
       </SafeAreaProvider>
-    </ApolloProvider>
+    </OvermindProvider>
   )
 }
 

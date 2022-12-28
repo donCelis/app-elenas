@@ -7,7 +7,7 @@ import { theme } from '../../theme'
 /* components */
 import Avatar from './Avatar'
 
-export default function UserCard ({ id, firstName, lastName, city }) {
+export default function UserCard ({ id, name, username }) {
   const linkTo = useLinkTo()
 
   const handleRouting = () => {
@@ -16,12 +16,12 @@ export default function UserCard ({ id, firstName, lastName, city }) {
   return (
     <Pressable onPress={handleRouting}>
       <View style={styles.content}>
-        <Avatar size={50} str={firstName} />
+        <Avatar size={50} str={name} />
         <View style={styles.info}>
           <Text style={styles.title}>
-            {firstName} {lastName}
+            {name}
           </Text>
-          <Text style={styles.small}>{city}</Text>
+          <Text style={styles.small}>{username}</Text>
         </View>
       </View>
     </Pressable>

@@ -1,5 +1,3 @@
-import 'dotenv/config'
-
 export default {
   name: 'app-elenas',
   slug: 'app-elenas',
@@ -29,9 +27,5 @@ export default {
   },
   web: {
     favicon: './assets/favicon.png'
-  },
-  extra: {
-    apolloUri: process.env.APOLLO_URI,
-    env: process.env.ENV
   }
 }

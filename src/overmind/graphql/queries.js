@@ -1,4 +1,16 @@
-import { gql } from '@apollo/client'
+import { gql } from 'overmind-graphql'
+
+export const GET_USERS = gql`
+  query {
+    users {
+      data {
+        id
+        username
+        name
+      }
+    }
+  }
+`
 
 export const GET_SINGLE_USER = gql`
   query ($ids: [Int!]) {
@@ -29,18 +41,6 @@ export const GET_SINGLE_USER = gql`
   }
 `
 
-export const GET_USERS = gql`
-  query ($ids: [Int!]) {
-    clientsSearch(ids: $ids) {
-      results {
-        id
-        firstName
-        lastName
-        city
-      }
-    }
-  }
-`
 export const GET_PROFILE = gql`
   query {
     profile {

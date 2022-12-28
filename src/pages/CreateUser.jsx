@@ -1,11 +1,11 @@
 import AddEditForm from '../components/AddEditForm'
 import KeyboardShift from '../components/KeyboardShift'
-import { useAddUser } from '../hooks/useAddUser'
+// import { useAddUser } from '../hooks/useAddUser'
 
 export default function CreateUser () {
-  const { addUser } = useAddUser()
+  // const { addUser } = useAddUser()
 
-  const handleAddUser = async (data) => {
+  /* const handleAddUser = async (data) => {
     const { cellphone, address } = data
     const response = await addUser({
       ...data,
@@ -16,10 +16,11 @@ export default function CreateUser () {
     })
 
     return response
-  }
+  } */
+
   return (
     <KeyboardShift>
-      <AddEditForm callBack={handleAddUser} />
+      <AddEditForm /* callBack={handleAddUser} */ />
     </KeyboardShift>
   )
 }

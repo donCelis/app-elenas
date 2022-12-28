@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client'
+import { gql } from 'overmind-graphql'
 
 export const LOGIN_MUTATION = gql`
   mutation (

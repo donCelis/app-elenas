@@ -1,5 +1,5 @@
 import { useMutation, useApolloClient } from '@apollo/client'
-import { ADD_USER } from '../graphql/mutations.js'
+import { ADD_USER } from '../overmind/graphql/mutations'
 
 export const useAddUser = () => {
   const [addUserMutation] = useMutation(ADD_USER)
