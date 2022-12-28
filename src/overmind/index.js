@@ -9,12 +9,14 @@ import { namespaced, merge } from 'overmind/config'
 import { overmindIp } from '../../config'
 
 /* states, actions, effects */
-import { onInitialize } from './onInit'
+import { state } from './state'
+import * as actions from './actions'
 import * as users from './users'
 import * as admin from './admin'
 
 const config = merge({
-  onInitialize
+  state,
+  actions
 }, namespaced({ users, admin }))
 
 export const overmind = createOvermind(config, {

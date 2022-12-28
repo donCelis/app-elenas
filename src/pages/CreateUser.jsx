@@ -5,10 +5,7 @@ import { useAddUser } from '../hooks/useAddUser'
 export default function CreateUser () {
   const { addUser } = useAddUser()
 
-  const handleAddUser = (data) => {
-    const response = addUser({ ...data })
-    return response
-  }
+  const handleAddUser = (data) => addUser({ ...data })
 
   return (
     <KeyboardShift>

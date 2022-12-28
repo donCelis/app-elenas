@@ -1,12 +1,14 @@
 import { gql } from 'overmind-graphql'
 
 export const GET_USERS = gql`
-  query {
-    users {
+  query Query($options: PageQueryOptions) {
+    users(options: $options) {
       data {
         id
-        username
+        email
         name
+        phone
+        username
       }
     }
   }

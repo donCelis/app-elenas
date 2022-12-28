@@ -1,25 +1,22 @@
 import { SafeAreaView, StyleSheet } from 'react-native'
+import { useAppState } from '../overmind'
 
 import Profile from '../components/Profile'
 import SignOut from '../components/SignOut'
-// import LoadingModal from '../components/common/Modal'
-import { useAppState } from '../overmind'
+import LoadingModal from '../components/common/Modal'
 
 export default function ProfilePage () {
-  const { admin } = useAppState()
-  const user = admin.data
+  const { admin, loading } = useAppState()
+  const user = admin
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* {loading && <LoadingModal />}
+      {loading && <LoadingModal />}
       {!loading && (
         <Profile {...user}>
           <SignOut />
         </Profile>
-      )} */}
-      <Profile {...user}>
-        <SignOut />
-      </Profile>
+      )}
     </SafeAreaView>
   )
 }
