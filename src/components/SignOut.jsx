@@ -1,9 +1,9 @@
 import { useNavigation, StackActions } from '@react-navigation/native'
 import { useApolloClient } from '@apollo/client'
 
-import { PATH_AUTH } from '../routes/paths.js'
-import { removeAccessToken } from '../utils/authStorage.js'
-import Button from '../components/common/Button.jsx'
+import { PATH_AUTH } from '../routes/paths'
+import { removeAccessToken } from '../utils/authStorage'
+import Button from '../components/common/Button'
 
 export default function SignOut () {
   const apolloClient = useApolloClient()

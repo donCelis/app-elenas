@@ -30,13 +30,12 @@ export const GET_SINGLE_USER = gql`
 `
 
 export const GET_USERS = gql`
-  query ($ids: [Int!]) {
-    clientsSearch(ids: $ids) {
-      results {
+  query {
+    users {
+      data {
         id
-        firstName
-        lastName
-        city
+        name
+        username
       }
     }
   }

@@ -11,7 +11,7 @@ import LoadingModal from '../components/common/Modal'
 export default function UserList () {
   const { data, error, loading } = useQuery(GET_USERS)
 
-  const users = data?.clientsSearch?.results || []
+  const users = data?.users?.data || []
 
   return (
     <View style={styles.container}>

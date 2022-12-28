@@ -1,5 +1,5 @@
 import { useMutation, useApolloClient } from '@apollo/client'
-import { UPDATE_CLIENT } from '../graphql/mutations.js'
+import { UPDATE_CLIENT } from '../graphql/mutations'
 
 export const useUpdate = () => {
   const [updateMutation] = useMutation(UPDATE_CLIENT)
