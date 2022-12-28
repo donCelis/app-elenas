@@ -1,7 +1,6 @@
 import { ScrollView, StyleSheet, View } from 'react-native'
 
 import { theme } from '../theme'
-import { converDate } from '../utils/convertDate'
 
 /* components */
 import Avatar from '../components/common/Avatar'
@@ -9,33 +8,24 @@ import TextMd from './common/TextMd'
 
 export default function Profile ({
   id = 0,
-  firstName = '',
-  lastName = '',
-  cellphone = '',
-  registerDate,
-  address = '',
-  isSeller = '',
-  credit = '',
-  state = '',
-  city = '',
+  name = '',
+  username = '',
   isEdit = false,
   email = 'Empty',
-  cedula = 0,
+  phone = 0,
   children
 }) {
-  const formatRegisterDate = converDate(registerDate)
-
   return (
     <View style={styles.container}>
       <View style={styles.avatar}>
-        <Avatar str={firstName} size={85} />
+        <Avatar str={name} size={85} />
         <TextMd
           style={styles.username}
           fontWeight='bold'
           align='center'
           fontSize='title'
         >
-          {firstName} {lastName}
+          {name}
         </TextMd>
       </View>
       <ScrollView
@@ -47,53 +37,17 @@ export default function Profile ({
           <TextMd>{id}</TextMd>
         </View>
         <View style={styles.innerCard}>
-          <TextMd fontWeight='bold'>Phone</TextMd>
-          <TextMd>{cellphone}</TextMd>
-        </View>
-        {
-          !isEdit && (
-            <>
-              <View style={styles.innerCard}>
-                <TextMd fontWeight='bold'>Cedula</TextMd>
-                <TextMd>{cedula}</TextMd>
-              </View>
-              <View style={styles.innerCard}>
-                <TextMd fontWeight='bold'>Email</TextMd>
-                <TextMd>{email}</TextMd>
-              </View>
-            </>
-          )
-        }
-        <View style={styles.innerCard}>
-          <TextMd fontWeight='bold'>Created</TextMd>
-          <TextMd>{formatRegisterDate}</TextMd>
+          <TextMd fontWeight='bold'>Username</TextMd>
+          <TextMd>{username}</TextMd>
         </View>
         <View style={styles.innerCard}>
-          <TextMd fontWeight='bold'>City</TextMd>
-          <TextMd>{address?.city || city}</TextMd>
+          <TextMd fontWeight='bold'>Cellphone</TextMd>
+          <TextMd>{phone}</TextMd>
         </View>
-        {
-          isEdit && (
-            <>
-              <View style={styles.innerCard}>
-                <TextMd fontWeight='bold'>State</TextMd>
-                <TextMd>{state?.displayName}</TextMd>
-              </View>
-              <View style={styles.innerCard}>
-                <TextMd fontWeight='bold'>Short Code</TextMd>
-                <TextMd>{state?.shortCode}</TextMd>
-              </View>
-              <View style={styles.innerCard}>
-                <TextMd fontWeight='bold'>Is Seller</TextMd>
-                <TextMd>{isSeller ? '🟢' : '🔴'}</TextMd>
-              </View>
-              <View style={styles.innerCard}>
-                <TextMd fontWeight='bold'>Credit</TextMd>
-                <TextMd>{credit}</TextMd>
-              </View>
-            </>
-          )
-        }
+        <View style={styles.innerCard}>
+          <TextMd fontWeight='bold'>Email</TextMd>
+          <TextMd>{email}</TextMd>
+        </View>
         {children}
       </ScrollView>
     </View>

@@ -21,11 +21,10 @@ export default function AddEditForm ({
   const defaultValues = useMemo(
     () => ({
       id: currentUser?.id || 0,
-      firstName: currentUser?.firstName || '',
-      lastName: currentUser?.lastName || '',
-      cellphone: currentUser?.cellphone || '',
-      cedula: currentUser?.cedula || '',
-      address: currentUser?.address || ''
+      username: currentUser?.username || '',
+      name: currentUser?.name || '',
+      email: currentUser?.email || '',
+      phone: currentUser?.phone || ''
     }),
     [currentUser]
   )
@@ -67,24 +66,27 @@ export default function AddEditForm ({
           showsVerticalScrollIndicator={false}
         >
           <View style={styles.inner}>
-            <InputField topError label='First Name' name='firstName' />
+            <InputField topError label='Name' name='name' />
           </View>
           <View style={styles.inner}>
-            <InputField topError label='Last Name' name='lastName' />
+            <InputField topError label='Username' name='username' />
           </View>
           <View style={styles.inner}>
-            <InputField topError label='Document' name='cedula' />
+            <InputField
+              topError
+              label='Cellphone'
+              name='phone'
+              keyboardType='phone-pad'
+            />
           </View>
           <View style={styles.inner}>
-            <InputField topError label='Address' name='address' />
-          </View>
-          <View style={[styles.inner, styles.space]}>
             <InputField
               editable={!isEdit}
               notEdit={isEdit}
               topError
-              label='Cellphone'
-              name='cellphone'
+              label='Email'
+              name='email'
+              keyboardType='email-address'
             />
           </View>
           <Button

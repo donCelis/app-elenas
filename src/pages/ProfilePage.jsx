@@ -1,15 +1,13 @@
 import { SafeAreaView, StyleSheet } from 'react-native'
-// import { useQuery } from '@apollo/client'
-// import { GET_PROFILE } from '../overmind/effects/graphql/queries'
 
 import Profile from '../components/Profile'
 import SignOut from '../components/SignOut'
-import LoadingModal from '../components/common/Modal'
+// import LoadingModal from '../components/common/Modal'
+import { useAppState } from '../overmind'
 
 export default function ProfilePage () {
-  // const { data = {}, loading } = useQuery(GET_PROFILE, { })
-
-  const user = {}
+  const { admin } = useAppState()
+  const user = admin.data
 
   return (
     <SafeAreaView style={styles.container}>
@@ -19,6 +17,9 @@ export default function ProfilePage () {
           <SignOut />
         </Profile>
       )} */}
+      <Profile {...user}>
+        <SignOut />
+      </Profile>
     </SafeAreaView>
   )
 }

@@ -7,12 +7,15 @@ import {
 } from 'overmind-react'
 import { namespaced, merge } from 'overmind/config'
 import { overmindIp } from '../../config'
+
+/* states, actions, effects */
 import { onInitialize } from './onInit'
 import * as users from './users'
+import * as admin from './admin'
 
 const config = merge({
   onInitialize
-}, namespaced({ users }))
+}, namespaced({ users, admin }))
 
 export const overmind = createOvermind(config, {
   devtools: overmindIp

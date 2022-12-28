@@ -10,9 +10,8 @@ export const loginSchema = Yup.object({})
 /* schema add user */
 export const addUserSchema = Yup.object({})
   .shape({
-    firstName: Yup.string().required('First Name is required.'),
-    lastName: Yup.string().required('Last Name is required.'),
-    cellphone: Yup.string().required('Cellphone is required.'),
-    cedula: Yup.string().required('Cedula is required.'),
-    address: Yup.string().required('Address is required.')
+    username: Yup.string().required('Username is required.'),
+    name: Yup.string().required('Name is required.'),
+    email: Yup.string().email('Email not valid').required('Email is required.'),
+    phone: Yup.string().required('Cellphone is required')
   })

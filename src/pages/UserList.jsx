@@ -14,7 +14,7 @@ export default function UserList () {
       <FlatList
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.flatlist}
-        data={users?.data}
+        data={users?.data || []}
         renderItem={({ item: user }) => <UserCard {...user} />}
       />
       {/* {loading && <LoadingModal />}
