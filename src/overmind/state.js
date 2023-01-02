@@ -1,3 +1,4 @@
 export const state = {
-  loading: true
+  loading: true,
+  currentUser: {}
 }

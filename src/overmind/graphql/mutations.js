@@ -33,17 +33,13 @@ export const UPDATE_CLIENT = gql`
   }
 `
 export const ADD_USER = gql`
-  mutation ($createClientInput: ClientInput!) {
-    createClient(input: $createClientInput) {
-      ... on Client {
-        id
-      }
-      ... on ValidationErrors {
-        errors {
-          message
-          field
-        }
-      }
+  mutation ($input: CreateUserInput!) {
+    createUser(input: $input) {
+      username
+      name
+      email
+      phone
+      id
     }
   }
 `

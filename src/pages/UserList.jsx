@@ -1,10 +1,9 @@
+import { useEffect } from 'react'
 import { FlatList, StyleSheet, View } from 'react-native'
 import { useActions, useAppState } from '../overmind'
 
 /* components */
-// import TextMd from '../components/common/TextMd'
 import UserCard from '../components/common/UserCard'
-import { useEffect } from 'react'
 import LoadingModal from '../components/common/Modal'
 
 export default function UserList () {
@@ -17,7 +16,7 @@ export default function UserList () {
   } = useActions()
 
   useEffect(() => {
-    getUsers()
+    users.length === 0 && getUsers()
   }, [])
 
   return (
@@ -31,11 +30,6 @@ export default function UserList () {
           renderItem={({ item: user }) => <UserCard {...user} />}
         />
       )}
-      {/* {error && (
-        <TextMd align='center' fontSize='subheading'>
-          {String(error)}
-        </TextMd>
-      )} */}
     </View>
   )
 }

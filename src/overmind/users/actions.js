@@ -1,6 +1,5 @@
 /* users */
 export const getUsers = async ({ state, effects }) => {
-  state.loading = true
   const options = {
     options: {
       sort: [
@@ -23,16 +22,22 @@ export const getUsers = async ({ state, effects }) => {
   state.loading = false
 }
 
-export const getUser = ({ state }, id) => {
-  const user = [...state.users].find((user) => user.id === id)
-  return user
+export const getUser = async ({ state, effects }, id) => {
+  // const user = [...state.users].find((user) => user.id === id)
+  const { user } = await effects.users.gql.queries.GET_SINGLE_USER({
+    userId: id
+  })
+  state.currentUser = user
 }
 
-export const addUser = ({ state }, user) => {
-  const id = String(Date.now())
-  const tempUser = { id, ...user }
+export const addUser = async ({ state, effects }, user) => {
+  const { createUser } = await effects.users.gql.mutations.ADD_USER({
+    input: {
+      ...user
+    }
+  })
 
-  state.users = [...state.users, tempUser]
+  state.users = [...state.users, createUser]
 }
 
 export const updateUser = ({ state }, changes) => {
