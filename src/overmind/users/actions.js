@@ -1,3 +1,4 @@
+/* users */
 export const getUsers = async ({ state, effects }) => {
   state.loading = true
   const options = {
@@ -13,37 +14,51 @@ export const getUsers = async ({ state, effects }) => {
   const {
     users: { data }
   } = await effects.users.gql.queries.GET_USERS(options)
-  state.users = data
+
+  const addIsFavToUsers = [...data].map((user) => {
+    return { ...user, isFav: false }
+  })
+
+  state.users = addIsFavToUsers
   state.loading = false
 }
 
 export const getUser = ({ state }, id) => {
-  const { users } = state
-
-  const user = users.find((user) => user.id === id)
+  const user = [...state.users].find((user) => user.id === id)
   return user
 }
 
 export const addUser = ({ state }, user) => {
-  const { users } = state
   const id = String(Date.now())
+  const tempUser = { id, ...user }
 
-  users.push({
-    id,
-    ...user
-  })
+  state.users = [...state.users, tempUser]
 }
 
 export const updateUser = ({ state }, changes) => {
-  const { users } = state
-  const indexUser = users.findIndex((user) => user.id === changes.id)
+  const indexUser = [...state.users].findIndex(
+    (user) => user.id === changes.id
+  )
 
   if (indexUser === -1) return
 
   const changesUser = {
-    ...users[indexUser],
+    ...state.users[indexUser],
     ...changes
   }
 
-  users[indexUser] = changesUser
+  state.users[indexUser] = changesUser
+}
+
+export const clearUsers = ({ state }) => {
+  state.users = []
+}
+
+/* favs */
+export const editUserFavs = ({ state }, { id, isFav }) => {
+  const indexUser = [...state.users].findIndex((user) => user.id === id)
+
+  if (indexUser === -1) return
+
+  state.users[indexUser].isFav = !isFav
 }

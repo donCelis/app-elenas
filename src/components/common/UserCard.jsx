@@ -6,16 +6,19 @@ import { theme } from '../../theme'
 
 /* components */
 import Avatar from './Avatar'
+import Favs from './Favs'
 
-export default function UserCard ({ id, name, username }) {
+export default function UserCard (user) {
+  const { id, name, username } = user
   const linkTo = useLinkTo()
 
   const handleRouting = () => {
     linkTo(`/${PATH_PAGE.detail}/${id}`)
   }
+
   return (
-    <Pressable onPress={handleRouting}>
-      <View style={styles.content}>
+    <View style={styles.row}>
+      <Pressable style={styles.content} onPress={handleRouting}>
         <Avatar size={50} str={name} />
         <View style={styles.info}>
           <Text style={styles.title}>
@@ -23,19 +26,26 @@ export default function UserCard ({ id, name, username }) {
           </Text>
           <Text style={styles.small}>{username}</Text>
         </View>
-      </View>
-    </Pressable>
+      </Pressable>
+      <Favs {...user} />
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: theme.colors.whitePure,
+    marginVertical: 10,
+    borderRadius: 5
+  },
   content: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: theme.colors.whitePure,
-    borderRadius: 5,
     padding: 15,
-    marginVertical: 10
+    flex: 1
   },
   info: {
     marginLeft: 15
