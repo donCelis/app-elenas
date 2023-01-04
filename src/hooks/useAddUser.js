@@ -6,8 +6,7 @@ export const useAddUser = () => {
   } = useActions()
 
   const addUser = async ({ username, name, email, phone }) => {
-    const data = await addUserAction({ username, name, email, phone })
-    return data
+    await addUserAction({ username, name, email, phone })
   }
 
   return { addUser }

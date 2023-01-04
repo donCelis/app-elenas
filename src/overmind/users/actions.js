@@ -14,9 +14,7 @@ export const getUsers = async ({ state, effects }) => {
     users: { data }
   } = await effects.users.gql.queries.GET_USERS(options)
 
-  const addIsFavToUsers = [...data].map((user) => {
-    return { ...user, isFav: false }
-  })
+  const addIsFavToUsers = [...data].map((user) => ({ ...user, isFav: false }))
 
   state.users = addIsFavToUsers
   state.loading = false
@@ -37,19 +35,39 @@ export const addUser = async ({ state, effects }, user) => {
     }
   })
 
-  state.users = [...state.users, createUser]
+  const toRewriteId = String(Date.now())
+
+  const tempUser = {
+    ...createUser,
+    id: toRewriteId
+  }
+
+  state.users = [...state.users, tempUser]
 }
 
-export const updateUser = ({ state }, changes) => {
-  const indexUser = [...state.users].findIndex(
-    (user) => user.id === changes.id
-  )
+export const updateUser = async (
+  { state, effects },
+  { id, username, name, phone }
+) => {
+  const { updateUser } = await effects.users.gql.mutations.UPDATE_CLIENT({
+    updateUserId: id,
+    input: {
+      username,
+      name,
+      phone
+    }
+  })
+
+  const checkId = updateUser?.id || id
+
+  const indexUser = [...state.users].findIndex((user) => user.id === checkId)
 
   if (indexUser === -1) return
 
   const changesUser = {
     ...state.users[indexUser],
-    ...changes
+    ...updateUser,
+    id
   }
 
   state.users[indexUser] = changesUser

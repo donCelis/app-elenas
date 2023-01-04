@@ -24,11 +24,12 @@ export const LOGIN_MUTATION = gql`
   }
 `
 export const UPDATE_CLIENT = gql`
-  mutation ($updateClientId: Int!, $updateClientInput: ClientInput!) {
-    updateClient(id: $updateClientId, input: $updateClientInput) {
-      ... on Client {
-        id
-      }
+  mutation ($updateUserId: ID!, $input: UpdateUserInput!) {
+    updateUser(id: $updateUserId, input: $input) {
+      id
+      name
+      phone
+      username
     }
   }
 `

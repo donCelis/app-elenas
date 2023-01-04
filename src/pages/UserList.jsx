@@ -12,11 +12,14 @@ export default function UserList () {
     loading
   } = useAppState()
   const {
-    users: { getUsers }
+    users: { getUsers }, admin: { getAdmin }
   } = useActions()
 
   useEffect(() => {
-    users.length === 0 && getUsers()
+    if (users.length === 0) {
+      getUsers()
+      getAdmin()
+    }
   }, [])
 
   return (

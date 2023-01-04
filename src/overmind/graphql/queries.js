@@ -15,7 +15,7 @@ export const GET_USERS = gql`
 `
 
 export const GET_SINGLE_USER = gql`
-  query ($userId: ID!){
+  query ($userId: ID!) {
     user(id: $userId) {
       id
       email
@@ -27,18 +27,13 @@ export const GET_SINGLE_USER = gql`
 `
 
 export const GET_PROFILE = gql`
-  query {
-    profile {
-      firstName
-      lastName
+  query ($userId: ID!) {
+    user(id: $userId) {
       id
-      cellphone
       email
-      cedula
-      registerDate
-      address {
-        city
-      }
+      name
+      phone
+      username
     }
   }
 `

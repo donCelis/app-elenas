@@ -8,7 +8,7 @@ export default function UpdateUser ({ route }) {
 
   const { updateUser } = useUpdate()
 
-  const handleUpdateUser = (data) => updateUser({ ...data })
+  const handleUpdateUser = async (data) => await updateUser(data)
 
   return (
     <KeyboardShift>

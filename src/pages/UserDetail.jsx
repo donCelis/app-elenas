@@ -1,6 +1,5 @@
-import { useEffect } from 'react'
 import { StyleSheet, SafeAreaView } from 'react-native'
-import { useActions, useAppState } from '../overmind'
+import { useAppState } from '../overmind'
 
 import { PATH_PAGE } from '../routes/paths'
 
@@ -11,20 +10,14 @@ import LoadingModal from '../components/common/Modal'
 
 export default function UserDetail ({ route, navigation: { navigate } }) {
   const { loading, users } = useAppState()
-  const {
-    users: { getUser }
-  } = useActions()
+
   const idUser = route?.params?.screen
 
   const currentUser = users.find(user => user.id === idUser)
 
   const handleEdit = () => {
-    navigate(PATH_PAGE.update, { ...currentUser })
+    navigate(PATH_PAGE.update, currentUser)
   }
-
-  useEffect(() => {
-    getUser(idUser)
-  }, [])
 
   return (
     <SafeAreaView style={styles.container}>

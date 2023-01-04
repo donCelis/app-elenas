@@ -5,11 +5,9 @@ export const useUpdate = () => {
     users: { updateUser: updateUserAction }
   } = useActions()
 
-  const updateUser = ({ username, name, phone, id }) => {
-    updateUserAction({ username, name, phone, id })
+  const updateUser = async ({ username, name, phone, id }) => {
+    await updateUserAction({ username, name, phone, id })
   }
 
-  return {
-    updateUser
-  }
+  return { updateUser }
 }
