@@ -3,7 +3,7 @@ import { ScrollView, StyleSheet, View } from 'react-native'
 import { theme } from '../theme'
 
 /* components */
-import Avatar from '../components/common/Avatar'
+import Avatar from './common/Avatar'
 import TextMd from './common/TextMd'
 
 export default function Profile ({

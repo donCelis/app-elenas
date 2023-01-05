@@ -38,7 +38,7 @@ const theme = {
 
 const screenOptions = {
   tabBarActiveTintColor: theme?.colors.primary,
-  tabBarInactiveTintColor: theme?.colors.secondaryText,
+  tabBarInactiveTintColor: theme?.colors.textSecondary,
   headerStyle: {
     backgroundColor: theme?.colors.primary
   },

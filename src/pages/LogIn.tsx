@@ -14,9 +14,11 @@ import Button from '../components/common/Button'
 import TextMd from '../components/common/TextMd'
 /* hooks */
 import { useLogin } from '../hooks/useLogin'
+import { useActions } from '../overmind'
 
 export default function LogIn ({ navigation: { replace } }) {
   const { logIn } = useLogin()
+  const { admin: { getAdmin } } = useActions()
 
   const methods = useForm({
     resolver: yupResolver(loginSchema),
@@ -38,6 +40,7 @@ export default function LogIn ({ navigation: { replace } }) {
       Alert.alert(response[0].message)
     } else {
       /* disable navigation to login */
+      await getAdmin()
       replace(PATH_PAGE.home)
       resetForm()
     }
