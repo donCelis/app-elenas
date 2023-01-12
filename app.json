@@ -1,6 +1,6 @@
 {
   "name": "app-elenas",
-  "slug": "elenas-app",
+  "slug": "app-elenas",
   "version": "1.0.0",
   "orientation": "portrait",
   "icon": "./assets/icon.png",
@@ -40,6 +40,11 @@
   "expo": {
     "android": {
       "package": "com.alexander.celis.elenasapp"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "86f4227f-d353-4d02-9813-be711c395600"
+      }
     }
   }
 }
