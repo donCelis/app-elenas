@@ -1,6 +1,6 @@
 {
   "name": "app-elenas",
-  "slug": "Mujeres Poderosas",
+  "slug": "elenas-app",
   "version": "1.0.0",
   "orientation": "portrait",
   "icon": "./assets/icon.png",
@@ -13,7 +13,9 @@
   "updates": {
     "fallbackToCacheTimeout": 0
   },
-  "assetBundlePatterns": ["**/*"],
+  "assetBundlePatterns": [
+    "**/*"
+  ],
   "ios": {
     "supportsTablet": true
   },
@@ -25,5 +27,19 @@
   },
   "web": {
     "favicon": "./assets/favicon.png"
+  },
+  "extra": {
+    "eas": {
+      "projectId": "ff80308c-14a6-473e-bf42-d8efd9c8af4a"
+    }
+  },
+  "owner": "alexander.celis",
+  "plugins": [
+    "expo-community-flipper"
+  ],
+  "expo": {
+    "android": {
+      "package": "com.alexander.celis.elenasapp"
+    }
   }
 }

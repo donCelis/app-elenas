@@ -19,6 +19,8 @@ const config = merge({
   actions
 }, namespaced({ users, admin }))
 
+console.log(overmindIp)
+
 export const overmind = createOvermind(config, {
   devtools: overmindIp
 })

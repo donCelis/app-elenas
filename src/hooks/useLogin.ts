@@ -1,5 +1,5 @@
-import { setAccessToken } from '../utils/authStorage.js'
-import fakeToken from '../utils/fakeTokenGenerator.js'
+import { setAccessToken } from '../utils/authStorage'
+import fakeToken from '../utils/fakeTokenGenerator'
 
 export const useLogin = () => {
   const logIn = async (data) => {
