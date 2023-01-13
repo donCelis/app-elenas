@@ -34,9 +34,6 @@
     }
   },
   "owner": "alexander.celis",
-  "plugins": [
-    "expo-community-flipper"
-  ],
   "expo": {
     "android": {
       "package": "com.alexander.celis.elenasapp"

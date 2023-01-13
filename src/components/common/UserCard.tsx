@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     backgroundColor: theme.colors.whitePure,
-    margin: 10,
+    marginVertical: 10,
     borderRadius: 5
   },
   content: {

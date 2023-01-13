@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
-import { StyleSheet, View } from 'react-native'
-import { FlashList } from '@shopify/flash-list'
+import { StyleSheet, View, FlatList } from 'react-native'
 import { useActions, useAppState } from '../overmind'
 
 /* components */
@@ -23,11 +22,11 @@ function UserList () {
     <View style={styles.container}>
       {loading && <LoadingModal />}
       {!loading && (
-        <FlashList
+        <FlatList
           showsVerticalScrollIndicator={false}
+          contentContainerStyle={styles.flatlist}
           data={users ?? []}
           renderItem={({ item: user }) => <UserCard {...user} />}
-          estimatedItemSize={80}
         />
       )}
     </View>
