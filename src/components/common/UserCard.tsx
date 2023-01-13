@@ -1,4 +1,5 @@
 import { useLinkTo } from '@react-navigation/native'
+import { memo } from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 
 import { PATH_PAGE } from '../../routes/paths'
@@ -8,7 +9,7 @@ import { theme } from '../../theme'
 import Avatar from './Avatar'
 import Favs from './Favs'
 
-export default function UserCard (user) {
+function UserCard (user) {
   const { id, name, username } = user
   const linkTo = useLinkTo()
 
@@ -21,9 +22,7 @@ export default function UserCard (user) {
       <Pressable style={styles.content} onPress={handleRouting}>
         <Avatar size={50} str={name} />
         <View style={styles.info}>
-          <Text style={styles.title}>
-            {name}
-          </Text>
+          <Text style={styles.title}>{name}</Text>
           <Text style={styles.small}>{username}</Text>
         </View>
       </Pressable>
@@ -32,13 +31,15 @@ export default function UserCard (user) {
   )
 }
 
+export default memo(UserCard)
+
 const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     backgroundColor: theme.colors.whitePure,
-    marginVertical: 10,
+    margin: 10,
     borderRadius: 5
   },
   content: {

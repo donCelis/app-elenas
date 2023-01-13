@@ -16,9 +16,13 @@ import TextMd from '../components/common/TextMd'
 import { useLogin } from '../hooks/useLogin'
 import { useActions } from '../overmind'
 
-export default function LogIn ({ navigation: { replace } }) {
+function LogIn ({ navigation: { replace } }) {
+  // console.log('Login')
+
   const { logIn } = useLogin()
-  const { admin: { getAdmin } } = useActions()
+  const {
+    admin: { getAdmin }
+  } = useActions()
 
   const methods = useForm({
     resolver: yupResolver(loginSchema),
@@ -65,7 +69,7 @@ export default function LogIn ({ navigation: { replace } }) {
                 placeholder='+57'
                 label='Cellphone'
                 name='cellphone'
-                bottonError
+                bottomError
               />
               <InputField
                 mod={styles.space}
@@ -73,7 +77,7 @@ export default function LogIn ({ navigation: { replace } }) {
                 label='Password'
                 name='password'
                 secureTextEntry
-                bottonError
+                bottomError
               />
               <Button
                 disabled={isSubmitting}
@@ -90,6 +94,8 @@ export default function LogIn ({ navigation: { replace } }) {
     </Container>
   )
 }
+
+export default LogIn
 
 const styles = StyleSheet.create({
   login: {

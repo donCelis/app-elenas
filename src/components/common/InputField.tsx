@@ -1,26 +1,24 @@
-import { useState } from 'react'
+import { useState, useCallback, memo } from 'react'
 import { StyleSheet, Text, TextInput, View } from 'react-native'
 import { Controller, useFormContext } from 'react-hook-form'
 import { theme } from '../../theme'
 import Sms from './Sms'
 
-export default function InputField ({
+function InputField ({
   name,
   topError = false,
-  bottonError = false,
+  bottomError = false,
   notEdit = false,
   ...props
 }) {
+  // console.log('Input')
+
   const [isFocus, setIsFocus] = useState(false)
   const { control } = useFormContext()
   const { label, mod } = props
 
-  const handleFocus = () => {
-    setIsFocus(true)
-  }
-  const handleBlur = () => {
-    setIsFocus(false)
-  }
+  const handleFocus = useCallback(() => setIsFocus(true), [])
+  const handleBlur = useCallback(() => setIsFocus(false), [])
 
   return (
     <View style={mod}>
@@ -48,8 +46,8 @@ export default function InputField ({
               onFocus={handleFocus}
               {...props}
             />
-            {(topError && error) && <Sms topError text={error.message} />}
-            {(bottonError && error) && <Sms bottonError text={error.message} />}
+            {topError && error && <Sms topError text={error.message} />}
+            {bottomError && error && <Sms bottomError text={error.message} />}
             {notEdit && <Sms notEdit text='Not Editable' />}
           </View>
         )}
@@ -61,6 +59,8 @@ export default function InputField ({
     </View>
   )
 }
+
+export default memo(InputField)
 
 const styles = StyleSheet.create({
   label: {

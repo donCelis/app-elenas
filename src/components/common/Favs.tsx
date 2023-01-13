@@ -1,14 +1,16 @@
+import { useCallback } from 'react'
 import { Pressable, StyleSheet } from 'react-native'
 import { useActions } from '../../overmind'
 
 import TabBarIcon from './TabBarIcon'
 
-export default function Favs ({ id, isFav }) {
+function Favs ({ id, isFav }) {
   const { users: { editUserFavs } } = useActions()
 
-  const handleChangeFavs = () => {
-    editUserFavs({ id, isFav })
-  }
+  const handleChangeFavs = useCallback(
+    () => editUserFavs({ id, isFav }),
+    [isFav]
+  )
 
   return (
     <Pressable style={styles.fav} onPress={handleChangeFavs}>
@@ -16,6 +18,7 @@ export default function Favs ({ id, isFav }) {
     </Pressable>
   )
 }
+export default Favs
 
 const styles = StyleSheet.create({
   fav: {

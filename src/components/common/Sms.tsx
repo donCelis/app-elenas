@@ -1,11 +1,11 @@
 import { StyleSheet, Text } from 'react-native'
 import { theme } from '../../theme'
 
-export default function Sms ({ notEdit, bottonError, topError, text }) {
+export default function Sms ({ notEdit, bottomError, topError, text }) {
   const styles = [
     stylesSms.sms,
     notEdit && stylesSms.disable,
-    bottonError && stylesSms.smsErrorBotton,
+    bottomError && stylesSms.smsErrorBottom,
     topError && stylesSms.smsErrorTop
   ]
   return (
@@ -19,7 +19,7 @@ const stylesSms = StyleSheet.create({
     textAlign: 'right',
     right: 0
   },
-  smsErrorBotton: {
+  smsErrorBottom: {
     color: theme.colors.wrong,
     bottom: -20
   },

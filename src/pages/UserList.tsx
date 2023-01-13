@@ -1,16 +1,14 @@
 import { useEffect } from 'react'
-import { FlatList, StyleSheet, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
+import { FlashList } from '@shopify/flash-list'
 import { useActions, useAppState } from '../overmind'
 
 /* components */
-import UserCard from '../components/common/UserCard'
 import LoadingModal from '../components/common/Modal'
+import UserCard from '../components/common/UserCard'
 
-export default function UserList () {
-  const {
-    users,
-    loading
-  } = useAppState()
+function UserList () {
+  const { users, loading } = useAppState()
   const {
     users: { getUsers }
   } = useActions()
@@ -25,16 +23,18 @@ export default function UserList () {
     <View style={styles.container}>
       {loading && <LoadingModal />}
       {!loading && (
-        <FlatList
+        <FlashList
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={styles.flatlist}
           data={users ?? []}
           renderItem={({ item: user }) => <UserCard {...user} />}
+          estimatedItemSize={80}
         />
       )}
     </View>
   )
 }
+
+export default UserList
 
 const styles = StyleSheet.create({
   container: {
