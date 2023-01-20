@@ -33,8 +33,8 @@ function InputField ({
             <TextInput
               style={[
                 styles.input,
-                error && styles.inputError,
-                isFocus && !error && styles.inputFocus,
+                (error != null) && styles.inputError,
+                isFocus && (error == null) && styles.inputFocus,
                 value !== '' && styles.inputFocus
               ]}
               onBlur={() => {
@@ -46,8 +46,8 @@ function InputField ({
               onFocus={handleFocus}
               {...props}
             />
-            {topError && error && <Sms topError text={error.message} />}
-            {bottomError && error && <Sms bottomError text={error.message} />}
+            {topError && (error != null) && <Sms topError text={error.message} />}
+            {bottomError && (error != null) && <Sms bottomError text={error.message} />}
             {notEdit && <Sms notEdit text='Not Editable' />}
           </View>
         )}

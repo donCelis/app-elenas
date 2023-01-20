@@ -1,18 +1,8 @@
 /* users */
 export const getUsers = async ({ state, effects }) => {
-  const options = {
-    options: {
-      sort: [
-        {
-          field: 'name',
-          order: 'ASC'
-        }
-      ]
-    }
-  }
   const {
     users: { data }
-  } = await effects.users.gql.queries.GET_USERS(options)
+  } = await effects.users.gql.queries.GET_USERS()
 
   const addIsFavToUsers = [...data].map((user) => ({ ...user, isFav: false }))
 
@@ -42,7 +32,7 @@ export const addUser = async ({ state, effects }, user) => {
     id: toRewriteId
   }
 
-  state.users = [...state.users, tempUser]
+  state.users.push(tempUser)
 }
 
 export const updateUser = async (
