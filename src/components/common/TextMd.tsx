@@ -1,5 +1,14 @@
 import { StyleSheet, Text } from 'react-native'
 import { theme } from '../../theme'
+import type { PropsWithChildren } from "react"
+
+type SectionProps = PropsWithChildren<{
+  color: string | null
+  fontSize: string | null
+  fontWeight: string | null
+  align: string | null
+  style: {} | null
+}>;
 
 export default function TextMd ({
   children,
@@ -9,7 +18,7 @@ export default function TextMd ({
   align,
   style,
   ...restProps
-}) {
+}: SectionProps) {
   const textStyles = [
     styles.text,
     color === 'primary' && styles.colorPrimary,

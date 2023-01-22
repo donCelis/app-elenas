@@ -1,5 +1,6 @@
-import { useEffect } from 'react'
-import { StyleSheet, View, FlatList } from 'react-native'
+import { Profiler, useEffect } from 'react'
+import { StyleSheet, View } from 'react-native'
+import { FlashList } from '@shopify/flash-list'
 import { useActions, useAppState } from '../overmind'
 
 /* components */
@@ -19,17 +20,24 @@ function UserList () {
   }, [])
 
   return (
-    <View style={styles.container}>
-      {loading && <LoadingModal />}
-      {!loading && (
-        <FlatList
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={styles.flatlist}
-          data={users ?? []}
-          renderItem={({ item: user }) => <UserCard {...user} />}
-        />
-      )}
-    </View>
+    <Profiler
+      id='Padre'
+      onRender={(id, phase, actualDuration) =>
+        console.log(actualDuration, '\t', id, phase)}
+    >
+      <View style={styles.container}>
+        {loading && <LoadingModal />}
+        {!loading && (
+          <FlashList
+            showsVerticalScrollIndicator={false}
+            data={users ?? []}
+            renderItem={({ item: user }) => <UserCard {...user} />}
+            estimatedItemSize={180}
+            extraData={[users]}
+          />
+        )}
+      </View>
+    </Profiler>
   )
 }
 
@@ -38,9 +46,5 @@ export default UserList
 const styles = StyleSheet.create({
   container: {
     flex: 1
-  },
-  flatlist: {
-    paddingVertical: 10,
-    paddingHorizontal: 15
   }
 })

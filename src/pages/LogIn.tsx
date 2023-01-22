@@ -17,8 +17,6 @@ import { useLogin } from '../hooks/useLogin'
 import { useActions } from '../overmind'
 
 function LogIn ({ navigation: { replace } }) {
-  // console.log('Login')
-
   const { logIn } = useLogin()
   const {
     admin: { getAdmin }

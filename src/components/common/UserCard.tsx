@@ -1,21 +1,32 @@
 import { useLinkTo } from '@react-navigation/native'
-import { memo } from 'react'
+import { memo, useCallback } from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
+import { useActions } from '../../overmind'
 
 import { PATH_PAGE } from '../../routes/paths'
 import { theme } from '../../theme'
 
 /* components */
 import Avatar from './Avatar'
-import Favs from './Favs'
+import TabBarIcon from './TabBarIcon'
 
-function UserCard (user) {
-  const { id, name, username } = user
+type User = {
+  id: string
+  name: string
+  username: string
+  isFav: boolean
+}
+
+function UserCard({ id, name, username, isFav }: User) {
+  const { users : { editUserFavs } } = useActions()
+
   const linkTo = useLinkTo()
 
-  const handleRouting = () => {
+  const handleRouting = useCallback(() => {
     linkTo(`/${PATH_PAGE.detail}/${id}`)
-  }
+  }, [])
+
+  const handleChangeFavs = () => editUserFavs({ id, isFav })
 
   return (
     <View style={styles.row}>
@@ -26,12 +37,14 @@ function UserCard (user) {
           <Text style={styles.small}>{username}</Text>
         </View>
       </Pressable>
-      <Favs {...user} />
+      <Pressable style={styles.fav} onPress={handleChangeFavs}>
+        <TabBarIcon icon='heart' focused={isFav} />
+      </Pressable>
     </View>
   )
 }
 
-export default memo(UserCard)
+export default UserCard
 
 const styles = StyleSheet.create({
   row: {
@@ -40,24 +53,28 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     backgroundColor: theme.colors.whitePure,
     marginVertical: 10,
-    borderRadius: 5
+    marginHorizontal: 15,
+    borderRadius: 5,
   },
   content: {
     flexDirection: 'row',
     alignItems: 'center',
     padding: 15,
-    flex: 1
+    flex: 1,
   },
   info: {
-    marginLeft: 15
+    marginLeft: 15,
   },
   title: {
     fontWeight: 'bold',
     fontSize: theme.fontSizes.subheading,
-    textTransform: 'capitalize'
+    textTransform: 'capitalize',
   },
   small: {
     color: theme.colors.textSecondary,
-    fontSize: theme.fontSizes.body
-  }
+    fontSize: theme.fontSizes.body,
+  },
+  fav: {
+    padding: 15,
+  },
 })

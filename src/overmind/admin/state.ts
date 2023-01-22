@@ -1,7 +1,17 @@
-export const state = {
-  id: '1094045520',
-  name: 'Alexander Celis',
-  username: 'donCelis',
-  phone: '300-875-4649',
-  email: 'alexcelis019@gmail.com'
+type AdminType = {
+  id: string
+  name: string
+  username: string
+  phone: string
+  email: string
+  website: string
+}
+
+export const state: AdminType = {
+  id: '',
+  name: '',
+  username: '',
+  phone: '',
+  email: '',
+  website: ''
 }

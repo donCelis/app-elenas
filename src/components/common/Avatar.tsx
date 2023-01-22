@@ -2,7 +2,12 @@ import { StyleSheet, Text, View } from 'react-native'
 import { theme } from '../../theme'
 import { createAvatar } from '../../utils/createAvatar'
 
-export default function Avatar ({ str = '', size }) {
+type Avatar = {
+  str: string
+  size: number
+}
+
+export default function Avatar ({ str = '', size }: Avatar) {
   const { name } = createAvatar(str)
 
   const stylesAvatar = [

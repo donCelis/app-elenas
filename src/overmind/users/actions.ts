@@ -1,77 +1,89 @@
+import { Context } from '../index';
 /* users */
-export const getUsers = async ({ state, effects }) => {
+export const getUsers = async ({ state, effects }: Context) => {
   const {
-    users: { data }
+    users: { data },
   } = await effects.users.gql.queries.GET_USERS()
 
-  const addIsFavToUsers = [...data].map((user) => ({ ...user, isFav: false }))
+  const addIsFavToUsers = [...data].map((user) => ({ ...user, isFav: false }));
 
-  state.users = addIsFavToUsers
-  state.loading = false
-}
+  state.users = addIsFavToUsers;
+  state.loading = false;
+};
 
-export const getUser = async ({ state, effects }, id) => {
+export const getUser = async ({ state, effects }: Context, id: string) => {
   // const user = [...state.users].find((user) => user.id === id)
   const { user } = await effects.users.gql.queries.GET_SINGLE_USER({
-    userId: id
-  })
-  state.currentUser = user
-}
+    userId: id,
+  });
+  state.currentUser = user;
+};
 
-export const addUser = async ({ state, effects }, user) => {
+export const addUser = async (
+  { state, effects }: Context,
+  user: { id: string; username: string; name: string; phone: string }
+) => {
   const { createUser } = await effects.users.gql.mutations.ADD_USER({
     input: {
-      ...user
-    }
-  })
+      ...user,
+    },
+  });
 
-  const toRewriteId = String(Date.now())
+  const toRewriteId = String(Date.now());
 
   const tempUser = {
     ...createUser,
-    id: toRewriteId
-  }
+    id: toRewriteId,
+  };
 
-  state.users.push(tempUser)
-}
+  state.users.push(tempUser);
+};
 
 export const updateUser = async (
-  { state, effects },
-  { id, username, name, phone }
+  { state, effects }: Context,
+  {
+    id,
+    username,
+    name,
+    phone,
+  }: { id: string; username: string; name: string; phone: string }
 ) => {
   const { updateUser } = await effects.users.gql.mutations.UPDATE_CLIENT({
     updateUserId: id,
     input: {
       username,
       name,
-      phone
-    }
-  })
+      phone,
+    },
+  });
 
-  const checkId = updateUser?.id || id
+  const checkId = updateUser?.id || id;
 
-  const indexUser = [...state.users].findIndex((user) => user.id === checkId)
+  const indexUser = [...state.users].findIndex((user) => user.id === checkId);
 
-  if (indexUser === -1) return
+  if (indexUser === -1) return;
 
   const changesUser = {
     ...state.users[indexUser],
     ...updateUser,
-    id
-  }
+    id,
+  };
 
-  state.users[indexUser] = changesUser
-}
+  state.users[indexUser] = changesUser;
+};
 
-export const clearUsers = ({ state }) => {
-  state.users = []
-}
+export const clearUsers = ({ state }: Context) => {
+  state.users = [];
+};
 
 /* favs */
-export const editUserFavs = ({ state }, { id, isFav }) => {
-  const indexUser = [...state.users].findIndex((user) => user.id === id)
+export const editUserFavs = (
+  { state }: Context,
+  { id, isFav }: { id: string; isFav: boolean }
+) => {
+  const indexUser = [...state.users].findIndex((user) => user.id === id);
 
-  if (indexUser === -1) return
+  if (indexUser === -1) return;
 
-  state.users[indexUser].isFav = !isFav
-}
+  state.users[indexUser].isFav = !isFav;
+};

@@ -12,7 +12,7 @@ import InitialScreen from '../components/InitialScreen'
 
 const Stack = createNativeStackNavigator()
 
-export default function Main () {
+export default function Main (): JSX.Element {
   return (
     <>
       <StatusBar style='dark' />

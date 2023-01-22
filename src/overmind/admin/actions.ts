@@ -1,5 +1,6 @@
+import { Context } from '../index';
 /* users */
-export const getAdmin = async ({ state, effects }) => {
+export const getAdmin = async ({ state, effects }: Context) => {
   const { user } = await effects.admin.gql.queries.GET_PROFILE({
     userId: 5
   })

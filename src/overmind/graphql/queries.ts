@@ -1,21 +1,22 @@
 import { gql } from 'overmind-graphql'
 
 export const GET_USERS = gql`
-  query ($options: PageQueryOptions) {
-    users(options: $options) {
+  query getUsers{
+    users {
       data {
         id
         email
         name
         phone
         username
+        website
       }
     }
   }
 `
 
 export const GET_SINGLE_USER = gql`
-  query ($userId: ID!) {
+  query getSingleUser($userId: ID!) {
     user(id: $userId) {
       id
       email
@@ -27,13 +28,14 @@ export const GET_SINGLE_USER = gql`
 `
 
 export const GET_PROFILE = gql`
-  query ($userId: ID!) {
+  query getProfile($userId: ID!) {
     user(id: $userId) {
       id
       email
       name
       phone
       username
+      website
     }
   }
 `

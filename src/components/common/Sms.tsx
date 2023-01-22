@@ -1,7 +1,14 @@
 import { StyleSheet, Text } from 'react-native'
 import { theme } from '../../theme'
 
-export default function Sms ({ notEdit, bottomError, topError, text }) {
+type Sms = {
+  notEdit: boolean | null
+  bottomError: boolean | null
+  topError: boolean | null
+  text: string | null
+}
+
+export default function Sms ({ notEdit, bottomError, topError, text = '' }: Sms) {
   const styles = [
     stylesSms.sms,
     notEdit && stylesSms.disable,

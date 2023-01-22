@@ -1,8 +1,8 @@
-const rand = () => {
+const rand = (): string => {
   return Math.random().toString(36).substr(2)
 }
 
-const fakeToken = () => {
+const fakeToken = (): string => {
   return rand() + rand()
 }
 

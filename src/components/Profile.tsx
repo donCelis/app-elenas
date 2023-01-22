@@ -1,4 +1,5 @@
 import { ScrollView, StyleSheet, View } from 'react-native'
+import type { PropsWithChildren } from "react"
 
 import { theme } from '../theme'
 
@@ -6,15 +7,27 @@ import { theme } from '../theme'
 import Avatar from './common/Avatar'
 import TextMd from './common/TextMd'
 
+
+type ProfileProps<PropsWithChildren> = {
+  id: number
+  name: string
+  username: string
+  isEdit: boolean
+  email: string
+  phone: string
+  website: string
+}
+
 export default function Profile ({
   id = 0,
   name = '',
   username = '',
   isEdit = false,
   email = 'Empty',
-  phone = 0,
+  phone = '',
+  website = '',
   children
-}) {
+}: ProfileProps) {
   return (
     <View style={styles.container}>
       <View style={styles.avatar}>
@@ -47,6 +60,10 @@ export default function Profile ({
         <View style={styles.innerCard}>
           <TextMd fontWeight='bold'>Email</TextMd>
           <TextMd>{email}</TextMd>
+        </View>
+        <View style={styles.innerCard}>
+          <TextMd fontWeight='bold'>Website</TextMd>
+          <TextMd>{website}</TextMd>
         </View>
         {children}
       </ScrollView>

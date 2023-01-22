@@ -1,7 +1,7 @@
 import { Pressable, StyleSheet, Text } from 'react-native'
 import { theme } from '../../theme'
 
-export default function Button ({ title, ...props }) {
+export default function Button ({ title, ...props }: { title: string }) {
   return (
     <Pressable style={styles.button} {...props}>
       <Text style={styles.text}>

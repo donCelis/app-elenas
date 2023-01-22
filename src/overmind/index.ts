@@ -1,4 +1,4 @@
-import { createOvermind } from 'overmind'
+import { createOvermind, IContext } from 'overmind'
 import {
   createActionsHook,
   createEffectsHook,
@@ -24,6 +24,8 @@ console.log(overmindIp)
 export const overmind = createOvermind(config, {
   devtools: overmindIp
 })
+
+export type Context = IContext<typeof config>
 
 export const useAppState = createStateHook()
 export const useActions = createActionsHook()

@@ -2,7 +2,9 @@ import { StyleSheet } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { theme } from '../../theme'
 
-export default function Container ({ children }) {
+import type { PropsWithChildren } from "react"
+
+export default function Container ({ children }:PropsWithChildren) {
   return (
     <SafeAreaView style={styles.container}>
       {children}

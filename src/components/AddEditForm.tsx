@@ -11,11 +11,25 @@ import { theme } from '../theme'
 import InputField from './common/InputField'
 import Button from './common/Button'
 
-export default function AddEditForm ({
+type CurrentUser = {
+  id: string
+  username: string
+  name: string
+  email: string
+  phone: string
+}
+
+type PropsEditForm = {
+  currentUser: CurrentUser
+  isEdit: boolean
+  callBack: (data: CurrentUser) => void
+}
+
+export default function AddEditForm({
   currentUser,
   isEdit = false,
-  callBack = async () => {}
-}) {
+  callBack = async () => {},
+}: PropsEditForm): JSX.Element {
   const { goBack } = useNavigation()
 
   const defaultValues = useMemo(
@@ -43,7 +57,7 @@ export default function AddEditForm ({
     if (isEdit && currentUser) resetForm(defaultValues)
   }, [isEdit, currentUser])
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: CurrentUser) => {
     const response = await callBack(data)
     if (response) {
       Alert.alert(response[0].message)
