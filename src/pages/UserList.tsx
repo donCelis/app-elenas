@@ -1,50 +1,50 @@
-import { Profiler, useEffect } from 'react'
-import { StyleSheet, View } from 'react-native'
-import { FlashList } from '@shopify/flash-list'
-import { useActions, useAppState } from '../overmind'
+import React, {Profiler, useEffect} from 'react';
+import {StyleSheet, View} from 'react-native';
+import {FlashList} from '@shopify/flash-list';
+import {useActions, useAppState} from '../overmind';
 
 /* components */
-import LoadingModal from '../components/common/Modal'
-import UserCard from '../components/common/UserCard'
+import LoadingModal from '../components/common/Modal';
+import UserCard from '../components/common/UserCard';
 
-function UserList () {
-  const { users, loading } = useAppState()
+function UserList() {
+  const {users, loading} = useAppState();
   const {
-    users: { getUsers }
-  } = useActions()
+    users: {getUsers},
+  } = useActions();
 
   useEffect(() => {
     if (users.length === 0) {
-      getUsers()
+      getUsers();
     }
-  }, [])
+  }, []);
 
   return (
     <Profiler
-      id='Padre'
+      id="Padre"
       onRender={(id, phase, actualDuration) =>
-        console.log(actualDuration, '\t', id, phase)}
-    >
+        console.log(actualDuration, '\t', id, phase)
+      }>
       <View style={styles.container}>
         {loading && <LoadingModal />}
         {!loading && (
           <FlashList
             showsVerticalScrollIndicator={false}
             data={users ?? []}
-            renderItem={({ item: user }) => <UserCard {...user} />}
+            renderItem={({item: user}) => <UserCard {...user} />}
             estimatedItemSize={180}
             extraData={[users]}
           />
         )}
       </View>
     </Profiler>
-  )
+  );
 }
 
-export default UserList
+export default UserList;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
-  }
-})
+    flex: 1,
+  },
+});

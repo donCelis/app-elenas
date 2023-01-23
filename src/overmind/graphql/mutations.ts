@@ -1,6 +1,6 @@
-import { gql, Query } from 'overmind-graphql'
-import { createUser, createUserVariables } from './graphql-types/createUser'
-import {updateUser, updateUserVariables} from './graphql-types/updateUser'
+import {gql, Query} from 'overmind-graphql';
+import type {createUser, createUserVariables} from './graphql-types/createUser';
+import type {updateUser, updateUserVariables} from './graphql-types/updateUser';
 
 export const CreateUserM: Query<createUser, createUserVariables> = gql`
   mutation createUser($input: CreateUserInput!) {
@@ -12,7 +12,7 @@ export const CreateUserM: Query<createUser, createUserVariables> = gql`
       id
     }
   }
-`
+`;
 
 export const UpdateUserM: Query<updateUser, updateUserVariables> = gql`
   mutation updateUser($updateUserId: ID!, $input: UpdateUserInput!) {
@@ -23,4 +23,4 @@ export const UpdateUserM: Query<updateUser, updateUserVariables> = gql`
       username
     }
   }
-`
+`;

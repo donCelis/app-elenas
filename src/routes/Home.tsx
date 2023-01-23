@@ -1,27 +1,30 @@
-import { StatusBar } from 'expo-status-bar'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import React from 'react';
+import {StatusBar} from 'expo-status-bar';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import { screenOptions } from '../theme'
-import { PATH_PAGE } from './paths'
+import {screenOptions} from '../theme';
+import {PATH_PAGE} from './paths';
 
 /* Components */
-import TabBarIcon from '../components/common/TabBarIcon'
-import UserList from '../pages/UserList'
-import CreateUser from '../pages/CreateUser'
-import ProfilePage from '../pages/ProfilePage'
+import TabBarIcon from '../components/common/TabBarIcon';
+import UserList from '../pages/UserList';
+import CreateUser from '../pages/CreateUser';
+import ProfilePage from '../pages/ProfilePage';
 
-const Tab = createBottomTabNavigator()
+const Tab = createBottomTabNavigator();
 
-export default function Home () {
+export default function Home() {
   return (
     <>
-      <StatusBar style='light' />
-      <Tab.Navigator initialRouteName={PATH_PAGE.userList} screenOptions={screenOptions}>
+      <StatusBar style="light" />
+      <Tab.Navigator
+        initialRouteName={PATH_PAGE.userList}
+        screenOptions={screenOptions}>
         <Tab.Screen
           name={PATH_PAGE.userList}
           options={{
             title: 'User List',
-            tabBarIcon: (props) => <TabBarIcon icon='list' {...props} />
+            tabBarIcon: props => <TabBarIcon icon="list" {...props} />,
           }}
           component={UserList}
         />
@@ -30,7 +33,7 @@ export default function Home () {
           component={CreateUser}
           options={{
             title: 'Add User',
-            tabBarIcon: (props) => <TabBarIcon icon='add-circle' {...props} />
+            tabBarIcon: props => <TabBarIcon icon="add-circle" {...props} />,
           }}
         />
         <Tab.Screen
@@ -38,10 +41,10 @@ export default function Home () {
           component={ProfilePage}
           options={{
             title: 'Profile',
-            tabBarIcon: (props) => <TabBarIcon icon='person' {...props} />
+            tabBarIcon: props => <TabBarIcon icon="person" {...props} />,
           }}
         />
       </Tab.Navigator>
     </>
-  )
+  );
 }

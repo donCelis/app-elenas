@@ -1,36 +1,36 @@
-import { useEffect, useMemo } from 'react'
-import { StyleSheet, View, ScrollView, Alert } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
-import { FormProvider, useForm } from 'react-hook-form'
-import { yupResolver } from '@hookform/resolvers/yup'
+import React, {useEffect, useMemo} from 'react';
+import {StyleSheet, View, ScrollView, Alert} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
+import {FormProvider, useForm} from 'react-hook-form';
+import {yupResolver} from '@hookform/resolvers/yup';
 
-import { addUserSchema } from '../schemas'
-import { theme } from '../theme'
+import {addUserSchema} from '../schemas';
+import {theme} from '../theme';
 
 /* components */
-import InputField from './common/InputField'
-import Button from './common/Button'
+import InputField from './common/InputField';
+import Button from './common/Button';
 
 type CurrentUser = {
-  id: string
-  username: string
-  name: string
-  email: string
-  phone: string
-}
+  id: string;
+  username: string;
+  name: string;
+  email: string;
+  phone: string;
+};
 
 type PropsEditForm = {
-  currentUser: CurrentUser
-  isEdit: boolean
-  callBack: (data: CurrentUser) => void
-}
+  currentUser: CurrentUser;
+  isEdit: boolean;
+  callBack: (data: CurrentUser) => void;
+};
 
 export default function AddEditForm({
   currentUser,
   isEdit = false,
   callBack = async () => {},
 }: PropsEditForm): JSX.Element {
-  const { goBack } = useNavigation()
+  const {goBack} = useNavigation();
 
   const defaultValues = useMemo(
     () => ({
@@ -38,36 +38,40 @@ export default function AddEditForm({
       username: currentUser?.username || '',
       name: currentUser?.name || '',
       email: currentUser?.email || '',
-      phone: currentUser?.phone || ''
+      phone: currentUser?.phone || '',
     }),
-    [currentUser]
-  )
+    [currentUser],
+  );
   const methods = useForm({
     resolver: yupResolver(addUserSchema),
-    defaultValues
-  })
+    defaultValues,
+  });
 
   const {
     handleSubmit,
     reset: resetForm,
-    formState: { isSubmitting }
-  } = methods
+    formState: {isSubmitting},
+  } = methods;
 
   useEffect(() => {
-    if (isEdit && currentUser) resetForm(defaultValues)
-  }, [isEdit, currentUser])
+    if (isEdit && currentUser) {
+      resetForm(defaultValues);
+    }
+  }, [isEdit, currentUser]);
 
   const onSubmit = async (data: CurrentUser) => {
-    const response = await callBack(data)
+    const response = await callBack(data);
     if (response) {
-      Alert.alert(response[0].message)
+      Alert.alert(response[0].message);
     } else {
-      if (!isEdit) resetForm()
-      goBack()
+      if (!isEdit) {
+        resetForm();
+      }
+      goBack();
     }
-  }
+  };
 
-  const titleBtn = !isEdit ? 'Save' : 'Update'
+  const titleBtn = !isEdit ? 'Save' : 'Update';
 
   return (
     <View style={styles.container}>
@@ -75,22 +79,21 @@ export default function AddEditForm({
         <ScrollView
           contentContainerStyle={{
             paddingVertical: 10,
-            paddingHorizontal: 15
+            paddingHorizontal: 15,
           }}
-          showsVerticalScrollIndicator={false}
-        >
+          showsVerticalScrollIndicator={false}>
           <View style={styles.inner}>
-            <InputField topError label='Name' name='name' />
+            <InputField topError label="Name" name="name" />
           </View>
           <View style={styles.inner}>
-            <InputField topError label='Username' name='username' />
+            <InputField topError label="Username" name="username" />
           </View>
           <View style={styles.inner}>
             <InputField
               topError
-              label='Cellphone'
-              name='phone'
-              keyboardType='phone-pad'
+              label="Cellphone"
+              name="phone"
+              keyboardType="phone-pad"
             />
           </View>
           <View style={styles.inner}>
@@ -98,9 +101,9 @@ export default function AddEditForm({
               editable={!isEdit}
               notEdit={isEdit}
               topError
-              label='Email'
-              name='email'
-              keyboardType='email-address'
+              label="Email"
+              name="email"
+              keyboardType="email-address"
             />
           </View>
           <Button
@@ -111,19 +114,19 @@ export default function AddEditForm({
         </ScrollView>
       </FormProvider>
     </View>
-  )
+  );
 }
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
   },
   inner: {
     backgroundColor: theme.colors.whitePure,
     borderRadius: 5,
     padding: 10,
-    marginVertical: 10
+    marginVertical: 10,
   },
   space: {
-    marginBottom: 20
-  }
-})
+    marginBottom: 20,
+  },
+});

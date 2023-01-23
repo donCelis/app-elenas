@@ -1,7 +1,7 @@
 const PATH_AUTH = {
   signIn: 'signin',
-  signOut: 'signout'
-}
+  signOut: 'signout',
+};
 
 const PATH_PAGE = {
   home: 'home',
@@ -9,7 +9,7 @@ const PATH_PAGE = {
   update: 'update',
   userList: 'userlist',
   addUser: 'adduser',
-  profile: 'profile'
-}
+  profile: 'profile',
+};
 
-export { PATH_AUTH, PATH_PAGE }
+export {PATH_AUTH, PATH_PAGE};

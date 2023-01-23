@@ -1,9 +1,9 @@
-import { gql, Query } from 'overmind-graphql'
-import { users } from './graphql-types/users'
-import { user, userVariables } from './graphql-types/user'
+import {gql, Query} from 'overmind-graphql';
+import {users} from './graphql-types/users';
+import {user, userVariables} from './graphql-types/user';
 
 export const UsersQ: Query<users> = gql`
-  query users{
+  query users {
     users {
       data {
         id
@@ -15,7 +15,7 @@ export const UsersQ: Query<users> = gql`
       }
     }
   }
-`
+`;
 
 export const UserQ: Query<user, userVariables> = gql`
   query user($userId: ID!) {
@@ -28,4 +28,4 @@ export const UserQ: Query<user, userVariables> = gql`
       website
     }
   }
-`
+`;

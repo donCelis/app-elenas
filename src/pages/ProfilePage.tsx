@@ -1,13 +1,14 @@
-import { SafeAreaView, StyleSheet } from 'react-native'
-import { useAppState } from '../overmind'
+import React from 'react';
+import {SafeAreaView, StyleSheet} from 'react-native';
+import {useAppState} from '../overmind';
 
-import Profile from '../components/Profile'
-import SignOut from '../components/SignOut'
-import LoadingModal from '../components/common/Modal'
+import Profile from '../components/Profile';
+import SignOut from '../components/SignOut';
+import LoadingModal from '../components/common/Modal';
 
-export default function ProfilePage () {
-  const { admin, loading } = useAppState()
-  const user = admin
+export default function ProfilePage() {
+  const {admin, loading} = useAppState();
+  const user = admin;
 
   return (
     <SafeAreaView style={styles.container}>
@@ -18,11 +19,11 @@ export default function ProfilePage () {
         </Profile>
       )}
     </SafeAreaView>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
-  }
-})
+    flex: 1,
+  },
+});

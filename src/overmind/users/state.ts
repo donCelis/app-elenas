@@ -1,10 +1,10 @@
 export type User = {
-  id: string
-  username: string
-  name: string
-  email: string
-  phone: string
-  website: string
-}
+  id: string;
+  username: string;
+  name: string;
+  email: string;
+  phone: string;
+  website: string;
+};
 
-export const state: User[] = []
+export const state: User[] = [];

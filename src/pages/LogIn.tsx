@@ -1,54 +1,55 @@
-import { View, StyleSheet, Image, Alert } from 'react-native'
-import { FormProvider, useForm } from 'react-hook-form'
-import { yupResolver } from '@hookform/resolvers/yup'
+import React from 'react';
+import {View, StyleSheet, Image, Alert} from 'react-native';
+import {FormProvider, useForm} from 'react-hook-form';
+import {yupResolver} from '@hookform/resolvers/yup';
 
-import { PATH_PAGE } from '../routes/paths'
+import {PATH_PAGE} from '../routes/paths';
 
 /* validation */
-import { loginSchema } from '../schemas'
+import {loginSchema} from '../schemas';
 /* components */
-import Container from '../components/common/Container'
-import KeyboardShift from '../components/KeyboardShift'
-import InputField from '../components/common/InputField'
-import Button from '../components/common/Button'
-import TextMd from '../components/common/TextMd'
+import Container from '../components/common/Container';
+import KeyboardShift from '../components/KeyboardShift';
+import InputField from '../components/common/InputField';
+import Button from '../components/common/Button';
+import TextMd from '../components/common/TextMd';
 /* hooks */
-import { useLogin } from '../hooks/useLogin'
-import { useActions } from '../overmind'
+import {useLogin} from '../hooks/useLogin';
+import {useActions} from '../overmind';
 
-function LogIn ({ navigation: { replace } }) {
-  const { logIn } = useLogin()
+function LogIn({navigation: {replace}}) {
+  const {logIn} = useLogin();
   const {
-    admin: { getAdmin }
-  } = useActions()
+    admin: {getAdmin},
+  } = useActions();
 
   const methods = useForm({
     resolver: yupResolver(loginSchema),
     defaultValues: {
       cellphone: '+573208335263',
-      password: '123456'
-    }
-  })
+      password: '123456',
+    },
+  });
 
   const {
     handleSubmit,
     reset: resetForm,
-    formState: { isSubmitting }
-  } = methods
+    formState: {isSubmitting},
+  } = methods;
 
-  const onSubmit = async (data) => {
-    const response = await logIn({ ...data })
+  const onSubmit = async data => {
+    const response = await logIn({...data});
     if (response) {
-      Alert.alert(response[0].message)
+      Alert.alert(response[0].message);
     } else {
       /* disable navigation to login */
-      await getAdmin()
-      replace(PATH_PAGE.home)
-      resetForm()
+      await getAdmin();
+      replace(PATH_PAGE.home);
+      resetForm();
     }
-  }
+  };
 
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
     <Container>
@@ -56,24 +57,24 @@ function LogIn ({ navigation: { replace } }) {
         <View style={styles.login}>
           <View style={styles.logo}>
             <Image
-              style={{ width: 220 }}
-              resizeMode='contain'
+              style={{width: 220}}
+              resizeMode="contain"
               source={require('../../assets/elenas.png')}
             />
           </View>
           <FormProvider {...methods}>
             <View style={styles.form}>
               <InputField
-                placeholder='+57'
-                label='Cellphone'
-                name='cellphone'
+                placeholder="+57"
+                label="Cellphone"
+                name="cellphone"
                 bottomError
               />
               <InputField
                 mod={styles.space}
-                placeholder=':)'
-                label='Password'
-                name='password'
+                placeholder=":)"
+                label="Password"
+                name="password"
                 secureTextEntry
                 bottomError
               />
@@ -84,31 +85,31 @@ function LogIn ({ navigation: { replace } }) {
               />
             </View>
           </FormProvider>
-          <TextMd align='center' color='secondary'>
+          <TextMd align="center" color="secondary">
             {currentYear}
           </TextMd>
         </View>
       </KeyboardShift>
     </Container>
-  )
+  );
 }
 
-export default LogIn
+export default LogIn;
 
 const styles = StyleSheet.create({
   login: {
     flex: 1,
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   logo: {
     padding: 12,
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
   form: {
-    padding: 20
+    padding: 20,
   },
   space: {
     marginTop: 15,
-    marginBottom: 35
-  }
-})
+    marginBottom: 35,
+  },
+});

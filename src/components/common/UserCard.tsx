@@ -1,32 +1,34 @@
-import { useLinkTo } from '@react-navigation/native'
-import { memo, useCallback } from 'react'
-import { Pressable, StyleSheet, Text, View } from 'react-native'
-import { useActions } from '../../overmind'
+import React, {useCallback} from 'react';
+import {useLinkTo} from '@react-navigation/native';
+import {Pressable, StyleSheet, Text, View} from 'react-native';
+import {useActions} from '../../overmind';
 
-import { PATH_PAGE } from '../../routes/paths'
-import { theme } from '../../theme'
+import {PATH_PAGE} from '../../routes/paths';
+import {theme} from '../../theme';
 
 /* components */
-import Avatar from './Avatar'
-import TabBarIcon from './TabBarIcon'
+import Avatar from './Avatar';
+import TabBarIcon from './TabBarIcon';
 
 type User = {
-  id: string
-  name: string
-  username: string
-  isFav: boolean
-}
+  id: string;
+  name: string;
+  username: string;
+  isFav: boolean;
+};
 
-function UserCard({ id, name, username, isFav }: User) {
-  const { users : { editUserFavs } } = useActions()
+function UserCard({id, name, username, isFav}: User) {
+  const {
+    users: {editUserFavs},
+  } = useActions();
 
-  const linkTo = useLinkTo()
+  const linkTo = useLinkTo();
 
   const handleRouting = useCallback(() => {
-    linkTo(`/${PATH_PAGE.detail}/${id}`)
-  }, [])
+    linkTo(`/${PATH_PAGE.detail}/${id}`);
+  }, []);
 
-  const handleChangeFavs = () => editUserFavs({ id, isFav })
+  const handleChangeFavs = () => editUserFavs({id, isFav});
 
   return (
     <View style={styles.row}>
@@ -38,13 +40,13 @@ function UserCard({ id, name, username, isFav }: User) {
         </View>
       </Pressable>
       <Pressable style={styles.fav} onPress={handleChangeFavs}>
-        <TabBarIcon icon='heart' focused={isFav} />
+        <TabBarIcon icon="heart" focused={isFav} />
       </Pressable>
     </View>
-  )
+  );
 }
 
-export default UserCard
+export default UserCard;
 
 const styles = StyleSheet.create({
   row: {
@@ -77,4 +79,4 @@ const styles = StyleSheet.create({
   fav: {
     padding: 15,
   },
-})
+});

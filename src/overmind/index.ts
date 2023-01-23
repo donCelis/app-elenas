@@ -1,33 +1,36 @@
-import { createOvermind, IContext } from 'overmind'
+import {createOvermind, IContext} from 'overmind';
 import {
   createActionsHook,
   createEffectsHook,
   createReactionHook,
-  createStateHook
-} from 'overmind-react'
-import { namespaced, merge } from 'overmind/config'
-import { overmindIp } from '../../config'
+  createStateHook,
+} from 'overmind-react';
+import {namespaced, merge} from 'overmind/config';
+import {overmindIp} from '../../config';
 
 /* states, actions, effects */
-import { state } from './state'
-import * as actions from './actions'
-import * as users from './users'
-import * as admin from './admin'
+import {state} from './state';
+import * as actions from './actions';
+import * as users from './users';
+import * as admin from './admin';
 
-const config = merge({
-  state,
-  actions
-}, namespaced({ users, admin }))
+const config = merge(
+  {
+    state,
+    actions,
+  },
+  namespaced({users, admin}),
+);
 
-console.log(overmindIp)
+console.log(overmindIp);
 
 export const overmind = createOvermind(config, {
-  devtools: overmindIp
-})
+  devtools: overmindIp,
+});
 
-export type Context = IContext<typeof config>
+export type Context = IContext<typeof config>;
 
-export const useAppState = createStateHook()
-export const useActions = createActionsHook()
-export const useAppEffects = createEffectsHook()
-export const useReaction = createReactionHook()
+export const useAppState = createStateHook();
+export const useActions = createActionsHook();
+export const useAppEffects = createEffectsHook();
+export const useReaction = createReactionHook();

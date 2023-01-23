@@ -1,16 +1,17 @@
-import { StyleSheet, Text } from 'react-native'
-import { theme } from '../../theme'
-import type { PropsWithChildren } from "react"
+import React from 'react';
+import type {PropsWithChildren} from 'react';
+import {StyleSheet, Text} from 'react-native';
+import {theme} from '../../theme';
 
 type SectionProps = PropsWithChildren<{
-  color: string | null
-  fontSize: string | null
-  fontWeight: string | null
-  align: string | null
-  style: {} | null
+  color: string | null;
+  fontSize: string | null;
+  fontWeight: string | null;
+  align: string | null;
+  style: {} | null;
 }>;
 
-export default function TextMd ({
+export default function TextMd({
   children,
   color,
   fontSize,
@@ -27,13 +28,13 @@ export default function TextMd ({
     fontSize === 'subheading' && styles.subheading,
     fontSize === 'title' && styles.title,
     fontWeight === 'bold' && styles.bold,
-    align === 'center' && styles.align
-  ]
+    align === 'center' && styles.align,
+  ];
   return (
     <Text {...restProps} style={[textStyles, style]}>
       {children}
     </Text>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -41,27 +42,27 @@ const styles = StyleSheet.create({
     fontSize: theme.fontSizes.body,
     color: theme.colors.textPrimary,
     fontFamily: theme.fonts.main,
-    fontWeight: theme.fontWeights.normal
+    fontWeight: theme.fontWeights.normal,
   },
   bold: {
-    fontWeight: theme.fontWeights.bold
+    fontWeight: theme.fontWeights.bold,
   },
   subheading: {
-    fontSize: theme.fontSizes.subheading
+    fontSize: theme.fontSizes.subheading,
   },
   title: {
-    fontSize: theme.fontSizes.title
+    fontSize: theme.fontSizes.title,
   },
   colorPrimary: {
-    color: theme.colors.primary
+    color: theme.colors.primary,
   },
   colorSecondary: {
-    color: theme.colors.textSecondary
+    color: theme.colors.textSecondary,
   },
   colorText: {
-    color: theme.colors.whitePure
+    color: theme.colors.whitePure,
   },
   align: {
-    textAlign: 'center'
-  }
-})
+    textAlign: 'center',
+  },
+});
