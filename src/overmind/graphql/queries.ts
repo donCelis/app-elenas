@@ -1,7 +1,9 @@
-import { gql } from 'overmind-graphql'
+import { gql, Query } from 'overmind-graphql'
+import { users } from './graphql-types/users'
+import { user, userVariables } from './graphql-types/user'
 
-export const GET_USERS = gql`
-  query getUsers{
+export const UsersQ: Query<users> = gql`
+  query users{
     users {
       data {
         id
@@ -15,20 +17,8 @@ export const GET_USERS = gql`
   }
 `
 
-export const GET_SINGLE_USER = gql`
-  query getSingleUser($userId: ID!) {
-    user(id: $userId) {
-      id
-      email
-      name
-      phone
-      username
-    }
-  }
-`
-
-export const GET_PROFILE = gql`
-  query getProfile($userId: ID!) {
+export const UserQ: Query<user, userVariables> = gql`
+  query user($userId: ID!) {
     user(id: $userId) {
       id
       email

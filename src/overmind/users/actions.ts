@@ -3,7 +3,7 @@ import { Context } from '../index';
 export const getUsers = async ({ state, effects }: Context) => {
   const {
     users: { data },
-  } = await effects.users.gql.queries.GET_USERS()
+  } = await effects.users.gql.queries.UsersQ()
 
   const addIsFavToUsers = [...data].map((user) => ({ ...user, isFav: false }));
 
@@ -13,7 +13,7 @@ export const getUsers = async ({ state, effects }: Context) => {
 
 export const getUser = async ({ state, effects }: Context, id: string) => {
   // const user = [...state.users].find((user) => user.id === id)
-  const { user } = await effects.users.gql.queries.GET_SINGLE_USER({
+  const { user } = await effects.users.gql.queries.UserQ({
     userId: id,
   });
   state.currentUser = user;
@@ -23,7 +23,7 @@ export const addUser = async (
   { state, effects }: Context,
   user: { id: string; username: string; name: string; phone: string }
 ) => {
-  const { createUser } = await effects.users.gql.mutations.ADD_USER({
+  const { createUser } = await effects.users.gql.mutations.CreateUserQ({
     input: {
       ...user,
     },
@@ -48,7 +48,7 @@ export const updateUser = async (
     phone,
   }: { id: string; username: string; name: string; phone: string }
 ) => {
-  const { updateUser } = await effects.users.gql.mutations.UPDATE_CLIENT({
+  const { updateUser } = await effects.users.gql.mutations.UpdateUserQ({
     updateUserId: id,
     input: {
       username,
