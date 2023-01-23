@@ -17,13 +17,18 @@ import TextMd from '../components/common/TextMd';
 import {useLogin} from '../hooks/useLogin';
 import {useActions} from '../overmind';
 
+export type FormLogin = {
+  cellphone: string;
+  password: string;
+};
+
 function LogIn({navigation: {replace}}) {
   const {logIn} = useLogin();
   const {
     admin: {getAdmin},
   } = useActions();
 
-  const methods = useForm({
+  const methods = useForm<FormLogin>({
     resolver: yupResolver(loginSchema),
     defaultValues: {
       cellphone: '+573208335263',
@@ -37,8 +42,8 @@ function LogIn({navigation: {replace}}) {
     formState: {isSubmitting},
   } = methods;
 
-  const onSubmit = async data => {
-    const response = await logIn({...data});
+  const onSubmit = async () => {
+    const response = await logIn();
     if (response) {
       Alert.alert(response[0].message);
     } else {

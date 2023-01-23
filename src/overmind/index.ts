@@ -30,7 +30,7 @@ export const overmind = createOvermind(config, {
 
 export type Context = IContext<typeof config>;
 
-export const useAppState = createStateHook();
-export const useActions = createActionsHook();
-export const useAppEffects = createEffectsHook();
-export const useReaction = createReactionHook();
+export const useAppState = createStateHook<Context>();
+export const useActions = createActionsHook<Context>();
+export const useAppEffects = createEffectsHook<Context>();
+export const useReaction = createReactionHook<Context>();

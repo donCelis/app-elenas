@@ -7,4 +7,11 @@ type AdminType = {
   website: string;
 };
 
-export const state: AdminType = {};
+export const state: AdminType = {
+  id: '',
+  name: '',
+  username: '',
+  phone: '',
+  email: '',
+  website: '',
+};

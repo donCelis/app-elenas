@@ -13,10 +13,10 @@ import Sms from './Sms';
 
 type Input = {
   name: string;
-  topError: boolean | null;
-  bottomError: boolean | null;
-  notEdit: boolean | null;
-  mod: StyleProp<ViewProps>;
+  topError?: boolean | null;
+  bottomError?: boolean | null;
+  notEdit?: boolean | null;
+  mod?: StyleProp<ViewProps>;
   label: string;
 };
 

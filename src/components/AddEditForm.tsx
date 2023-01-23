@@ -57,6 +57,7 @@ export default function AddEditForm({
     if (isEdit && currentUser) {
       resetForm(defaultValues);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isEdit, currentUser]);
 
   const onSubmit = async (data: CurrentUser) => {
@@ -77,10 +78,7 @@ export default function AddEditForm({
     <View style={styles.container}>
       <FormProvider {...methods}>
         <ScrollView
-          contentContainerStyle={{
-            paddingVertical: 10,
-            paddingHorizontal: 15,
-          }}
+          contentContainerStyle={styles.scrollView}
           showsVerticalScrollIndicator={false}>
           <View style={styles.inner}>
             <InputField topError label="Name" name="name" />
@@ -119,6 +117,10 @@ export default function AddEditForm({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  scrollView: {
+    paddingVertical: 10,
+    paddingHorizontal: 15,
   },
   inner: {
     backgroundColor: theme.colors.whitePure,

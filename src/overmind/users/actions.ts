@@ -23,7 +23,7 @@ export const addUser = async (
   {state, effects}: Context,
   user: {id: string; username: string; name: string; phone: string},
 ) => {
-  const {createUser} = await effects.users.gql.mutations.CreateUserQ({
+  const {createUser} = await effects.users.gql.mutations.CreateUserM({
     input: {
       ...user,
     },
@@ -48,7 +48,7 @@ export const updateUser = async (
     phone,
   }: {id: string; username: string; name: string; phone: string},
 ) => {
-  const {updateUser} = await effects.users.gql.mutations.UpdateUserQ({
+  const {updateUser} = await effects.users.gql.mutations.UpdateUserM({
     updateUserId: id,
     input: {
       username,

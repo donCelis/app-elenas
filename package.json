@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
+    "start": "run-p schema && expo start",
     "clear": "expo start -c",
     "build": "eas build --platform android --profile preview",
     "android": "expo start --android",
@@ -37,17 +37,18 @@
   },
   "devDependencies": {
     "@babel/core": "7.20.12",
+    "@react-native-community/eslint-config": "3.2.0",
+    "@tsconfig/react-native": "2.0.3",
     "@types/react": "18.0.27",
     "@types/react-native": "0.71.0",
     "apollo": "2.34.0",
+    "eslint": "8.32.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "2.8.3",
     "react-native-dotenv": "3.4.7",
     "rimraf": "4.1.1",
     "supabase": "1.34.5",
-    "typescript": "4.9.4",
-    "@react-native-community/eslint-config": "3.2.0",
-    "eslint": "8.32.0",
-    "prettier": "2.8.3",
-    "@tsconfig/react-native": "2.0.3"
+    "typescript": "4.9.4"
   },
   "private": true
 }

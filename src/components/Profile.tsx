@@ -12,7 +12,6 @@ type ProfileProps = PropsWithChildren<{
   id: number;
   name: string;
   username: string;
-  isEdit: boolean;
   email: string;
   phone: string;
   website: string;
@@ -22,7 +21,6 @@ export default function Profile({
   id = 0,
   name = '',
   username = '',
-  isEdit = false,
   email = 'Empty',
   phone = '',
   website = '',
