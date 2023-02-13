@@ -1,15 +1,23 @@
-import * as Yup from 'yup';
+import {z} from 'zod';
 
-/* schema login */
-export const loginSchema = Yup.object({}).shape({
-  cellphone: Yup.string().required('Cellphone is required'),
-  password: Yup.string().required('Password is required'),
-});
+export const loginSchema = z
+  .object({
+    cellphone: z.string().min(1, {message: 'Cellphone is required'}),
+    password: z.string().min(1, {message: 'Password is required'}),
+  })
+  .required();
 
-/* schema add user */
-export const addUserSchema = Yup.object({}).shape({
-  username: Yup.string().required('Username is required'),
-  name: Yup.string().required('Name is required'),
-  email: Yup.string().email('Email not valid').required('Email is required'),
-  phone: Yup.string().required('Cellphone is required'),
-});
+export type LoginType = z.infer<typeof loginSchema>;
+
+export const addUserSchema = z
+  .object({
+    username: z.string({required_error: 'Username is required'}),
+    name: z.string({required_error: 'Name is required'}),
+    email: z
+      .string({required_error: 'Email is required'})
+      .email({message: 'Invalid email address'}),
+    phone: z.string({required_error: 'Cellphone is required'}),
+  })
+  .required();
+
+export type AddUserType = z.infer<typeof addUserSchema>;

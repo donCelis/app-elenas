@@ -8,18 +8,17 @@
 // ====================================================
 
 export interface user_user {
-  id: string | null;
-  email: string | null;
-  name: string | null;
-  phone: string | null;
-  username: string | null;
-  website: string | null;
+  cellphone: string;
+  username: string;
+  /**
+   * Unique identifier
+   */
+  id: string;
 }
 
 export interface user {
+  /**
+   * Query a single User by an ID or a unique field
+   */
   user: user_user | null;
-}
-
-export interface userVariables {
-  userId: string;
 }

@@ -4,7 +4,7 @@ import {theme} from '../../theme';
 import {createAvatar} from '../../utils/createAvatar';
 
 type Avatar = {
-  str: string;
+  str?: string | null;
   size: number;
 };
 

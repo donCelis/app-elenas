@@ -3,7 +3,7 @@ import {Ionicons} from '@expo/vector-icons';
 import {theme} from '../../theme';
 
 type Props = {
-  focused: boolean;
+  focused: boolean | null;
   icon: any;
 };
 

@@ -16,8 +16,8 @@ import * as admin from './admin';
 
 const config = merge(
   {
-    state,
     actions,
+    state,
   },
   namespaced({users, admin}),
 );

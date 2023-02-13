@@ -1,9 +1,16 @@
 import {Context} from '../index';
 /* users */
 export const getAdmin = async ({state, effects}: Context) => {
-  const {user} = await effects.admin.gql.queries.UserQ({
-    userId: '5',
+  const response = await effects.admin.gql.queries.UserAdminQ({
+    UserAdminVariables: {
+      userAdminBy: {id: 'useradmin_01GRSJXVRHYH5HXNJVFEGW2KX4'},
+    },
+    UserCollectionVariables: {first: 10},
+    UserVariables: {by: {id: 'user_01GRMKJ759WY2N1WZ2QV04WBV2'}},
   });
 
-  state.admin = user;
+  // userAdminBy: {id: 'useradmin_01GRSJXVRHYH5HXNJVFEGW2KX4'},
+  console.log(response);
+
+  // state.admin.user = userAdmin;
 };

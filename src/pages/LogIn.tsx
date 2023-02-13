@@ -1,12 +1,11 @@
 import React from 'react';
 import {View, StyleSheet, Image, Alert} from 'react-native';
 import {FormProvider, useForm} from 'react-hook-form';
-import {yupResolver} from '@hookform/resolvers/yup';
-
+import {zodResolver} from '@hookform/resolvers/zod';
 import {PATH_PAGE} from '../routes/paths';
 
 /* validation */
-import {loginSchema} from '../schemas';
+import {loginSchema, LoginType} from '../schemas';
 /* components */
 import Container from '../components/common/Container';
 import KeyboardShift from '../components/KeyboardShift';
@@ -17,19 +16,14 @@ import TextMd from '../components/common/TextMd';
 import {useLogin} from '../hooks/useLogin';
 import {useActions} from '../overmind';
 
-export type FormLogin = {
-  cellphone: string;
-  password: string;
-};
-
 function LogIn({navigation: {replace}}) {
   const {logIn} = useLogin();
   const {
     admin: {getAdmin},
   } = useActions();
 
-  const methods = useForm<FormLogin>({
-    resolver: yupResolver(loginSchema),
+  const methods = useForm<LoginType>({
+    resolver: zodResolver(loginSchema),
     defaultValues: {
       cellphone: '+573208335263',
       password: '123456',

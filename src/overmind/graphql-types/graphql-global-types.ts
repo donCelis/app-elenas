@@ -7,43 +7,27 @@
 // START Enums and Input Objects
 //==============================================================
 
-export interface AddressInput {
-  street?: string | null;
-  suite?: string | null;
-  city?: string | null;
-  zipcode?: string | null;
-  geo?: GeoInput | null;
+export interface UserAdminByInput {
+  id?: string | null;
 }
 
-export interface CompanyInput {
-  name?: string | null;
-  catchPhrase?: string | null;
-  bs?: string | null;
-}
-
-export interface CreateUserInput {
-  name: string;
-  username: string;
-  email: string;
-  address?: AddressInput | null;
-  phone?: string | null;
-  website?: string | null;
-  company?: CompanyInput | null;
-}
-
-export interface GeoInput {
-  lat?: number | null;
-  lng?: number | null;
-}
-
-export interface UpdateUserInput {
-  name?: string | null;
+export interface UserByInput {
+  cellphone?: string | null;
+  id?: string | null;
   username?: string | null;
+}
+
+/**
+ * Input to create a User
+ */
+export interface UserCreateInput {
+  avatarUrl?: string | null;
+  cellphone: string;
   email?: string | null;
-  address?: AddressInput | null;
-  phone?: string | null;
+  fullName?: string | null;
+  isFav?: boolean | null;
+  username: string;
   website?: string | null;
-  company?: CompanyInput | null;
 }
 
 //==============================================================

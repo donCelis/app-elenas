@@ -1,17 +1,16 @@
-type AdminType = {
+export type Profile = {
   id: string;
-  name: string;
+  cellphone: string;
   username: string;
-  phone: string;
-  email: string;
-  website: string;
+};
+
+export type AdminType = {
+  user: {
+    id: string;
+    profile: Profile;
+  } | null;
 };
 
 export const state: AdminType = {
-  id: '',
-  name: '',
-  username: '',
-  phone: '',
-  email: '',
-  website: '',
+  user: null,
 };

@@ -8,13 +8,17 @@ import LoadingModal from '../components/common/Modal';
 import UserCard from '../components/common/UserCard';
 
 function UserList() {
-  const {users, loading} = useAppState();
+  const {
+    users: {userList},
+    loading,
+  } = useAppState();
+
   const {
     users: {getUsers},
   } = useActions();
 
   useEffect(() => {
-    if (users.length === 0) {
+    if (userList?.length === 0) {
       getUsers();
     }
   }, []);
@@ -30,10 +34,10 @@ function UserList() {
         {!loading && (
           <FlashList
             showsVerticalScrollIndicator={false}
-            data={users ?? []}
+            data={userList ?? []}
             renderItem={({item: user}) => <UserCard {...user} />}
             estimatedItemSize={180}
-            extraData={[users]}
+            extraData={[userList]}
           />
         )}
       </View>

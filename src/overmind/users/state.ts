@@ -1,10 +1,17 @@
 export type User = {
-  id: string;
-  username: string;
-  name: string;
-  email: string;
-  phone: string;
-  website: string;
+  id: string | null;
+  email: string | null;
+  name: string | null;
+  phone: string | null;
+  username: string | null;
+  website: string | null;
+  isFav: boolean | null;
 };
 
-export const state: User[] = [];
+export type State = {
+  userList: User[] | [];
+};
+
+export const state: State = {
+  userList: [],
+};

@@ -2,16 +2,16 @@ import React, {useEffect, useMemo} from 'react';
 import {StyleSheet, View, ScrollView, Alert} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {FormProvider, useForm} from 'react-hook-form';
-import {yupResolver} from '@hookform/resolvers/yup';
+import {zodResolver} from '@hookform/resolvers/zod';
 
-import {addUserSchema} from '../schemas';
+import {addUserSchema, AddUserType} from '../schemas';
 import {theme} from '../theme';
 
 /* components */
 import InputField from './common/InputField';
 import Button from './common/Button';
 
-type CurrentUser = {
+export type CurrentUser = {
   id: string;
   username: string;
   name: string;
@@ -42,8 +42,8 @@ export default function AddEditForm({
     }),
     [currentUser],
   );
-  const methods = useForm({
-    resolver: yupResolver(addUserSchema),
+  const methods = useForm<AddUserType>({
+    resolver: zodResolver(addUserSchema),
     defaultValues,
   });
 

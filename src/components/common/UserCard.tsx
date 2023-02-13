@@ -5,17 +5,11 @@ import {useActions} from '../../overmind';
 
 import {PATH_PAGE} from '../../routes/paths';
 import {theme} from '../../theme';
+import {User} from '../../overmind/users/state';
 
 /* components */
 import Avatar from './Avatar';
 import TabBarIcon from './TabBarIcon';
-
-type User = {
-  id: string;
-  name: string;
-  username: string;
-  isFav: boolean;
-};
 
 function UserCard({id, name, username, isFav}: User) {
   const {
@@ -28,7 +22,8 @@ function UserCard({id, name, username, isFav}: User) {
     linkTo(`/${PATH_PAGE.detail}/${id}`);
   }, []);
 
-  const handleChangeFavs = () => editUserFavs({id, isFav});
+  const handleChangeFavs = () =>
+    editUserFavs({id: id || '', isFav: isFav || false});
 
   return (
     <View style={styles.row}>
