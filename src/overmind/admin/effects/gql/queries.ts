@@ -1,12 +1,7 @@
 import {gql, Query} from 'overmind-graphql';
-import {UserAdmin, UserAdminVariables} from './graphql-types/userAdmin';
-import {
-  UserCollection,
-  UserCollectionVariables,
-} from './graphql-types/UserCollection';
-import {User, UserVariables} from './graphql-types/User';
+import {AllQuery, AllQueryVariables} from './graphql-types/AllQuery';
 
-type GlobalTypes = {
+/* type GlobalTypes = {
   UserAdmin: UserAdmin;
   UserCollection: UserCollection;
   User: User;
@@ -16,37 +11,38 @@ type GlobalVariables = {
   UserAdminVariables: UserAdminVariables;
   UserCollectionVariables: UserCollectionVariables;
   UserVariables: UserVariables;
-};
+}; */
 
-export const UserAdminQ: Query<GlobalTypes, GlobalVariables> = gql`
-  query UserAdmin($userAdminBy: UserAdminByInput!) {
-    userAdmin(by: $userAdminBy) {
+export const USER_DETAILS_FRAGMENT = gql`
+  fragment UserDetails on User {
+    id
+    cellphone
+    username
+  }
+`;
+
+export const UserAdminQ: Query<AllQuery, AllQueryVariables> = gql`
+  query AllQuery(
+    $byAdmin: UserAdminByInput!
+    $first: Int
+    $byUser: UserByInput!
+  ) {
+    userAdmin(by: $byAdmin) {
       id
       profile {
-        id
-        cellphone
-        username
+        ...UserDetails
       }
     }
-  }
-
-  query UserCollection($first: Int) {
     userCollection(first: $first) {
       edges {
         node {
-          cellphone
-          id
-          username
+          ...UserDetails
         }
       }
     }
-  }
-
-  query User($by: UserByInput!) {
-    user(by: $by) {
-      cellphone
-      username
-      id
+    user(by: $byUser) {
+      ...UserDetails
     }
   }
+  ${USER_DETAILS_FRAGMENT}
 `;
