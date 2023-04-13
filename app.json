@@ -1,0 +1,47 @@
+{
+  "name": "app-elenas",
+  "slug": "app-elenas",
+  "version": "1.0.0",
+  "orientation": "portrait",
+  "icon": "./assets/icon.png",
+  "userInterfaceStyle": "light",
+  "splash": {
+    "image": "./assets/splash.png",
+    "resizeMode": "cover",
+    "backgroundColor": "#ffffff"
+  },
+  "updates": {
+    "fallbackToCacheTimeout": 0
+  },
+  "assetBundlePatterns": [
+    "**/*"
+  ],
+  "ios": {
+    "supportsTablet": true
+  },
+  "android": {
+    "adaptiveIcon": {
+      "foregroundImage": "./assets/adaptive-icon.png",
+      "backgroundColor": "#FFFFFF"
+    }
+  },
+  "web": {
+    "favicon": "./assets/favicon.png"
+  },
+  "extra": {
+    "eas": {
+      "projectId": "ff80308c-14a6-473e-bf42-d8efd9c8af4a"
+    }
+  },
+  "owner": "alexander.celis",
+  "expo": {
+    "android": {
+      "package": "com.alexander.celis.elenasapp"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "86f4227f-d353-4d02-9813-be711c395600"
+      }
+    }
+  }
+}
