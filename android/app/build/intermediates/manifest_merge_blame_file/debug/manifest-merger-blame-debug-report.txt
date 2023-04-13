@@ -1,0 +1,208 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.alexander.celis.elenasapp"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="33" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:4:3-75
+11-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:4:20-73
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:2:3-64
+12-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:2:20-62
+13    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+13-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:3:3-77
+13-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:3:20-75
+14    <uses-permission android:name="android.permission.VIBRATE" />
+14-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:5:3-63
+14-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:5:20-61
+15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+15-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:6:3-78
+15-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:6:20-76
+16
+17    <queries>
+17-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:7:3-13:13
+18        <intent>
+18-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:8:5-12:14
+19            <action android:name="android.intent.action.VIEW" />
+19-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:9:7-58
+19-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:9:15-56
+20
+21            <category android:name="android.intent.category.BROWSABLE" />
+21-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:10:7-67
+21-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:10:17-65
+22
+23            <data android:scheme="https" />
+23-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:11:7-37
+23-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:11:13-35
+24        </intent>
+25        <!-- Query open documents -->
+26        <intent>
+26-->[:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:9-17:18
+27            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+27-->[:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-79
+27-->[:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:21-76
+28        </intent>
+29    </queries>
+30
+31    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+31-->[com.facebook.flipper:flipper:0.125.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\92ad11363d6a6f1ea5a8b9f3f48d9338\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:16:5-76
+31-->[com.facebook.flipper:flipper:0.125.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\92ad11363d6a6f1ea5a8b9f3f48d9338\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:16:22-73
+32    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+32-->[com.android.installreferrer:installreferrer:1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\6896888ad7a90361e416081be552069c\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:5-110
+32-->[com.android.installreferrer:installreferrer:1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\6896888ad7a90361e416081be552069c\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:22-107
+33
+34    <application
+34-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:3-33:17
+35        android:name="com.alexander.celis.elenasapp.MainApplication"
+35-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:16-47
+36        android:allowBackup="true"
+36-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:162-188
+37        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+37-->[androidx.core:core:1.7.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3c3d67745cc0055a2f3c7aa5c1d315d3\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+38        android:debuggable="true"
+39        android:icon="@mipmap/ic_launcher"
+39-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:81-115
+40        android:label="@string/app_name"
+40-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:48-80
+41        android:roundIcon="@mipmap/ic_launcher_round"
+41-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:116-161
+42        android:theme="@style/AppTheme"
+42-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:189-220
+43        android:usesCleartextTraffic="true" >
+43-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:221-256
+44        <meta-data
+44-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:15:5-82
+45            android:name="expo.modules.updates.ENABLED"
+45-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:15:16-59
+46            android:value="true" />
+46-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:15:60-80
+47        <meta-data
+47-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:16:5-93
+48            android:name="expo.modules.updates.EXPO_SDK_VERSION"
+48-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:16:16-68
+49            android:value="48.0.0" />
+49-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:16:69-91
+50        <meta-data
+50-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:17:5-105
+51            android:name="expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH"
+51-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:17:16-80
+52            android:value="ALWAYS" />
+52-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:17:81-103
+53        <meta-data
+53-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:18:5-99
+54            android:name="expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS"
+54-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:18:16-79
+55            android:value="0" />
+55-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:18:80-97
+56        <meta-data
+56-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:19:5-124
+57            android:name="expo.modules.updates.EXPO_UPDATE_URL"
+57-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:19:16-67
+58            android:value="https://exp.host/@anonymous/app-elenas" />
+58-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:19:68-122
+59
+60        <activity
+60-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:20:5-31:16
+61            android:name="com.alexander.celis.elenasapp.MainActivity"
+61-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:20:15-43
+62            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+62-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:20:77-154
+63            android:exported="true"
+63-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:20:276-299
+64            android:label="@string/app_name"
+64-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:20:44-76
+65            android:launchMode="singleTask"
+65-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:20:155-186
+66            android:theme="@style/Theme.App.SplashScreen"
+66-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:20:230-275
+67            android:windowSoftInputMode="adjustResize" >
+67-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:20:187-229
+68            <intent-filter>
+68-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:21:7-24:23
+69                <action android:name="android.intent.action.MAIN" />
+69-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:22:9-60
+69-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:22:17-58
+70
+71                <category android:name="android.intent.category.LAUNCHER" />
+71-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:23:9-68
+71-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:23:19-66
+72            </intent-filter>
+73            <intent-filter>
+73-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:25:7-30:23
+74                <action android:name="android.intent.action.VIEW" />
+74-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:9:7-58
+74-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:9:15-56
+75
+76                <category android:name="android.intent.category.DEFAULT" />
+76-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:27:9-67
+76-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:27:19-65
+77                <category android:name="android.intent.category.BROWSABLE" />
+77-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:10:7-67
+77-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:10:17-65
+78
+79                <data android:scheme="com.alexander.celis.elenasapp" />
+79-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:11:7-37
+79-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:11:13-35
+80            </intent-filter>
+81        </activity>
+82        <activity
+82-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:32:5-106
+83            android:name="com.facebook.react.devsupport.DevSettingsActivity"
+83-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:32:15-79
+84            android:exported="false" />
+84-->C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:32:80-104
+85
+86        <provider
+86-->[:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:9-30:20
+87            android:name="expo.modules.filesystem.FileSystemFileProvider"
+87-->[:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-74
+88            android:authorities="com.alexander.celis.elenasapp.FileSystemFileProvider"
+88-->[:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-74
+89            android:exported="false"
+89-->[:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-37
+90            android:grantUriPermissions="true" >
+90-->[:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:13-47
+91            <meta-data
+91-->[:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-29:70
+92                android:name="android.support.FILE_PROVIDER_PATHS"
+92-->[:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:17-67
+93                android:resource="@xml/file_system_provider_paths" />
+93-->[:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:17-67
+94        </provider>
+95
+96        <meta-data
+96-->[:expo-modules-core] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-10:89
+97            android:name="org.unimodules.core.AppLoader#react-native-headless"
+97-->[:expo-modules-core] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-79
+98            android:value="expo.modules.adapters.react.apploader.RNHeadlessAppLoader" />
+98-->[:expo-modules-core] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:13-86
+99
+100        <provider
+100-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+101            android:name="androidx.startup.InitializationProvider"
+101-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+102            android:authorities="com.alexander.celis.elenasapp.androidx-startup"
+102-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+103            android:exported="false" >
+103-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+104            <meta-data
+104-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+105                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+105-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+106                android:value="androidx.startup" />
+106-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+107            <meta-data
+107-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\fc49bab9ad5b82206670bef3f766995b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+108                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+108-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\fc49bab9ad5b82206670bef3f766995b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+109                android:value="androidx.startup" />
+109-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\fc49bab9ad5b82206670bef3f766995b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+110        </provider>
+111    </application>
+112
+113</manifest>

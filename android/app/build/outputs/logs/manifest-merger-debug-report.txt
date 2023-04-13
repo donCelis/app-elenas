@@ -1,0 +1,553 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:1:1-34:12
+INJECTED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:1:1-34:12
+INJECTED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:1:1-34:12
+INJECTED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:1:1-34:12
+MERGED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:1:1-34:12
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.125.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\014c1961d36475190c3b128ca2cc5a5c\transformed\jetified-flipper-network-plugin-0.125.0\AndroidManifest.xml:8:1-15:12
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\cbc88ae85bcc7c3d45fd45bcea51858b\transformed\jetified-flipper-fresco-plugin-0.125.0\AndroidManifest.xml:8:1-15:12
+MERGED from [com.facebook.flipper:flipper:0.125.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\92ad11363d6a6f1ea5a8b9f3f48d9338\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:8:1-18:12
+MERGED from [:react-native-async-storage_async-storage] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:expo] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-safe-area-context] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-screens] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:expo-application] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-application\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:expo-constants] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-constants\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-33:12
+MERGED from [:expo-font] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-font\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:expo-keep-awake] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-keep-awake\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:expo-splash-screen] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-splash-screen\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:expo-modules-core] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-13:12
+MERGED from [com.facebook.react:react-android:0.71.6] C:\Users\Alexander Celis\.gradle\caches\transforms-3\80bcec10edf7b36a7acc4848e4b58fa9\transformed\jetified-react-android-0.71.6-debug\AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.fresco:flipper:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\8d2d465396fbc35cd57b3622e1220489\transformed\jetified-flipper-2.6.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:stetho:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\20916074075fc38e64c39baaa46aa981\transformed\jetified-stetho-2.6.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:fresco:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3492b292db4e7f1b08086ca6d344faa3\transformed\jetified-fresco-2.6.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.5.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\5cc3237fa7acfb226a14dc61826a268f\transformed\jetified-imagepipeline-okhttp3-2.5.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:animated-gif:2.5.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\eea2ee5afc54a106a5d1bf8a5a91e5fc\transformed\jetified-animated-gif-2.5.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:webpsupport:2.5.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\39103f51d755b052da946f110ee3fbd1\transformed\jetified-webpsupport-2.5.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\8aaa4e4436d91524d951d24ae0d57cef\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\4aaddbb748d63cc92d32864db41de456\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\55ab8b6ff959bd4fadbaf69510faee47\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.react:hermes-android:0.71.6] C:\Users\Alexander Celis\.gradle\caches\transforms-3\dfa009291e3f479b7cb2ac1d63e2e8f7\transformed\jetified-hermes-android-0.71.6-debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:shopify_flash-list] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\@shopify\flash-list\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.fbjni:fbjni:0.3.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\839e63e695132860efbc878bf673a792\transformed\jetified-fbjni-0.3.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:animated-base:2.5.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\a5a4f97315e4055bc901dcf6e75a7090\transformed\jetified-animated-base-2.5.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:animated-drawable:2.5.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\fe3d7dee9b67430ff5b01206b505588f\transformed\jetified-animated-drawable-2.5.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\81bb9df48fec7d5cbc4a24c5804be412\transformed\jetified-drawee-2.6.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagefilters:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\dc6cd17982c874eaee82c008e6ff3870\transformed\jetified-nativeimagefilters-2.6.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:memory-type-native:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\4575ae57b2b9dcec863f0ea585066647\transformed\jetified-memory-type-native-2.6.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:memory-type-java:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\58bfb1bfe4dc67ea4b8e824fa98d6fd1\transformed\jetified-memory-type-java-2.6.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-native:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\1a8dc3dedc2a619bdd1299449677ed64\transformed\jetified-imagepipeline-native-2.6.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:soloader:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\ff5408e18abc4dc095382e88306ad07e\transformed\jetified-soloader-2.6.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.10.4] C:\Users\Alexander Celis\.gradle\caches\transforms-3\146bedc425e239acb06ceaeaa786c185\transformed\jetified-soloader-0.10.4\AndroidManifest.xml:2:1-13:12
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3f844a1e5c8727dc4afe071f87e8602b\transformed\jetified-memory-type-ashmem-2.6.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\20c7db3048b39ec1a153f86421167137\transformed\jetified-imagepipeline-2.6.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\4405ad3b089c74d7fe8f69e8f6d66dcc\transformed\jetified-nativeimagetranscoder-2.6.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\000e8bd61a2a8701f2f50343829bdd81\transformed\jetified-imagepipeline-base-2.6.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\8d16aaf3ffbd08014bd2f2b46ceaeb2e\transformed\material-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\344321fee8d350f8db05df5ccde971ed\transformed\appcompat-1.4.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\82d60e426bfc7180727753af0063e210\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.4.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\fb8e4c857a05f42f2ffda550ec8cb5bb\transformed\jetified-appcompat-resources-1.4.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.autofill:autofill:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\584a98d75726e637ae0da959bef8219d\transformed\jetified-autofill-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\80423c634801d64594a18b8d92d7b371\transformed\jetified-emoji2-views-helper-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\fc49bab9ad5b82206670bef3f766995b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\41aea3076a11cb980ff97d59e2af4a71\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.fragment:fragment-ktx:1.4.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\567088ef19b94de8c4ed9ae63c3c9801\transformed\jetified-fragment-ktx-1.4.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity-ktx:1.4.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\508e51a36acb197cc312b1e2a3e4cc3f\transformed\jetified-activity-ktx-1.4.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\bf1edd33b7b113277a5bc2e573cba71c\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.4.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\663cf9cda3be9fce6369177c5cb51d97\transformed\fragment-1.4.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.4.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\a15587f910e55469c76240c98a921755\transformed\jetified-activity-1.4.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.tracing:tracing:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\96b99099ebc1059b87f2c6283045269a\transformed\jetified-tracing-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.facebook.fresco:middleware:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\ef82819b6e6a0d5f0a7d5fe8c061c056\transformed\jetified-middleware-2.6.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:ui-common:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\cc6560ea61c86be44e23aa392748cca0\transformed\jetified-ui-common-2.6.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3c6b0153445da8c76b3f732b887ce385\transformed\jetified-lifecycle-runtime-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\b7bc4eb305da2470ddf6dc0cbbd8ecb9\transformed\jetified-lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.facebook.fresco:fbcore:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\70af557bc00b9664155005c44fcedc70\transformed\jetified-fbcore-2.6.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\1f9b1ef711eb96c4766713ed4ac39e3c\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\19e1787c83a35bb271b0f460d76c429d\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\ee71c7251ed6436129b63abec9196d74\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\6e8ebbbbe6cfcd4ee38db92f45591bf3\transformed\sqlite-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\341e58976e25b82e21f0583dcc0d3308\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\bf8c44cf8c541a31cdac8b655dfea90c\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\cdd12e7b3df725dc5450c6191e9b8b4e\transformed\jetified-core-ktx-1.6.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\c80c910612b87f490274d61cb19ec301\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\1e143d6fab44b3df81b776a553315ca0\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\a3fa70192d02a4684f6f57e1167a3995\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\ef3e84970a57841bd50842cbd71fe9b7\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\7f88f57411207de0295ab20af6d7b106\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\bc8b105662677eae4c75afdcdd3831d0\transformed\media-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\c9172308208b4f616e16e5cefced94b7\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\7e34197efe20d87a4e4e509ee9becbbe\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\2c7431cc873562b3204810ab040f5f03\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.7.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3c3d67745cc0055a2f3c7aa5c1d315d3\transformed\core-1.7.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\36fe3f6941d1c7db66a00718ab724b42\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\6888ee006a8f6a0b8d3132e67479ed67\transformed\jetified-savedstate-ktx-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\9c0976f390aa65439b67888e9f1ebf5f\transformed\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\e9132e98b009ad6b8a966ddb806b6d90\transformed\jetified-savedstate-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\adc564342e81e1cdcb7dc892284a2ff4\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\d2aa1b2f64e4edfebc06462b78bc5e27\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3b948a260b9da85c66d197be09c59024\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\37f3ab0829c286c8be5200c4828dc0dd\transformed\lifecycle-runtime-2.4.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\1f1d85f162f14db1be2a745335b28522\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\ecdb4f3c09c34d9f7bc5353fd9fd0749\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\37fefe78d3788b722af0811bca04a73c\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\8d1054195b24bfe3a5ac3c4459bca605\transformed\jetified-lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\cdf17061e0e13a945634e7c4015d9c94\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\8b1634a6cc938648470280d9706d78d4\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\bc1a2b86e571d856f0db442236f137fc\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\6896888ad7a90361e416081be552069c\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:2:1-13:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\6a5c9144e6e53969e963d83e8e29a695\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+	package
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:1:70-109
+		INJECTED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:1:70-109
+		INJECTED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\debug\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:1:1-34:12
+		INJECTED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\debug\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\debug\AndroidManifest.xml:2:5-51
+	android:versionCode
+		INJECTED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:1:1-34:12
+		INJECTED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\debug\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:2:3-64
+MERGED from [com.facebook.flipper:flipper:0.125.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\92ad11363d6a6f1ea5a8b9f3f48d9338\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:15:5-67
+MERGED from [com.facebook.flipper:flipper:0.125.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\92ad11363d6a6f1ea5a8b9f3f48d9338\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:15:5-67
+MERGED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:5-67
+MERGED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:5-67
+	android:name
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:2:20-62
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:3:3-77
+MERGED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-80
+MERGED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-80
+	android:name
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:3:20-75
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:4:3-75
+MERGED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:4:3-75
+MERGED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:4:3-75
+	android:name
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:4:20-73
+uses-permission#android.permission.VIBRATE
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:5:3-63
+	android:name
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:5:20-61
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:6:3-78
+MERGED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-81
+MERGED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:6:20-76
+queries
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:7:3-13:13
+MERGED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-18:15
+MERGED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-18:15
+intent#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+data:scheme:https
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:8:5-12:14
+action#android.intent.action.VIEW
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:9:7-58
+	android:name
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:9:15-56
+category#android.intent.category.BROWSABLE
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:10:7-67
+	android:name
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:10:17-65
+data
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:11:7-37
+	android:scheme
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:11:13-35
+application
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:3-33:17
+MERGED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:3-33:17
+MERGED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:3-33:17
+MERGED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:5-31:19
+MERGED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:5-31:19
+MERGED from [:expo-modules-core] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-11:19
+MERGED from [:expo-modules-core] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-11:19
+MERGED from [com.facebook.react:react-android:0.71.6] C:\Users\Alexander Celis\.gradle\caches\transforms-3\80bcec10edf7b36a7acc4848e4b58fa9\transformed\jetified-react-android-0.71.6-debug\AndroidManifest.xml:9:5-20
+MERGED from [com.facebook.react:react-android:0.71.6] C:\Users\Alexander Celis\.gradle\caches\transforms-3\80bcec10edf7b36a7acc4848e4b58fa9\transformed\jetified-react-android-0.71.6-debug\AndroidManifest.xml:9:5-20
+MERGED from [com.facebook.soloader:soloader:0.10.4] C:\Users\Alexander Celis\.gradle\caches\transforms-3\146bedc425e239acb06ceaeaa786c185\transformed\jetified-soloader-0.10.4\AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.10.4] C:\Users\Alexander Celis\.gradle\caches\transforms-3\146bedc425e239acb06ceaeaa786c185\transformed\jetified-soloader-0.10.4\AndroidManifest.xml:11:5-20
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\8d16aaf3ffbd08014bd2f2b46ceaeb2e\transformed\material-1.1.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\8d16aaf3ffbd08014bd2f2b46ceaeb2e\transformed\material-1.1.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\fc49bab9ad5b82206670bef3f766995b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\fc49bab9ad5b82206670bef3f766995b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\41aea3076a11cb980ff97d59e2af4a71\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\41aea3076a11cb980ff97d59e2af4a71\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.core:core:1.7.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3c3d67745cc0055a2f3c7aa5c1d315d3\transformed\core-1.7.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.7.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3c3d67745cc0055a2f3c7aa5c1d315d3\transformed\core-1.7.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3b948a260b9da85c66d197be09c59024\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3b948a260b9da85c66d197be09c59024\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\6896888ad7a90361e416081be552069c\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:11:5-20
+MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\6896888ad7a90361e416081be552069c\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:11:5-20
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.7.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3c3d67745cc0055a2f3c7aa5c1d315d3\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:48-80
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:48-80
+	tools:ignore
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\debug\AndroidManifest.xml:6:75-114
+	android:roundIcon
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:116-161
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:116-161
+	tools:targetApi
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\debug\AndroidManifest.xml:6:54-74
+	android:icon
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:81-115
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:81-115
+	android:allowBackup
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:162-188
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:162-188
+	android:theme
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:189-220
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:189-220
+	android:usesCleartextTraffic
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:221-256
+	android:name
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:16-47
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:14:16-47
+meta-data#expo.modules.updates.ENABLED
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:15:5-82
+	android:value
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:15:60-80
+	android:name
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:15:16-59
+meta-data#expo.modules.updates.EXPO_SDK_VERSION
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:16:5-93
+	android:value
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:16:69-91
+	android:name
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:16:16-68
+meta-data#expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:17:5-105
+	android:value
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:17:81-103
+	android:name
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:17:16-80
+meta-data#expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:18:5-99
+	android:value
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:18:80-97
+	android:name
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:18:16-79
+meta-data#expo.modules.updates.EXPO_UPDATE_URL
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:19:5-124
+	android:value
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:19:68-122
+	android:name
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:19:16-67
+activity#com.alexander.celis.elenasapp.MainActivity
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:20:5-31:16
+	android:label
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:20:44-76
+	android:launchMode
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:20:155-186
+	android:windowSoftInputMode
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:20:187-229
+	android:exported
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:20:276-299
+	android:configChanges
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:20:77-154
+	android:theme
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:20:230-275
+	android:name
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:20:15-43
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:21:7-24:23
+action#android.intent.action.MAIN
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:22:9-60
+	android:name
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:22:17-58
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:23:9-68
+	android:name
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:23:19-66
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:com.alexander.celis.elenasapp
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:25:7-30:23
+category#android.intent.category.DEFAULT
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:27:9-67
+	android:name
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:27:19-65
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:32:5-106
+	android:exported
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:32:80-104
+	android:name
+		ADDED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml:32:15-79
+uses-sdk
+INJECTED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.125.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\014c1961d36475190c3b128ca2cc5a5c\transformed\jetified-flipper-network-plugin-0.125.0\AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.125.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\014c1961d36475190c3b128ca2cc5a5c\transformed\jetified-flipper-network-plugin-0.125.0\AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\cbc88ae85bcc7c3d45fd45bcea51858b\transformed\jetified-flipper-fresco-plugin-0.125.0\AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\cbc88ae85bcc7c3d45fd45bcea51858b\transformed\jetified-flipper-fresco-plugin-0.125.0\AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper:0.125.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\92ad11363d6a6f1ea5a8b9f3f48d9338\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper:0.125.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\92ad11363d6a6f1ea5a8b9f3f48d9338\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:11:5-13:41
+MERGED from [:react-native-async-storage_async-storage] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-async-storage_async-storage] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-safe-area-context] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-safe-area-context] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-screens] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-screens] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-application] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-application\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-application] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-application\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-constants] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-constants\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-constants] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-constants\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-44
+MERGED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-44
+MERGED from [:expo-font] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-font\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-font] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-font\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-keep-awake] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-keep-awake\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-keep-awake] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-keep-awake\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-splash-screen] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-splash-screen\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-splash-screen] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-splash-screen\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-modules-core] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:expo-modules-core] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.react:react-android:0.71.6] C:\Users\Alexander Celis\.gradle\caches\transforms-3\80bcec10edf7b36a7acc4848e4b58fa9\transformed\jetified-react-android-0.71.6-debug\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.react:react-android:0.71.6] C:\Users\Alexander Celis\.gradle\caches\transforms-3\80bcec10edf7b36a7acc4848e4b58fa9\transformed\jetified-react-android-0.71.6-debug\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:flipper:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\8d2d465396fbc35cd57b3622e1220489\transformed\jetified-flipper-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:flipper:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\8d2d465396fbc35cd57b3622e1220489\transformed\jetified-flipper-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:stetho:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\20916074075fc38e64c39baaa46aa981\transformed\jetified-stetho-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:stetho:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\20916074075fc38e64c39baaa46aa981\transformed\jetified-stetho-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3492b292db4e7f1b08086ca6d344faa3\transformed\jetified-fresco-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3492b292db4e7f1b08086ca6d344faa3\transformed\jetified-fresco-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.5.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\5cc3237fa7acfb226a14dc61826a268f\transformed\jetified-imagepipeline-okhttp3-2.5.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.5.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\5cc3237fa7acfb226a14dc61826a268f\transformed\jetified-imagepipeline-okhttp3-2.5.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-gif:2.5.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\eea2ee5afc54a106a5d1bf8a5a91e5fc\transformed\jetified-animated-gif-2.5.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-gif:2.5.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\eea2ee5afc54a106a5d1bf8a5a91e5fc\transformed\jetified-animated-gif-2.5.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:webpsupport:2.5.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\39103f51d755b052da946f110ee3fbd1\transformed\jetified-webpsupport-2.5.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:webpsupport:2.5.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\39103f51d755b052da946f110ee3fbd1\transformed\jetified-webpsupport-2.5.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\8aaa4e4436d91524d951d24ae0d57cef\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\8aaa4e4436d91524d951d24ae0d57cef\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\4aaddbb748d63cc92d32864db41de456\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\4aaddbb748d63cc92d32864db41de456\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\55ab8b6ff959bd4fadbaf69510faee47\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\55ab8b6ff959bd4fadbaf69510faee47\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.react:hermes-android:0.71.6] C:\Users\Alexander Celis\.gradle\caches\transforms-3\dfa009291e3f479b7cb2ac1d63e2e8f7\transformed\jetified-hermes-android-0.71.6-debug\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.react:hermes-android:0.71.6] C:\Users\Alexander Celis\.gradle\caches\transforms-3\dfa009291e3f479b7cb2ac1d63e2e8f7\transformed\jetified-hermes-android-0.71.6-debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:shopify_flash-list] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\@shopify\flash-list\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:shopify_flash-list] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\@shopify\flash-list\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.fbjni:fbjni:0.3.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\839e63e695132860efbc878bf673a792\transformed\jetified-fbjni-0.3.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fbjni:fbjni:0.3.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\839e63e695132860efbc878bf673a792\transformed\jetified-fbjni-0.3.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-base:2.5.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\a5a4f97315e4055bc901dcf6e75a7090\transformed\jetified-animated-base-2.5.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-base:2.5.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\a5a4f97315e4055bc901dcf6e75a7090\transformed\jetified-animated-base-2.5.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-drawable:2.5.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\fe3d7dee9b67430ff5b01206b505588f\transformed\jetified-animated-drawable-2.5.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-drawable:2.5.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\fe3d7dee9b67430ff5b01206b505588f\transformed\jetified-animated-drawable-2.5.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\81bb9df48fec7d5cbc4a24c5804be412\transformed\jetified-drawee-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\81bb9df48fec7d5cbc4a24c5804be412\transformed\jetified-drawee-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\dc6cd17982c874eaee82c008e6ff3870\transformed\jetified-nativeimagefilters-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\dc6cd17982c874eaee82c008e6ff3870\transformed\jetified-nativeimagefilters-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-native:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\4575ae57b2b9dcec863f0ea585066647\transformed\jetified-memory-type-native-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-native:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\4575ae57b2b9dcec863f0ea585066647\transformed\jetified-memory-type-native-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-java:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\58bfb1bfe4dc67ea4b8e824fa98d6fd1\transformed\jetified-memory-type-java-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-java:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\58bfb1bfe4dc67ea4b8e824fa98d6fd1\transformed\jetified-memory-type-java-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-native:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\1a8dc3dedc2a619bdd1299449677ed64\transformed\jetified-imagepipeline-native-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-native:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\1a8dc3dedc2a619bdd1299449677ed64\transformed\jetified-imagepipeline-native-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:soloader:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\ff5408e18abc4dc095382e88306ad07e\transformed\jetified-soloader-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:soloader:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\ff5408e18abc4dc095382e88306ad07e\transformed\jetified-soloader-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.10.4] C:\Users\Alexander Celis\.gradle\caches\transforms-3\146bedc425e239acb06ceaeaa786c185\transformed\jetified-soloader-0.10.4\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.10.4] C:\Users\Alexander Celis\.gradle\caches\transforms-3\146bedc425e239acb06ceaeaa786c185\transformed\jetified-soloader-0.10.4\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3f844a1e5c8727dc4afe071f87e8602b\transformed\jetified-memory-type-ashmem-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3f844a1e5c8727dc4afe071f87e8602b\transformed\jetified-memory-type-ashmem-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\20c7db3048b39ec1a153f86421167137\transformed\jetified-imagepipeline-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\20c7db3048b39ec1a153f86421167137\transformed\jetified-imagepipeline-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\4405ad3b089c74d7fe8f69e8f6d66dcc\transformed\jetified-nativeimagetranscoder-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\4405ad3b089c74d7fe8f69e8f6d66dcc\transformed\jetified-nativeimagetranscoder-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\000e8bd61a2a8701f2f50343829bdd81\transformed\jetified-imagepipeline-base-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\000e8bd61a2a8701f2f50343829bdd81\transformed\jetified-imagepipeline-base-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\8d16aaf3ffbd08014bd2f2b46ceaeb2e\transformed\material-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\8d16aaf3ffbd08014bd2f2b46ceaeb2e\transformed\material-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\344321fee8d350f8db05df5ccde971ed\transformed\appcompat-1.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\344321fee8d350f8db05df5ccde971ed\transformed\appcompat-1.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\82d60e426bfc7180727753af0063e210\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\82d60e426bfc7180727753af0063e210\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.4.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\fb8e4c857a05f42f2ffda550ec8cb5bb\transformed\jetified-appcompat-resources-1.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.4.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\fb8e4c857a05f42f2ffda550ec8cb5bb\transformed\jetified-appcompat-resources-1.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\584a98d75726e637ae0da959bef8219d\transformed\jetified-autofill-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\584a98d75726e637ae0da959bef8219d\transformed\jetified-autofill-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\80423c634801d64594a18b8d92d7b371\transformed\jetified-emoji2-views-helper-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\80423c634801d64594a18b8d92d7b371\transformed\jetified-emoji2-views-helper-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\fc49bab9ad5b82206670bef3f766995b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\fc49bab9ad5b82206670bef3f766995b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\41aea3076a11cb980ff97d59e2af4a71\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\41aea3076a11cb980ff97d59e2af4a71\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.fragment:fragment-ktx:1.4.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\567088ef19b94de8c4ed9ae63c3c9801\transformed\jetified-fragment-ktx-1.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.4.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\567088ef19b94de8c4ed9ae63c3c9801\transformed\jetified-fragment-ktx-1.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.4.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\508e51a36acb197cc312b1e2a3e4cc3f\transformed\jetified-activity-ktx-1.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.4.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\508e51a36acb197cc312b1e2a3e4cc3f\transformed\jetified-activity-ktx-1.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\bf1edd33b7b113277a5bc2e573cba71c\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\bf1edd33b7b113277a5bc2e573cba71c\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.4.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\663cf9cda3be9fce6369177c5cb51d97\transformed\fragment-1.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.4.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\663cf9cda3be9fce6369177c5cb51d97\transformed\fragment-1.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.4.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\a15587f910e55469c76240c98a921755\transformed\jetified-activity-1.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.4.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\a15587f910e55469c76240c98a921755\transformed\jetified-activity-1.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\96b99099ebc1059b87f2c6283045269a\transformed\jetified-tracing-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\96b99099ebc1059b87f2c6283045269a\transformed\jetified-tracing-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.facebook.fresco:middleware:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\ef82819b6e6a0d5f0a7d5fe8c061c056\transformed\jetified-middleware-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:middleware:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\ef82819b6e6a0d5f0a7d5fe8c061c056\transformed\jetified-middleware-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:ui-common:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\cc6560ea61c86be44e23aa392748cca0\transformed\jetified-ui-common-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:ui-common:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\cc6560ea61c86be44e23aa392748cca0\transformed\jetified-ui-common-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3c6b0153445da8c76b3f732b887ce385\transformed\jetified-lifecycle-runtime-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3c6b0153445da8c76b3f732b887ce385\transformed\jetified-lifecycle-runtime-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\b7bc4eb305da2470ddf6dc0cbbd8ecb9\transformed\jetified-lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\b7bc4eb305da2470ddf6dc0cbbd8ecb9\transformed\jetified-lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.facebook.fresco:fbcore:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\70af557bc00b9664155005c44fcedc70\transformed\jetified-fbcore-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\70af557bc00b9664155005c44fcedc70\transformed\jetified-fbcore-2.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\1f9b1ef711eb96c4766713ed4ac39e3c\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\1f9b1ef711eb96c4766713ed4ac39e3c\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\19e1787c83a35bb271b0f460d76c429d\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\19e1787c83a35bb271b0f460d76c429d\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\ee71c7251ed6436129b63abec9196d74\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\ee71c7251ed6436129b63abec9196d74\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\6e8ebbbbe6cfcd4ee38db92f45591bf3\transformed\sqlite-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\6e8ebbbbe6cfcd4ee38db92f45591bf3\transformed\sqlite-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\341e58976e25b82e21f0583dcc0d3308\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\341e58976e25b82e21f0583dcc0d3308\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\bf8c44cf8c541a31cdac8b655dfea90c\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\bf8c44cf8c541a31cdac8b655dfea90c\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\cdd12e7b3df725dc5450c6191e9b8b4e\transformed\jetified-core-ktx-1.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.6.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\cdd12e7b3df725dc5450c6191e9b8b4e\transformed\jetified-core-ktx-1.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\c80c910612b87f490274d61cb19ec301\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\c80c910612b87f490274d61cb19ec301\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\1e143d6fab44b3df81b776a553315ca0\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\1e143d6fab44b3df81b776a553315ca0\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\a3fa70192d02a4684f6f57e1167a3995\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\a3fa70192d02a4684f6f57e1167a3995\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\ef3e84970a57841bd50842cbd71fe9b7\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\ef3e84970a57841bd50842cbd71fe9b7\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\7f88f57411207de0295ab20af6d7b106\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\7f88f57411207de0295ab20af6d7b106\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\bc8b105662677eae4c75afdcdd3831d0\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\bc8b105662677eae4c75afdcdd3831d0\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\c9172308208b4f616e16e5cefced94b7\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\c9172308208b4f616e16e5cefced94b7\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\7e34197efe20d87a4e4e509ee9becbbe\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\7e34197efe20d87a4e4e509ee9becbbe\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\2c7431cc873562b3204810ab040f5f03\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\2c7431cc873562b3204810ab040f5f03\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.7.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3c3d67745cc0055a2f3c7aa5c1d315d3\transformed\core-1.7.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.7.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3c3d67745cc0055a2f3c7aa5c1d315d3\transformed\core-1.7.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\36fe3f6941d1c7db66a00718ab724b42\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\36fe3f6941d1c7db66a00718ab724b42\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\6888ee006a8f6a0b8d3132e67479ed67\transformed\jetified-savedstate-ktx-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate-ktx:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\6888ee006a8f6a0b8d3132e67479ed67\transformed\jetified-savedstate-ktx-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\9c0976f390aa65439b67888e9f1ebf5f\transformed\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\9c0976f390aa65439b67888e9f1ebf5f\transformed\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\e9132e98b009ad6b8a966ddb806b6d90\transformed\jetified-savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\e9132e98b009ad6b8a966ddb806b6d90\transformed\jetified-savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\adc564342e81e1cdcb7dc892284a2ff4\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\adc564342e81e1cdcb7dc892284a2ff4\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\d2aa1b2f64e4edfebc06462b78bc5e27\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\d2aa1b2f64e4edfebc06462b78bc5e27\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3b948a260b9da85c66d197be09c59024\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3b948a260b9da85c66d197be09c59024\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\37f3ab0829c286c8be5200c4828dc0dd\transformed\lifecycle-runtime-2.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\37f3ab0829c286c8be5200c4828dc0dd\transformed\lifecycle-runtime-2.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\1f1d85f162f14db1be2a745335b28522\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\1f1d85f162f14db1be2a745335b28522\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\ecdb4f3c09c34d9f7bc5353fd9fd0749\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\ecdb4f3c09c34d9f7bc5353fd9fd0749\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\37fefe78d3788b722af0811bca04a73c\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\37fefe78d3788b722af0811bca04a73c\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\8d1054195b24bfe3a5ac3c4459bca605\transformed\jetified-lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\8d1054195b24bfe3a5ac3c4459bca605\transformed\jetified-lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\cdf17061e0e13a945634e7c4015d9c94\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\cdf17061e0e13a945634e7c4015d9c94\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\8b1634a6cc938648470280d9706d78d4\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\Alexander Celis\.gradle\caches\transforms-3\8b1634a6cc938648470280d9706d78d4\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\bc1a2b86e571d856f0db442236f137fc\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\bc1a2b86e571d856f0db442236f137fc\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\6896888ad7a90361e416081be552069c\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\6896888ad7a90361e416081be552069c\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\6a5c9144e6e53969e963d83e8e29a695\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\6a5c9144e6e53969e963d83e8e29a695\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\debug\AndroidManifest.xml
+INJECTED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\debug\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\debug\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Alexander Celis\Documents\GitHub\app-elenas\android\app\src\debug\AndroidManifest.xml
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [com.facebook.flipper:flipper:0.125.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\92ad11363d6a6f1ea5a8b9f3f48d9338\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:16:5-76
+	android:name
+		ADDED from [com.facebook.flipper:flipper:0.125.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\92ad11363d6a6f1ea5a8b9f3f48d9338\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:16:22-73
+intent#action:name:android.intent.action.OPEN_DOCUMENT_TREE
+ADDED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:9-17:18
+action#android.intent.action.OPEN_DOCUMENT_TREE
+ADDED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-79
+	android:name
+		ADDED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:21-76
+provider#expo.modules.filesystem.FileSystemFileProvider
+ADDED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:9-30:20
+	android:grantUriPermissions
+		ADDED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:13-47
+	android:authorities
+		ADDED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-74
+	android:exported
+		ADDED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-37
+	tools:replace
+		ADDED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-48
+	android:name
+		ADDED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-74
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-29:70
+	android:resource
+		ADDED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:17-67
+	android:name
+		ADDED from [:expo-file-system] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:17-67
+meta-data#org.unimodules.core.AppLoader#react-native-headless
+ADDED from [:expo-modules-core] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-10:89
+	android:value
+		ADDED from [:expo-modules-core] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:13-86
+	android:name
+		ADDED from [:expo-modules-core] C:\Users\Alexander Celis\Documents\GitHub\app-elenas\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-79
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\fc49bab9ad5b82206670bef3f766995b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\fc49bab9ad5b82206670bef3f766995b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\41aea3076a11cb980ff97d59e2af4a71\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\41aea3076a11cb980ff97d59e2af4a71\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:30:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\3393f4c2dacd3424be6618614c2c97cd\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\fc49bab9ad5b82206670bef3f766995b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\fc49bab9ad5b82206670bef3f766995b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\fc49bab9ad5b82206670bef3f766995b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+ADDED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\6896888ad7a90361e416081be552069c\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:5-110
+	android:name
+		ADDED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Alexander Celis\.gradle\caches\transforms-3\6896888ad7a90361e416081be552069c\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:22-107
